@@ -1,0 +1,138 @@
+   <Row ss:AutoFitHeight="0" ss:Height="15.45">
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:MergeAcross="2" ss:StyleID="s83"><Data ss:Type="String">Total</Data></Cell>
+    <Cell ss:StyleID="s164" ss:Formula="=SUM(R[-35]C:R[-1]C)"><Data
+      ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s164" ss:Formula="=SUM(R[-35]C:R[-1]C)"><Data
+      ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s164" ss:Formula="=SUM(R[-35]C:R[-1]C)"><Data
+      ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s164"/>
+    <Cell ss:StyleID="s164" ss:Formula="=SUM(R[-35]C:R[-1]C)"><Data
+      ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s164"/>
+    <Cell ss:StyleID="s164" ss:Formula="=SUM(R[-35]C:R[-1]C)"><Data
+      ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s164"/>
+    <Cell ss:StyleID="s164" ss:Formula="=SUM(R[-35]C:R[-1]C)"><Data
+      ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+
+   <Row ss:AutoFitHeight="0" ss:Height="15.45">
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:MergeAcross="4" ss:StyleID="m1716013899984"><Data ss:Type="String">Remarks:</Data></Cell>
+    <Cell ss:MergeAcross="4" ss:StyleID="m1716013900004"><Data ss:Type="String">Summary</Data></Cell>
+    <Cell ss:MergeAcross="1" ss:StyleID="m1716013900024"><Data ss:Type="String">Amount</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="15.45">
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:MergeAcross="4" ss:StyleID="m1716013900044"/>
+    <Cell ss:MergeAcross="4" ss:StyleID="m1716013900064"><Data ss:Type="String">Total Invoice Value</Data></Cell>
+    <Cell ss:MergeAcross="1" ss:StyleID="m1716013900084" ss:Formula="=R[-2]C[-7]"><Data
+      ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="15.45">
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:MergeAcross="4" ss:StyleID="m1716013899568"/>
+    <Cell ss:MergeAcross="4" ss:StyleID="m1716013899588"><Data ss:Type="String">Total Discounts</Data></Cell>
+    <Cell ss:MergeAcross="1" ss:StyleID="m1716013899608" ss:Formula="=R[-3]C[-6]"><Data
+      ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="15.45">
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:MergeAcross="1" ss:MergeDown="1" ss:StyleID="m1716013899628"/>
+    <Cell ss:StyleID="s192"/>
+    <Cell ss:MergeDown="1" ss:StyleID="m1716013899648"/>
+    <Cell ss:StyleID="s192"/>
+    <Cell ss:MergeAcross="4" ss:StyleID="m1716013899668"><Data ss:Type="String">Total Taxable Value</Data></Cell>
+    <Cell ss:MergeAcross="1" ss:StyleID="m1716013899688" ss:Formula="=R[-4]C[-5]"><Data
+      ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="15.45">
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:Index="4" ss:StyleID="s192"/>
+    <Cell ss:Index="6" ss:StyleID="s192"/>
+    <Cell ss:MergeAcross="4" ss:StyleID="m1716013899708"><Data ss:Type="String">Total CGST</Data></Cell>
+    <Cell ss:MergeAcross="1" ss:StyleID="m1716013899728" ss:Formula="=R[-5]C[-3]"><Data
+      ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="15.45">
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:MergeAcross="1" ss:StyleID="m1716013900816"><Data ss:Type="String">Receiver's Signature</Data></Cell>
+    <Cell ss:StyleID="s192"/>
+    <Cell ss:StyleID="s176"/>
+    <Cell ss:StyleID="s192"/>
+    <Cell ss:MergeAcross="4" ss:StyleID="m1716013900836"><Data ss:Type="String">Total SGST</Data></Cell>
+    <Cell ss:MergeAcross="1" ss:StyleID="m1716013900856" ss:Formula="=R[-6]C[-1]"><Data
+      ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="15.45">
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:MergeAcross="4" ss:StyleID="m1716013900876"/>
+    <Cell ss:MergeAcross="4" ss:StyleID="m1716013900896"><Data ss:Type="String">Total IGST</Data></Cell>
+    <Cell ss:MergeAcross="1" ss:StyleID="m1716013900916" ss:Formula="=R[-7]C[1]"><Data
+      ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="15.45">
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:MergeAcross="4" ss:StyleID="m1716013901440"><Data ss:Type="String">Note: Make all cheques payable to Company Name</Data></Cell>
+    <Cell ss:MergeAcross="4" ss:StyleID="m1716013901460"><Data ss:Type="String">Grand Total</Data></Cell>
+    <Cell ss:MergeAcross="1" ss:StyleID="m1716013901480"
+     ss:Formula="=SUM(R[-4]C:R[-1]C)"><Data ss:Type="Number">0</Data></Cell>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+   <Row ss:AutoFitHeight="0" ss:Height="7.8000000000000007">
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+    <Cell ss:StyleID="s62"/>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <PageSetup>
+    <Header x:Margin="0.3"/>
+    <Footer x:Margin="0.3"/>
+    <PageMargins x:Bottom="0.75" x:Left="0.7" x:Right="0.7" x:Top="0.75"/>
+   </PageSetup>
+   <Unsynced/>
+   <Print>
+    <ValidPrinterInfo/>
+    <PaperSizeIndex>9</PaperSizeIndex>
+    <Scale>80</Scale>
+    <HorizontalResolution>600</HorizontalResolution>
+    <VerticalResolution>600</VerticalResolution>
+   </Print>
+   <Selected/>
+   <DoNotDisplayGridlines/>
+   <DoNotDisplayHeadings/>
+   <TopRowVisible>15</TopRowVisible>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>32</ActiveRow>
+     <ActiveCol>14</ActiveCol>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+</Workbook>

@@ -1,0 +1,8 @@
+******************** Error Log - 8/9/2020 1:50:37 PM*********************
+
+Exception Type : ArgumentOutOfRangeException
+Error Message : Specified argument was out of the range of valid values.
+Parameter name: index
+Error Source : App_Web_vn504xa3
+Error Trace :    at Operation_AssMapping.bindAssignmentDetails(Int32 RegNo) in d:\Projects\skool365\eGurukul\skool365\Operation\AssMapping.aspx.cs:line 1059
+   at Operation_AssMapping.ddlStudents_SelectedIndexChanged(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Operation\AssMapping.aspx.cs:line 349

@@ -1,0 +1,68 @@
+******************** Error Log - 4/22/2020 4:56:01 AM*********************
+
+Exception Type : ArgumentNullException
+Error Message : Value cannot be null.
+Parameter name: input
+Error Source : System
+Error Trace :    at System.Text.RegularExpressions.Regex.IsMatch(String input)
+   at Operation_SchoolRegistration.btnSubmit_Click(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Operation\SchoolRegistration.aspx.cs:line 256
+******************** Error Log - 4/22/2020 4:58:51 AM*********************
+
+Exception Type : SqlException
+Error Message : Could not find stored procedure 'dbo.USP_INS_DEL_UPD_SIGNUP_STUDENT'.
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at BLCMR.clsOlympiad.SignUpStudent(objOlympiad Olympiad)
+   at Operation_SchoolRegistration.btnSubmit_Click(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Operation\SchoolRegistration.aspx.cs:line 322
+******************** Error Log - 4/22/2020 5:10:29 AM*********************
+
+Exception Type : SqlException
+Error Message : Invalid column name 'USER_ID'.
+Invalid column name 'LOGIN_TIME'.
+Invalid column name 'LOGIN_MACHINE'.
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at Operation_SchoolRegistration.getDefaultLogin() in d:\Projects\skool365\eGurukul\skool365\Operation\SchoolRegistration.aspx.cs:line 927
+   at Operation_SchoolRegistration.Page_Load(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Operation\SchoolRegistration.aspx.cs:line 183
+******************** Error Log - 4/22/2020 5:10:32 AM*********************
+
+Exception Type : SqlException
+Error Message : Invalid column name 'USER_ID'.
+Invalid column name 'LOGIN_TIME'.
+Invalid column name 'LOGIN_MACHINE'.
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at Operation_SchoolRegistration.getDefaultLogin() in d:\Projects\skool365\eGurukul\skool365\Operation\SchoolRegistration.aspx.cs:line 927
+   at Operation_SchoolRegistration.Page_Load(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Operation\SchoolRegistration.aspx.cs:line 183
+******************** Error Log - 4/22/2020 5:13:43 AM*********************
+
+Exception Type : SqlException
+Error Message : Could not find stored procedure 'USP_GET_MAIL_SERVER_DETAILS'.
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at Operation_SchoolRegistration.getDefaultLogin() in d:\Projects\skool365\eGurukul\skool365\Operation\SchoolRegistration.aspx.cs:line 927
+   at Operation_SchoolRegistration.Page_Load(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Operation\SchoolRegistration.aspx.cs:line 183
+******************** Error Log - 4/22/2020 5:13:46 AM*********************
+
+Exception Type : SqlException
+Error Message : Could not find stored procedure 'USP_GET_MAIL_SERVER_DETAILS'.
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at Operation_SchoolRegistration.getDefaultLogin() in d:\Projects\skool365\eGurukul\skool365\Operation\SchoolRegistration.aspx.cs:line 927
+   at Operation_SchoolRegistration.Page_Load(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Operation\SchoolRegistration.aspx.cs:line 183
+******************** Error Log - 4/22/2020 5:16:17 AM*********************
+
+Exception Type : InvalidOperationException
+Error Message : The ConnectionString property has not been initialized.
+Error Source : App_Web_w4bupqzr
+Error Trace :    at Operation_SchoolRegistration.getComboData() in d:\Projects\skool365\eGurukul\skool365\Operation\SchoolRegistration.aspx.cs:line 750
+   at Operation_SchoolRegistration.Page_Load(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Operation\SchoolRegistration.aspx.cs:line 190
+******************** Error Log - 4/22/2020 5:26:15 AM*********************
+
+Exception Type : SqlException
+Error Message : Error converting data type nvarchar to int.
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at BLCMR.clsOlympiad.SignUpStudent(objOlympiad Olympiad)
+   at Operation_SchoolRegistration.btnSubmit_Click(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Operation\SchoolRegistration.aspx.cs:line 313
+******************** Error Log - 4/22/2020 5:41:48 AM*********************
+
+Exception Type : SqlException
+Error Message : Error converting data type nvarchar to int.
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at BLCMR.clsOlympiad.SignUpStudent(objOlympiad Olympiad)
+   at Operation_SchoolRegistration.btnSubmit_Click(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Operation\SchoolRegistration.aspx.cs:line 327

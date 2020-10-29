@@ -1,0 +1,24 @@
+******************** Error Log - 11/25/2018 11:07:53 PM*********************
+
+Exception Type : SqlException
+Error Message : Connection Timeout Expired.  The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement.  This could be because the pre-login handshake failed or the server was unable to respond back in time.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=2003; handshake=14381; 
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at Operation_ConfigMails.BindMailFormat() in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\ConfigMails.aspx.cs:line 207
+   at Operation_ConfigMails.Page_Load(Object sender, EventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\ConfigMails.aspx.cs:line 61
+
+Exception Type : Win32Exception
+Error Message : The wait operation timed out
+Error Source : 
+Error Trace : 
+******************** Error Log - 11/25/2018 11:07:58 PM*********************
+
+Exception Type : SqlException
+Error Message : Connection Timeout Expired.  The timeout period elapsed while attempting to consume the pre-login handshake acknowledgement.  This could be because the pre-login handshake failed or the server was unable to respond back in time.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=2003; handshake=14381; 
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at BLCMR.STPclsLogin.LogOut(String Userid, Int32 LogID, String strCon)
+   at Operation_Err.Page_Load(Object sender, EventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\Err.aspx.cs:line 46
+
+Exception Type : Win32Exception
+Error Message : The wait operation timed out
+Error Source : 
+Error Trace : 

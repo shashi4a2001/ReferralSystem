@@ -1,0 +1,12 @@
+******************** Error Log - 12/14/2019 12:59:33 AM*********************
+
+Exception Type : SqlException
+Error Message : Connection Timeout Expired.  The timeout period elapsed during the post-login phase.  The connection could have timed out while waiting for server to complete the login process and respond; Or it could have timed out while attempting to create multiple active connections.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=563; handshake=2082; [Login] initialization=0; authentication=17; [Post-Login] complete=11532; 
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at BLCMR.STPclsLogin.GetLogin(String Userid, String EmailId, String Password, String IPAddress, String strCon)
+   at Operation_Login.btnLogin_Click(Object sender, EventArgs e) in d:\Projects\IPSM\eGurukul\skool365\Login.aspx.cs:line 99
+
+Exception Type : Win32Exception
+Error Message : The wait operation timed out
+Error Source : 
+Error Trace : 

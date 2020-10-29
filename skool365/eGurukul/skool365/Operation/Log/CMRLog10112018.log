@@ -1,0 +1,45 @@
+******************** Error Log - 11/10/2018 4:22:55 AM*********************
+
+Exception Type : NullReferenceException
+Error Message : Object reference not set to an instance of an object.
+Error Source : App_Web_drd5rd5k
+Error Trace :    at Operation_SchoolRegistration.Page_PreInit(Object sender, EventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\SchoolRegistration.aspx.cs:line 57
+******************** Error Log - 11/10/2018 4:23:43 AM*********************
+
+Exception Type : NullReferenceException
+Error Message : Object reference not set to an instance of an object.
+Error Source : App_Web_drd5rd5k
+Error Trace :    at Operation_SchoolRegistration.Page_PreInit(Object sender, EventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\SchoolRegistration.aspx.cs:line 57
+******************** Error Log - 11/10/2018 4:24:36 AM*********************
+
+Exception Type : NullReferenceException
+Error Message : Object reference not set to an instance of an object.
+Error Source : App_Web_drd5rd5k
+Error Trace :    at Operation_SchoolRegistration.Page_PreInit(Object sender, EventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\SchoolRegistration.aspx.cs:line 57
+******************** Error Log - 11/10/2018 4:24:37 AM*********************
+
+Exception Type : NullReferenceException
+Error Message : Object reference not set to an instance of an object.
+Error Source : App_Web_drd5rd5k
+Error Trace :    at Operation_SchoolRegistration.Page_PreInit(Object sender, EventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\SchoolRegistration.aspx.cs:line 57
+******************** Error Log - 11/10/2018 10:34:42 AM*********************
+
+Exception Type : SqlException
+Error Message : The conversion of a char data type to a datetime data type resulted in an out-of-range datetime value.
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at Operation_Registration.getOlympiadRegisteredDetails() in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\Registration.aspx.cs:line 178
+   at Operation_Registration.btnSearch_Click(Object sender, EventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\Registration.aspx.cs:line 1173
+******************** Error Log - 11/10/2018 10:37:34 AM*********************
+
+Exception Type : SqlException
+Error Message : The conversion of a char data type to a datetime data type resulted in an out-of-range datetime value.
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at Operation_Registration.getOlympiadRegisteredDetails() in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\Registration.aspx.cs:line 178
+   at Operation_Registration.Page_Load(Object sender, EventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\Registration.aspx.cs:line 83
+******************** Error Log - 11/10/2018 5:23:28 PM*********************
+
+Exception Type : SqlException
+Error Message : The conversion of a char data type to a datetime data type resulted in an out-of-range datetime value.
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at Operation_Registration.getOlympiadRegisteredDetails() in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\Registration.aspx.cs:line 178
+   at Operation_Registration.Page_Load(Object sender, EventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\Registration.aspx.cs:line 83

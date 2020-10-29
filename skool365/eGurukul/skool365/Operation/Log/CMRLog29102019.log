@@ -1,0 +1,54 @@
+******************** Error Log - 10/29/2019 2:04:01 AM*********************
+
+Exception Type : HttpException
+Error Message : DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'ID'.
+Error Source : System.Web
+Error Trace :    at System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   at System.Web.UI.WebControls.GridView.CreateChildControls(IEnumerable dataSource, Boolean dataBinding)
+   at System.Web.UI.WebControls.CompositeDataBoundControl.PerformDataBinding(IEnumerable data)
+   at System.Web.UI.WebControls.GridView.PerformDataBinding(IEnumerable data)
+   at System.Web.UI.WebControls.DataBoundControl.OnDataSourceViewSelectCallback(IEnumerable data)
+   at System.Web.UI.DataSourceView.Select(DataSourceSelectArguments arguments, DataSourceViewSelectCallback callback)
+   at System.Web.UI.WebControls.DataBoundControl.PerformSelect()
+   at System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   at System.Web.UI.WebControls.GridView.DataBind()
+   at Operation_FeeMaster.btnGetData_Click(Object sender, EventArgs e) in d:\Projects\IPSM\eGurukul\skool365\Operation\FeeMaster.aspx.cs:line 327
+******************** Error Log - 10/29/2019 3:05:04 AM*********************
+
+Exception Type : HttpException
+Error Message : DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'STS'.
+Error Source : System.Web
+Error Trace :    at System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   at System.Web.UI.DataBinder.Eval(Object container, String[] expressionParts)
+   at System.Web.UI.DataBinder.Eval(Object container, String expression)
+   at Operation_FeeMaster.grdSemesterFee_RowDataBound(Object sender, GridViewRowEventArgs e) in d:\Projects\IPSM\eGurukul\skool365\Operation\FeeMaster.aspx.cs:line 811
+******************** Error Log - 10/29/2019 3:05:05 AM*********************
+
+Exception Type : ThreadAbortException
+Error Message : Thread was being aborted.
+Error Source : mscorlib
+Error Trace :    at System.Threading.Thread.AbortInternal()
+   at System.Threading.Thread.Abort(Object stateInfo)
+   at System.Web.HttpResponse.AbortCurrentThread()
+   at System.Web.HttpResponse.End()
+   at System.Web.HttpResponse.Redirect(String url, Boolean endResponse, Boolean permanent)
+   at System.Web.HttpResponse.Redirect(String url)
+   at Operation_FeeMaster.grdSemesterFee_RowDataBound(Object sender, GridViewRowEventArgs e) in d:\Projects\IPSM\eGurukul\skool365\Operation\FeeMaster.aspx.cs:line 834
+   at System.Web.UI.WebControls.GridView.OnRowDataBound(GridViewRowEventArgs e)
+   at System.Web.UI.WebControls.GridView.CreateRow(Int32 rowIndex, Int32 dataSourceIndex, DataControlRowType rowType, DataControlRowState rowState, Boolean dataBind, Object dataItem, DataControlField[] fields, TableRowCollection rows, PagedDataSource pagedDataSource)
+   at System.Web.UI.WebControls.GridView.CreateChildControls(IEnumerable dataSource, Boolean dataBinding)
+   at System.Web.UI.WebControls.CompositeDataBoundControl.PerformDataBinding(IEnumerable data)
+   at System.Web.UI.WebControls.GridView.PerformDataBinding(IEnumerable data)
+   at System.Web.UI.WebControls.DataBoundControl.OnDataSourceViewSelectCallback(IEnumerable data)
+   at System.Web.UI.DataSourceView.Select(DataSourceSelectArguments arguments, DataSourceViewSelectCallback callback)
+   at System.Web.UI.WebControls.DataBoundControl.PerformSelect()
+   at System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   at System.Web.UI.WebControls.GridView.DataBind()
+   at Operation_FeeMaster.btnGetData_Click(Object sender, EventArgs e) in d:\Projects\IPSM\eGurukul\skool365\Operation\FeeMaster.aspx.cs:line 336
+******************** Error Log - 10/29/2019 3:40:48 AM*********************
+
+Exception Type : SqlException
+Error Message : Could not find stored procedure 'USP_GET_STATE_LIST'.
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at Operation_SchoolRegistration.getStateList() in d:\Projects\IPSM\eGurukul\skool365\Operation\SchoolRegistration.aspx.cs:line 722
+   at Operation_SchoolRegistration.Page_Load(Object sender, EventArgs e) in d:\Projects\IPSM\eGurukul\skool365\Operation\SchoolRegistration.aspx.cs:line 164

@@ -1,0 +1,28 @@
+******************** Error Log - 9/30/2018 5:55:43 AM*********************
+
+Exception Type : InvalidOperationException
+Error Message : The ConnectionString property has not been initialized.
+Error Source : BLskool365
+Error Trace :    at BLCMR.clsOlympiad.CreateSchoolRegistrationRequests(objOlympiad Olympiad)
+   at Operation_SchoolRegistration.btnSubmit_Click(Object sender, EventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\SchoolRegistration.aspx.cs:line 204
+******************** Error Log - 9/30/2018 6:00:50 AM*********************
+
+Exception Type : InvalidOperationException
+Error Message : The ConnectionString property has not been initialized.
+Error Source : BLskool365
+Error Trace :    at BLCMR.clsOlympiad.CreateSchoolRegistrationRequests(objOlympiad Olympiad)
+   at Operation_SchoolRegistration.btnSubmit_Click(Object sender, EventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\SchoolRegistration.aspx.cs:line 204
+******************** Error Log - 9/30/2018 6:03:57 AM*********************
+
+Exception Type : InvalidOperationException
+Error Message : The ConnectionString property has not been initialized.
+Error Source : BLskool365
+Error Trace :    at BLCMR.clsOlympiad.CreateSchoolRegistrationRequests(objOlympiad Olympiad)
+   at Operation_SchoolRegistration.btnSubmit_Click(Object sender, EventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\SchoolRegistration.aspx.cs:line 199
+******************** Error Log - 9/30/2018 6:07:10 AM*********************
+
+Exception Type : SqlException
+Error Message : Procedure or function 'USP_INS_DEL_UPD_SCHOOL_REGISTRATION' expects parameter '@P_BOARD', which was not supplied.
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at BLCMR.clsOlympiad.CreateSchoolRegistrationRequests(objOlympiad Olympiad)
+   at Operation_SchoolRegistration.btnSubmit_Click(Object sender, EventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\SchoolRegistration.aspx.cs:line 200

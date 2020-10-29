@@ -1,0 +1,35 @@
+******************** Error Log - 10/2/2018 5:34:40 PM*********************
+
+Exception Type : SqlException
+Error Message : Error converting data type nvarchar to int.
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at BLCMR.clsOlympiad.CreateSchoolRegistrationRequests(objOlympiad Olympiad)
+   at Operation_SchoolRegistration.btnSubmit_Click(Object sender, EventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\SchoolRegistration.aspx.cs:line 201
+******************** Error Log - 10/2/2018 5:41:35 PM*********************
+
+Exception Type : SqlException
+Error Message : Error converting data type nvarchar to int.
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at BLCMR.clsOlympiad.CreateSchoolRegistrationRequests(objOlympiad Olympiad)
+   at Operation_SchoolRegistration.btnSubmit_Click(Object sender, EventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\SchoolRegistration.aspx.cs:line 202
+******************** Error Log - 10/2/2018 5:45:23 PM*********************
+
+Exception Type : SqlException
+Error Message : Error converting data type nvarchar to int.
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at BLCMR.clsOlympiad.CreateSchoolRegistrationRequests(objOlympiad Olympiad)
+   at Operation_SchoolRegistration.btnSubmit_Click(Object sender, EventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\SchoolRegistration.aspx.cs:line 202
+******************** Error Log - 10/2/2018 6:10:28 PM*********************
+
+Exception Type : SqlException
+Error Message : Error converting data type nvarchar to int.
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at BLCMR.clsOlympiad.CreateSchoolRegistrationRequests(objOlympiad Olympiad)
+   at Operation_SchoolRegistration.btnSubmit_Click(Object sender, EventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\SchoolRegistration.aspx.cs:line 202
+******************** Error Log - 10/2/2018 6:18:59 PM*********************
+
+Exception Type : NullReferenceException
+Error Message : Object reference not set to an instance of an object.
+Error Source : App_Web_ulzfidm3
+Error Trace :    at Operation_SchoolRegistration.getUnderwriterRequest(String strText) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\SchoolRegistration.aspx.cs:line 748
+   at Operation_SchoolRegistration.btnSubmit_Click(Object sender, EventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\SchoolRegistration.aspx.cs:line 347

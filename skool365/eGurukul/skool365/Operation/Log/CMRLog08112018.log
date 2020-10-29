@@ -1,0 +1,67 @@
+******************** Error Log - 11/8/2018 2:08:13 AM*********************
+
+Exception Type : InvalidOperationException
+Error Message : The 'MasterPageFile' property can only be set in or before the 'Page_PreInit' event.
+Error Source : System.Web
+Error Trace :    at System.Web.UI.Page.set_MasterPageFile(String value)
+   at Operation_SchoolRegistration.Page_Load(Object sender, EventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\SchoolRegistration.aspx.cs:line 111
+******************** Error Log - 11/8/2018 2:08:14 AM*********************
+
+Exception Type : InvalidOperationException
+Error Message : The 'MasterPageFile' property can only be set in or before the 'Page_PreInit' event.
+Error Source : System.Web
+Error Trace :    at System.Web.UI.Page.set_MasterPageFile(String value)
+   at Operation_SchoolRegistration.Page_Load(Object sender, EventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\SchoolRegistration.aspx.cs:line 111
+******************** Error Log - 11/8/2018 2:09:18 AM*********************
+
+Exception Type : InvalidOperationException
+Error Message : The 'MasterPageFile' property can only be set in or before the 'Page_PreInit' event.
+Error Source : System.Web
+Error Trace :    at System.Web.UI.Page.set_MasterPageFile(String value)
+   at Operation_SchoolRegistration.Page_Load(Object sender, EventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\SchoolRegistration.aspx.cs:line 111
+******************** Error Log - 11/8/2018 2:10:16 AM*********************
+
+Exception Type : InvalidOperationException
+Error Message : The 'MasterPageFile' property can only be set in or before the 'Page_PreInit' event.
+Error Source : System.Web
+Error Trace :    at System.Web.UI.Page.set_MasterPageFile(String value)
+   at Operation_SchoolRegistration.Page_Load(Object sender, EventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\SchoolRegistration.aspx.cs:line 111
+******************** Error Log - 11/8/2018 2:10:22 AM*********************
+
+Exception Type : InvalidOperationException
+Error Message : The 'MasterPageFile' property can only be set in or before the 'Page_PreInit' event.
+Error Source : System.Web
+Error Trace :    at System.Web.UI.Page.set_MasterPageFile(String value)
+   at Operation_SchoolRegistration.Page_Load(Object sender, EventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\SchoolRegistration.aspx.cs:line 111
+******************** Error Log - 11/8/2018 2:12:26 AM*********************
+
+Exception Type : InvalidOperationException
+Error Message : The 'MasterPageFile' property can only be set in or before the 'Page_PreInit' event.
+Error Source : System.Web
+Error Trace :    at System.Web.UI.Page.set_MasterPageFile(String value)
+   at Operation_SchoolRegistration.Page_Load(Object sender, EventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\SchoolRegistration.aspx.cs:line 111
+******************** Error Log - 11/8/2018 2:12:27 AM*********************
+
+Exception Type : InvalidOperationException
+Error Message : The 'MasterPageFile' property can only be set in or before the 'Page_PreInit' event.
+Error Source : System.Web
+Error Trace :    at System.Web.UI.Page.set_MasterPageFile(String value)
+   at Operation_SchoolRegistration.Page_Load(Object sender, EventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\SchoolRegistration.aspx.cs:line 111
+******************** Error Log - 11/8/2018 9:36:16 PM*********************
+
+Exception Type : SqlException
+Error Message : Invalid column name 'School_Id'.
+Invalid column name 'School_Id'.
+Invalid column name 'SCHOOL_ID'.
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at Operation_Registration.getOlympiadRegisteredDetails() in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\Registration.aspx.cs:line 178
+   at Operation_Registration.Page_Load(Object sender, EventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\Registration.aspx.cs:line 85
+******************** Error Log - 11/8/2018 9:38:37 PM*********************
+
+Exception Type : SqlException
+Error Message : Invalid column name 'School_Id'.
+Invalid column name 'School_Id'.
+Invalid column name 'SCHOOL_ID'.
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at Operation_Registration.getOlympiadRegisteredDetails() in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\Registration.aspx.cs:line 178
+   at Operation_Registration.Page_Load(Object sender, EventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\Registration.aspx.cs:line 85

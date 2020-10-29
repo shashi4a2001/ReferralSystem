@@ -1,0 +1,118 @@
+******************** Error Log - 10/29/2018 2:47:25 AM*********************
+
+Exception Type : NullReferenceException
+Error Message : Object reference not set to an instance of an object.
+Error Source : BLskool365
+Error Trace :    at BLCMR.clsCommon.DecryptData(String cipherText)
+   at Operation_SchoolRegistration.Page_Load(Object sender, EventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\SchoolRegistration.aspx.cs:line 43
+******************** Error Log - 10/29/2018 2:48:28 AM*********************
+
+Exception Type : NullReferenceException
+Error Message : Object reference not set to an instance of an object.
+Error Source : App_Web_dpg3pjmy
+Error Trace :    at Operation_SchoolRegistration.Page_Load(Object sender, EventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\SchoolRegistration.aspx.cs:line 43
+******************** Error Log - 10/29/2018 2:51:08 AM*********************
+
+Exception Type : NullReferenceException
+Error Message : Object reference not set to an instance of an object.
+Error Source : App_Web_d44qi1jg
+Error Trace :    at Operation_SchoolRegistration.Page_Load(Object sender, EventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\SchoolRegistration.aspx.cs:line 43
+******************** Error Log - 10/29/2018 2:52:32 AM*********************
+
+Exception Type : NullReferenceException
+Error Message : Object reference not set to an instance of an object.
+Error Source : App_Web_d44qi1jg
+Error Trace :    at Operation_SchoolRegistration.Page_Load(Object sender, EventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\SchoolRegistration.aspx.cs:line 43
+******************** Error Log - 10/29/2018 2:58:49 AM*********************
+
+Exception Type : NullReferenceException
+Error Message : Object reference not set to an instance of an object.
+Error Source : BLskool365
+Error Trace :    at BLCMR.clsCommon.DecryptData(String cipherText)
+   at Operation_SchoolRegistration.Page_Load(Object sender, EventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\SchoolRegistration.aspx.cs:line 44
+******************** Error Log - 10/29/2018 3:08:41 AM*********************
+
+Exception Type : FormatException
+Error Message : Invalid length for a Base-64 char array or string.
+Error Source : mscorlib
+Error Trace :    at System.Convert.FromBase64_Decode(Char* startInputPtr, Int32 inputLength, Byte* startDestPtr, Int32 destLength)
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at BLCMR.clsCommon.DecryptData(String cipherText)
+   at Operation_SchoolRegistration.Page_Load(Object sender, EventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\SchoolRegistration.aspx.cs:line 44
+******************** Error Log - 10/29/2018 3:09:07 AM*********************
+
+Exception Type : FormatException
+Error Message : Invalid length for a Base-64 char array or string.
+Error Source : mscorlib
+Error Trace :    at System.Convert.FromBase64_Decode(Char* startInputPtr, Int32 inputLength, Byte* startDestPtr, Int32 destLength)
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at BLCMR.clsCommon.DecryptData(String cipherText)
+   at Operation_SchoolRegistration.Page_Load(Object sender, EventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\SchoolRegistration.aspx.cs:line 44
+******************** Error Log - 10/29/2018 3:10:25 AM*********************
+
+Exception Type : FormatException
+Error Message : The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters. 
+Error Source : mscorlib
+Error Trace :    at System.Convert.FromBase64_Decode(Char* startInputPtr, Int32 inputLength, Byte* startDestPtr, Int32 destLength)
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at BLCMR.clsCommon.DecryptData(String cipherText)
+   at Operation_SchoolRegistration.Page_Load(Object sender, EventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\SchoolRegistration.aspx.cs:line 44
+******************** Error Log - 10/29/2018 3:12:00 AM*********************
+
+Exception Type : FormatException
+Error Message : The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters. 
+Error Source : mscorlib
+Error Trace :    at System.Convert.FromBase64_Decode(Char* startInputPtr, Int32 inputLength, Byte* startDestPtr, Int32 destLength)
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at BLCMR.clsCommon.DecryptData(String cipherText)
+   at Operation_SchoolRegistration.Page_Load(Object sender, EventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\SchoolRegistration.aspx.cs:line 44
+******************** Error Log - 10/29/2018 3:12:17 AM*********************
+
+Exception Type : SqlException
+Error Message : Procedure or function 'usp_CHECK_PAGE_ACCESSIBILITY' expects parameter '@P_USER_ID', which was not supplied.
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at BLCMR.clsCommon.checkPageAccessiblity(String strUserID, String strPageName, String strConn)
+   at Operation_SchoolRegistration.Page_Load(Object sender, EventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\SchoolRegistration.aspx.cs:line 111
+******************** Error Log - 10/29/2018 3:12:42 AM*********************
+
+Exception Type : SqlException
+Error Message : Procedure or function 'usp_CHECK_PAGE_ACCESSIBILITY' expects parameter '@P_USER_ID', which was not supplied.
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at BLCMR.clsCommon.checkPageAccessiblity(String strUserID, String strPageName, String strConn)
+   at Operation_SchoolRegistration.Page_Load(Object sender, EventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\SchoolRegistration.aspx.cs:line 111
+******************** Error Log - 10/29/2018 3:14:00 AM*********************
+
+Exception Type : FormatException
+Error Message : Invalid length for a Base-64 char array or string.
+Error Source : mscorlib
+Error Trace :    at System.Convert.FromBase64_Decode(Char* startInputPtr, Int32 inputLength, Byte* startDestPtr, Int32 destLength)
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at BLCMR.clsCommon.DecryptData(String cipherText)
+   at Operation_SchoolRegistration.Page_Load(Object sender, EventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\SchoolRegistration.aspx.cs:line 44
+******************** Error Log - 10/29/2018 3:14:31 AM*********************
+
+Exception Type : SqlException
+Error Message : Procedure or function 'usp_CHECK_PAGE_ACCESSIBILITY' expects parameter '@P_USER_ID', which was not supplied.
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at BLCMR.clsCommon.checkPageAccessiblity(String strUserID, String strPageName, String strConn)
+   at Operation_SchoolRegistration.Page_Load(Object sender, EventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\SchoolRegistration.aspx.cs:line 111
+******************** Error Log - 10/29/2018 3:15:46 AM*********************
+
+Exception Type : SqlException
+Error Message : Procedure or function 'usp_CHECK_PAGE_ACCESSIBILITY' expects parameter '@P_USER_ID', which was not supplied.
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at BLCMR.clsCommon.checkPageAccessiblity(String strUserID, String strPageName, String strConn)
+   at Operation_SchoolRegistration.Page_Load(Object sender, EventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\SchoolRegistration.aspx.cs:line 111
+******************** Error Log - 10/29/2018 3:29:18 AM*********************
+
+Exception Type : NullReferenceException
+Error Message : Object reference not set to an instance of an object.
+Error Source : BLskool365
+Error Trace :    at BLCMR.clsCommon.DecryptData(String cipherText)
+   at BLCMR.ObjPortalUser.get_IPAddress()
+   at Operation_CRMOperationArea2.Page_Load(Object sender, EventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\CRMOperationArea2.Master.cs:line 30

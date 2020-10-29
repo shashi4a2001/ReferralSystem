@@ -1,0 +1,14 @@
+******************** Error Log - 10/19/2019 8:44:15 AM*********************
+
+Exception Type : SqlException
+Error Message : Procedure or function 'USP_UPDATE_COURSE' expects parameter '@P_COURSE_NAME', which was not supplied.
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at BLCMR.clsCommonUtility.SaveCourse(ObjMaster master)
+   at Operation_Course.btnSubmit_Click(Object sender, EventArgs e) in d:\Projects\IPSM\eGurukul\skool365\Operation\Course.aspx.cs:line 198
+******************** Error Log - 10/19/2019 8:51:12 AM*********************
+
+Exception Type : SqlException
+Error Message : Procedure or function 'USP_UPDATE_COURSE' expects parameter '@P_COURSE_NAME', which was not supplied.
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at BLCMR.clsCommonUtility.SaveCourse(ObjMaster master)
+   at Operation_Course.btnSubmit_Click(Object sender, EventArgs e) in d:\Projects\IPSM\eGurukul\skool365\Operation\Course.aspx.cs:line 198

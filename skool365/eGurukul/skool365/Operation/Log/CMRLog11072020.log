@@ -1,0 +1,47 @@
+******************** Error Log - 7/11/2020 5:03:10 PM*********************
+
+Exception Type : SqlException
+Error Message : Could not find stored procedure 'usp_SelectAssignments'.
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at Operation_AssgnEbooks.BindGrid() in d:\Projects\skool365\eGurukul\skool365\Operation\AssgnEbooks.aspx.cs:line 327
+   at Operation_AssgnEbooks.Page_Load(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Operation\AssgnEbooks.aspx.cs:line 83
+******************** Error Log - 7/11/2020 5:42:43 PM*********************
+
+Exception Type : SqlException
+Error Message : Invalid column name 'LOG_ID'.
+Invalid column name 'USER_ID'.
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at BLCMR.STPclsLogin.GetLogin(String Userid, String EmailId, String Password, String IPAddress, String strCon)
+   at Operation_Login.btnLogin_Click(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Login.aspx.cs:line 104
+******************** Error Log - 7/11/2020 5:44:10 PM*********************
+
+Exception Type : SqlException
+Error Message : Invalid column name 'LOG_ID'.
+Invalid column name 'USER_ID'.
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at BLCMR.STPclsLogin.GetLogin(String Userid, String EmailId, String Password, String IPAddress, String strCon)
+   at Operation_Login.btnLogin_Click(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Login.aspx.cs:line 104
+******************** Error Log - 7/11/2020 5:45:20 PM*********************
+
+Exception Type : SqlException
+Error Message : Invalid column name 'LOG_ID'.
+Invalid column name 'USER_ID'.
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at BLCMR.STPclsLogin.GetLogin(String Userid, String EmailId, String Password, String IPAddress, String strCon)
+   at Operation_Login.btnLogin_Click(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Login.aspx.cs:line 104
+******************** Error Log - 7/11/2020 5:56:02 PM*********************
+
+Exception Type : ArgumentOutOfRangeException
+Error Message : 'ddlSession' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value
+Error Source : App_Web_qefiubwv
+Error Trace :    at Operation_AssgnEbooks.bindCombos() in d:\Projects\skool365\eGurukul\skool365\Operation\AssgnEbooks.aspx.cs:line 182
+   at Operation_AssgnEbooks.grdEvents_SelectedIndexChanged(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Operation\AssgnEbooks.aspx.cs:line 471
+******************** Error Log - 7/11/2020 6:04:32 PM*********************
+
+Exception Type : ArgumentOutOfRangeException
+Error Message : 'ddlSession' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value
+Error Source : App_Web_qefiubwv
+Error Trace :    at Operation_AssgnEbooks.bindCombos() in d:\Projects\skool365\eGurukul\skool365\Operation\AssgnEbooks.aspx.cs:line 182
+   at Operation_AssgnEbooks.grdEvents_SelectedIndexChanged(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Operation\AssgnEbooks.aspx.cs:line 471

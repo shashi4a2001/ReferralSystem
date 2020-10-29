@@ -1,0 +1,26 @@
+******************** Error Log - 10/30/2019 1:19:00 AM*********************
+
+Exception Type : SqlException
+Error Message : Could not find stored procedure 'USP_GET_STATE_LIST'.
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at Operation_SchoolRegistration.getStateList() in d:\Projects\IPSM\eGurukul\skool365\Operation\SchoolRegistration.aspx.cs:line 739
+   at Operation_SchoolRegistration.Page_Load(Object sender, EventArgs e) in d:\Projects\IPSM\eGurukul\skool365\Operation\SchoolRegistration.aspx.cs:line 181
+******************** Error Log - 10/30/2019 1:35:57 AM*********************
+
+Exception Type : SqlException
+Error Message : Could not find stored procedure 'USP_GET_SCHOOL_REGISTRATION_REQUESTS'.
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at Operation_SchoolRegistration.getRegistrationRequest(String strText) in d:\Projects\IPSM\eGurukul\skool365\Operation\SchoolRegistration.aspx.cs:line 780
+   at Operation_SchoolRegistration.Page_Load(Object sender, EventArgs e) in d:\Projects\IPSM\eGurukul\skool365\Operation\SchoolRegistration.aspx.cs:line 183
+******************** Error Log - 10/30/2019 10:33:18 AM*********************
+
+Exception Type : SqlException
+Error Message : A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Shared Memory Provider, error: 40 - Could not open a connection to SQL Server)
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at BLCMR.STPclsLogin.GetLogin(String Userid, String EmailId, String Password, String IPAddress, String strCon)
+   at Operation_Login.btnLogin_Click(Object sender, EventArgs e) in d:\Projects\IPSM\eGurukul\skool365\Login.aspx.cs:line 99
+
+Exception Type : Win32Exception
+Error Message : The system cannot find the file specified
+Error Source : 
+Error Trace : 

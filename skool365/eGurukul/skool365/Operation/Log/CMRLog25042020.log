@@ -1,0 +1,44 @@
+******************** Error Log - 4/25/2020 2:03:20 AM*********************
+
+Exception Type : ArgumentException
+Error Message : Column 'Orig_CGST' does not belong to table .
+Error Source : System.Data
+Error Trace :    at System.Data.DataRow.GetDataColumn(String columnName)
+   at System.Data.DataRow.get_Item(String columnName)
+   at Operation_Login.btnLogin_Click(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Login.aspx.cs:line 109
+******************** Error Log - 4/25/2020 2:03:24 AM*********************
+
+Exception Type : ArgumentException
+Error Message : Column 'Orig_CGST' does not belong to table .
+Error Source : System.Data
+Error Trace :    at System.Data.DataRow.GetDataColumn(String columnName)
+   at System.Data.DataRow.get_Item(String columnName)
+   at Operation_Login.btnLogin_Click(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Login.aspx.cs:line 109
+******************** Error Log - 4/25/2020 2:04:03 AM*********************
+
+Exception Type : ArgumentException
+Error Message : Column 'Orig_CGST' does not belong to table .
+Error Source : System.Data
+Error Trace :    at System.Data.DataRow.GetDataColumn(String columnName)
+   at System.Data.DataRow.get_Item(String columnName)
+   at Operation_Login.btnLogin_Click(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Login.aspx.cs:line 109
+******************** Error Log - 4/25/2020 2:10:20 AM*********************
+
+Exception Type : NullReferenceException
+Error Message : Object reference not set to an instance of an object.
+Error Source : App_Web_wkvzu0jt
+Error Trace :    at Operation_MyAssignments.Page_Load(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Operation\MyAssignments.aspx.cs:line 82
+******************** Error Log - 4/25/2020 4:28:17 AM*********************
+
+Exception Type : NullReferenceException
+Error Message : Object reference not set to an instance of an object.
+Error Source : App_Web_secmqdwu
+Error Trace :    at Operation_AssgnEbooks.SendMailAlert(String strAction, String strAssignmentPath) in d:\Projects\skool365\eGurukul\skool365\Operation\AssgnEbooks.aspx.cs:line 909
+   at Operation_AssgnEbooks.btnSubmit_Click(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Operation\AssgnEbooks.aspx.cs:line 276
+******************** Error Log - 4/25/2020 4:38:49 AM*********************
+
+Exception Type : NullReferenceException
+Error Message : Object reference not set to an instance of an object.
+Error Source : App_Web_secmqdwu
+Error Trace :    at Operation_AssgnEbooks.SendMailAlert(String strAction, String strAssignmentPath) in d:\Projects\skool365\eGurukul\skool365\Operation\AssgnEbooks.aspx.cs:line 909
+   at Operation_AssgnEbooks.btnSubmit_Click(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Operation\AssgnEbooks.aspx.cs:line 276

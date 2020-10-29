@@ -1,0 +1,54 @@
+******************** Error Log - 1/18/2020 2:22:56 AM*********************
+
+Exception Type : FormatException
+Error Message : Input string was not in a correct format.
+Error Source : mscorlib
+Error Trace :    at System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Convert.ToDouble(String value)
+   at Operation_InstallmentDtl.grdInstallment_RowDataBound(Object sender, GridViewRowEventArgs e) in d:\Projects\skool365\eGurukul\skool365\Operation\InstallmentDtl.aspx.cs:line 409
+******************** Error Log - 1/18/2020 2:24:38 AM*********************
+
+Exception Type : FormatException
+Error Message : Input string was not in a correct format.
+Error Source : mscorlib
+Error Trace :    at System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Convert.ToDouble(String value)
+   at Operation_InstallmentDtl.grdInstallment_RowDataBound(Object sender, GridViewRowEventArgs e) in d:\Projects\skool365\eGurukul\skool365\Operation\InstallmentDtl.aspx.cs:line 409
+******************** Error Log - 1/18/2020 2:31:07 AM*********************
+
+Exception Type : FormatException
+Error Message : Input string was not in a correct format.
+Error Source : mscorlib
+Error Trace :    at System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Convert.ToDouble(String value)
+   at Operation_InstallmentDtl.grdInstallment_RowDataBound(Object sender, GridViewRowEventArgs e) in d:\Projects\skool365\eGurukul\skool365\Operation\InstallmentDtl.aspx.cs:line 409
+******************** Error Log - 1/18/2020 2:33:29 AM*********************
+
+Exception Type : FormatException
+Error Message : Input string was not in a correct format.
+Error Source : mscorlib
+Error Trace :    at System.Number.ParseDouble(String value, NumberStyles options, NumberFormatInfo numfmt)
+   at System.Convert.ToDouble(String value)
+   at Operation_InstallmentDtl.grdInstallment_RowDataBound(Object sender, GridViewRowEventArgs e) in d:\Projects\skool365\eGurukul\skool365\Operation\InstallmentDtl.aspx.cs:line 409
+******************** Error Log - 1/18/2020 6:18:19 AM*********************
+
+Exception Type : SqlException
+Error Message : Procedure or function 'USP_CHANGE_PASSWORD' expects parameter '@P_LOGIN_MACHINE', which was not supplied.
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at BLCMR.STPclsLogin.changePassword(String userID, String OldPassword, String NewPassword, String strLoggedInMachne, String strCon)
+   at Operation_ChangePassword.btnSubmit_Click(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Operation\ChangePassword.aspx.cs:line 186
+******************** Error Log - 1/18/2020 6:20:36 AM*********************
+
+Exception Type : SqlException
+Error Message : Procedure or function 'USP_CHANGE_PASSWORD' expects parameter '@P_LOGIN_MACHINE', which was not supplied.
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at BLCMR.STPclsLogin.changePassword(String userID, String OldPassword, String NewPassword, String strLoggedInMachne, String strCon)
+   at Operation_ChangePassword.btnSubmit_Click(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Operation\ChangePassword.aspx.cs:line 186
+******************** Error Log - 1/18/2020 10:25:00 AM*********************
+
+Exception Type : SqlException
+Error Message : Cannot open database "IPSM" requested by the login. The login failed.
+Login failed for user 'ranjan-PC\ranjan'.
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at BLCMR.STPclsLogin.GetLogin(String Userid, String EmailId, String Password, String IPAddress, String strCon)
+   at Operation_Login.btnLogin_Click(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Login.aspx.cs:line 98

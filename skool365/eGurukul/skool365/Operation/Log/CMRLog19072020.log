@@ -1,0 +1,28 @@
+******************** Error Log - 7/19/2020 12:00:22 PM*********************
+
+Exception Type : InvalidOperationException
+Error Message : The ConnectionString property has not been initialized.
+Error Source : BLskool365
+Error Trace :    at BLCMR.clsAssignments.DeleteAssignments(EC_Assignments objEC_Assignments)
+   at Operation_AssgnEbooks.grdStyled_RowDeleting(Object sender, GridViewDeleteEventArgs e) in d:\Projects\skool365\eGurukul\skool365\Operation\AssgnEbooks.aspx.cs:line 406
+******************** Error Log - 7/19/2020 1:24:00 PM*********************
+
+Exception Type : HttpException
+Error Message : DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'AssignmentId'.
+Error Source : App_Web_ioel5luh
+Error Trace :    at Operation_AssgnEbooks.getDetails(String strText) in d:\Projects\skool365\eGurukul\skool365\Operation\AssgnEbooks.aspx.cs:line 1538
+   at Operation_AssgnEbooks.btnSearch_Click(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Operation\AssgnEbooks.aspx.cs:line 1488
+******************** Error Log - 7/19/2020 9:56:42 PM*********************
+
+Exception Type : NullReferenceException
+Error Message : Object reference not set to an instance of an object.
+Error Source : App_Web_hwiu2kxp
+Error Trace :    at Operation_AssgnEbooks.BindGrid(String strSearchText) in d:\Projects\skool365\eGurukul\skool365\Operation\AssgnEbooks.aspx.cs:line 370
+   at Operation_AssgnEbooks.btnSearch_Click(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Operation\AssgnEbooks.aspx.cs:line 1497
+******************** Error Log - 7/19/2020 10:11:11 PM*********************
+
+Exception Type : InvalidOperationException
+Error Message : The ConnectionString property has not been initialized.
+Error Source : System.Data
+Error Trace :    at BLCMR.clsAssignments.DeleteAssignments(EC_Assignments objEC_Assignments)
+   at Operation_AssgnEbooks.grdStyled_RowDeleting(Object sender, GridViewDeleteEventArgs e) in d:\Projects\skool365\eGurukul\skool365\Operation\AssgnEbooks.aspx.cs:line 415

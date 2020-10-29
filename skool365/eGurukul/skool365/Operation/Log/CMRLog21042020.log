@@ -1,0 +1,21 @@
+******************** Error Log - 4/21/2020 11:16:10 AM*********************
+
+Exception Type : NullReferenceException
+Error Message : Object reference not set to an instance of an object.
+Error Source : App_Web_utkkmnc1
+Error Trace :    at Operation_SchoolRegistration.getStateList() in d:\Projects\skool365\eGurukul\skool365\Operation\SchoolRegistration.aspx.cs:line 735
+   at Operation_SchoolRegistration.Page_Load(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Operation\SchoolRegistration.aspx.cs:line 181
+******************** Error Log - 4/21/2020 11:23:03 AM*********************
+
+Exception Type : SqlException
+Error Message : Procedure or function 'usp_CHECK_PAGE_ACCESSIBILITY' expects parameter '@P_USER_ID', which was not supplied.
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at BLCMR.clsCommon.checkPageAccessiblity(String strUserID, String strPageName, String strConn)
+   at Operation_SchoolRegistration.Page_Load(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Operation\SchoolRegistration.aspx.cs:line 194
+******************** Error Log - 4/21/2020 11:24:51 AM*********************
+
+Exception Type : SqlException
+Error Message : Procedure or function 'usp_CHECK_PAGE_ACCESSIBILITY' expects parameter '@P_USER_ID', which was not supplied.
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at BLCMR.clsCommon.checkPageAccessiblity(String strUserID, String strPageName, String strConn)
+   at Operation_SchoolRegistration.Page_Load(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Operation\SchoolRegistration.aspx.cs:line 194

@@ -1,0 +1,120 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="CRMOperationArea2 - Copy.Master.cs"
+    Inherits="Operation_CRMOperationArea2" %>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head id="Head1" runat="server">
+    <title></title>
+    <script type="text/javascript">
+        $(function () {
+            blinkeffect('#txtblnk');
+        })
+        function blinkeffect(selector) {
+            $(selector).fadeOut('slow', function () {
+                $(this).fadeIn('slow', function () {
+                    blinkeffect(this);
+                });
+            });
+        }
+    </script>
+    <style type="text/css">
+        .MyCalendar .ajax__calendar_container
+        {
+            border: 1px solid #646464;
+            background-color: lemonchiffon;
+            color: red;
+        }
+        .MyCalendar .ajax__calendar_other .ajax__calendar_day, .MyCalendar .ajax__calendar_other .ajax__calendar_year
+        {
+            color: black;
+        }
+        .MyCalendar .ajax__calendar_hover .ajax__calendar_day, .MyCalendar .ajax__calendar_hover .ajax__calendar_month, .MyCalendar .ajax__calendar_hover .ajax__calendar_year
+        {
+            color: black;
+        }
+        .MyCalendar .ajax__calendar_active .ajax__calendar_day, .MyCalendar .ajax__calendar_active .ajax__calendar_month, .MyCalendar .ajax__calendar_active .ajax__calendar_year
+        {
+            color: black;
+            font-weight: bold;
+        }
+        
+        .foot
+        {
+            background-color: #1f3e8e !important;
+            height: 2px;
+            color: #FFFFFF;
+            font-size: 12px;
+            text-align: center;
+            border-top: #7b7a7a dashed 1px;
+            line-height: 15px;
+            margin-top: 25px;
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            padding-top: 5px;
+        }
+        .logo
+        {
+            font-size: 38px;
+            font-weight: 600;
+            float: left;
+            padding-top: 0;
+            margin-top: -8px;
+            font-family: Arial, Helvetica, sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-left: 10px;
+            color: #fff;
+            margin-top: 3px;
+            text-shadow: 0 1px 0 #fff;
+        }
+    </style>
+    <!-- Template stylesheet -->
+    <link href="../Common/css/blue/screen.css" rel="stylesheet" type="text/css" media="all" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src="../Common/JS/jquery-1.8.2.js"></script>
+    <link href="../Common/CSS/Admin.css" type="text/css" rel="Stylesheet" />
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="content_wrapper">
+        <!-- Begin header -->
+        <div id="header">
+            <div class="logo">
+                IPSM Online</div>
+            <div id="account_info" style="float: right;">
+                <%--<a href="UWSelect.aspx" id="SelectUW" runat="server">Select UW |</a> --%>
+                <a href="DashBoard.aspx"
+                    id="dashBoard" runat="server">Dashboard |</a> Role:
+                <asp:Label ID="lblUserRole" runat="server" Font-Bold="true" ForeColor="White"></asp:Label>
+                <img src="../Common/images/icon_online.png" alt="Online" class="mid_align" />
+                Welcome <a href="#" class="active">
+                    <asp:Literal ID="ltrlUserName" runat="server"></asp:Literal></a> | <a href="LogOut.aspx">
+                        Logout</a> | <a href="ChangePassword.aspx" id="changePwd" runat="server">Change Password</a>
+            </div>
+        </div>
+    </div>
+    <!-- End header -->
+    <!-- Begin left panel -->
+    <!-- End left panel -->
+    <!-- Begin content -->
+    <div>
+        <div id="content" style="width: 97%">
+            <asp:ScriptManager ID="ManageOperation" runat="server">
+            </asp:ScriptManager>
+            <asp:ContentPlaceHolder ID="MiddleContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <br class="clear" />
+            <!-- Begin footer -->
+            <!-- End footer -->
+        </div>
+        <!-- End content -->
+      <%--  <div class="foot" style="height: 80px; position: static !important">
+            <img src="../Common/Images/lnvmOnline.png" alt="Posts" height="50" width="300" />
+            <br />
+            &copy; COPYRIGHT © 2019. ALL RIGHTS RESERVED
+        </div>--%>
+    </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,33 @@
+******************** Error Log - 4/23/2020 1:45:30 AM*********************
+
+Exception Type : SqlException
+Error Message : Error converting data type nvarchar to int.
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at BLCMR.clsOlympiad.SignUpStudent(objOlympiad Olympiad)
+   at Operation_SchoolRegistration.btnSubmit_Click(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Operation\SchoolRegistration.aspx.cs:line 327
+******************** Error Log - 4/23/2020 3:06:18 AM*********************
+
+Exception Type : SqlException
+Error Message : A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: TCP Provider, error: 0 - The wait operation timed out.)
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at Operation_SignupSt.getDefaultLogin() in d:\Projects\skool365\eGurukul\skool365\Operation\SignupSt.aspx.cs:line 944
+   at Operation_SignupSt.Page_Load(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Operation\SignupSt.aspx.cs:line 183
+
+Exception Type : Win32Exception
+Error Message : The wait operation timed out
+Error Source : 
+Error Trace : 
+******************** Error Log - 4/23/2020 3:16:08 AM*********************
+
+Exception Type : SqlException
+Error Message : Could not find stored procedure 'USP_GET_SCHOOL_REGISTRATION_REQUESTS'.
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at Operation_SignupSt.getRegistrationRequest(String strText) in d:\Projects\skool365\eGurukul\skool365\Operation\SignupSt.aspx.cs:line 809
+   at Operation_SignupSt.btnSubmit_Click(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Operation\SignupSt.aspx.cs:line 474
+******************** Error Log - 4/23/2020 3:24:46 AM*********************
+
+Exception Type : ArgumentException
+Error Message : Column 'Orig_Code' does not belong to table .
+Error Source : App_Web_r2ff0bim
+Error Trace :    at Operation_SignupSt.getDefaultLogin() in d:\Projects\skool365\eGurukul\skool365\Operation\SignupSt.aspx.cs:line 961
+   at Operation_SignupSt.Page_Load(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Operation\SignupSt.aspx.cs:line 183

@@ -1,0 +1,5 @@
+D:\Projects\Demo\LNVM\DLAttendance\bin\Release\DL_LNVM.dll.config
+D:\Projects\Demo\LNVM\DLAttendance\bin\Release\DL_LNVM.dll
+D:\Projects\Demo\LNVM\DLAttendance\bin\Release\DL_LNVM.pdb
+D:\Projects\Demo\LNVM\DLAttendance\obj\Release\DL_LNVM.dll
+D:\Projects\Demo\LNVM\DLAttendance\obj\Release\DL_LNVM.pdb

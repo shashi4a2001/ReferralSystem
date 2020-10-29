@@ -1,0 +1,27 @@
+******************** Error Log - 5/10/2020 10:21:36 PM*********************
+
+Exception Type : HttpException
+Error Message : DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'UNDERWRITER'.
+Error Source : App_Web_ynbf0hpg
+Error Trace :    at Operation_MngRequests.getUWList() in d:\Projects\skool365\eGurukul\skool365\Operation\MngRequests.aspx.cs:line 1027
+   at Operation_MngRequests.Page_Load(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Operation\MngRequests.aspx.cs:line 88
+******************** Error Log - 5/10/2020 10:24:59 PM*********************
+
+Exception Type : HttpException
+Error Message : DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'UNDERWRITER'.
+Error Source : App_Web_ynbf0hpg
+Error Trace :    at Operation_MngRequests.getUWList() in d:\Projects\skool365\eGurukul\skool365\Operation\MngRequests.aspx.cs:line 1027
+   at Operation_MngRequests.Page_Load(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Operation\MngRequests.aspx.cs:line 88
+******************** Error Log - 5/10/2020 11:24:10 PM*********************
+
+Exception Type : HttpException
+Error Message : DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'UNDERWRITER'.
+Error Source : App_Web_qxd5bhpt
+Error Trace :    at Operation_MngRequests.getUWList() in d:\Projects\skool365\eGurukul\skool365\Operation\MngRequests.aspx.cs:line 1026
+   at Operation_MngRequests.Page_Load(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Operation\MngRequests.aspx.cs:line 88
+******************** Error Log - 5/10/2020 11:29:02 PM*********************
+
+Exception Type : InvalidCastException
+Error Message : Unable to cast object of type 'System.Web.UI.WebControls.DropDownList' to type 'System.Data.DataTable'.
+Error Source : App_Web_sfcntash
+Error Trace :    at Operation_MngRequests.ddlAssignments_SelectedIndexChanged(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Operation\MngRequests.aspx.cs:line 1316

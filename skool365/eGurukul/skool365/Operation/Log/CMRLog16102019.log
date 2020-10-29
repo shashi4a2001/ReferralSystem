@@ -1,0 +1,115 @@
+******************** Error Log - 10/16/2019 4:02:48 AM*********************
+
+Exception Type : SqlException
+Error Message : Procedure or function 'USP_INSERT_COURSE' expects parameter '@P_COURSE_CODE', which was not supplied.
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at BLCMR.clsCommonUtility.SaveCourse(ObjMaster master)
+   at Operation_Course.btnSubmit_Click(Object sender, EventArgs e) in d:\Projects\IPSM\eGurukul\skool365\Operation\Course.aspx.cs:line 198
+******************** Error Log - 10/16/2019 4:05:58 AM*********************
+
+Exception Type : SqlException
+Error Message : Cannot open database "IPSM" requested by the login. The login failed.
+Login failed for user 'ranjan-PC\ranjan'.
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at BLCMR.STPclsLogin.GetLogin(String Userid, String EmailId, String Password, String IPAddress, String strCon)
+   at Operation_Login.btnLogin_Click(Object sender, EventArgs e) in d:\Projects\IPSM\eGurukul\skool365\Login.aspx.cs:line 99
+******************** Error Log - 10/16/2019 4:08:11 AM*********************
+
+Exception Type : SqlException
+Error Message : Procedure or function 'USP_INSERT_COURSE' expects parameter '@P_COURSE_CODE', which was not supplied.
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at BLCMR.clsCommonUtility.SaveCourse(ObjMaster master)
+   at Operation_Course.btnSubmit_Click(Object sender, EventArgs e) in d:\Projects\IPSM\eGurukul\skool365\Operation\Course.aspx.cs:line 198
+******************** Error Log - 10/16/2019 4:12:14 AM*********************
+
+Exception Type : SqlException
+Error Message : Procedure or function 'USP_INSERT_COURSE' expects parameter '@P_COURSE_CODE', which was not supplied.
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at BLCMR.clsCommonUtility.SaveCourse(ObjMaster master)
+   at Operation_Course.btnSubmit_Click(Object sender, EventArgs e) in d:\Projects\IPSM\eGurukul\skool365\Operation\Course.aspx.cs:line 198
+******************** Error Log - 10/16/2019 4:14:31 AM*********************
+
+Exception Type : HttpException
+Error Message : A field or property with the name 'TOTAL_SEMESTER ' was not found on the selected data source.
+Error Source : App_Web_m5s0535g
+Error Trace :    at Operation_Course.getDetails(String strText) in d:\Projects\IPSM\eGurukul\skool365\Operation\Course.aspx.cs:line 273
+   at Operation_Course.btnSubmit_Click(Object sender, EventArgs e) in d:\Projects\IPSM\eGurukul\skool365\Operation\Course.aspx.cs:line 216
+******************** Error Log - 10/16/2019 4:14:41 AM*********************
+
+Exception Type : HttpException
+Error Message : A field or property with the name 'TOTAL_SEMESTER ' was not found on the selected data source.
+Error Source : App_Web_m5s0535g
+Error Trace :    at Operation_Course.getDetails(String strText) in d:\Projects\IPSM\eGurukul\skool365\Operation\Course.aspx.cs:line 273
+   at Operation_Course.Page_Load(Object sender, EventArgs e) in d:\Projects\IPSM\eGurukul\skool365\Operation\Course.aspx.cs:line 76
+******************** Error Log - 10/16/2019 10:11:53 AM*********************
+
+Exception Type : HttpException
+Error Message : A field or property with the name 'TOTAL_SEMESTER ' was not found on the selected data source.
+Error Source : App_Web_m5s0535g
+Error Trace :    at Operation_Course.getDetails(String strText) in d:\Projects\IPSM\eGurukul\skool365\Operation\Course.aspx.cs:line 273
+   at Operation_Course.Page_Load(Object sender, EventArgs e) in d:\Projects\IPSM\eGurukul\skool365\Operation\Course.aspx.cs:line 76
+******************** Error Log - 10/16/2019 10:12:56 AM*********************
+
+Exception Type : HttpException
+Error Message : DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'STATUS'.
+Error Source : App_Web_31aihfse
+Error Trace :    at Operation_Course.getDetails(String strText) in d:\Projects\IPSM\eGurukul\skool365\Operation\Course.aspx.cs:line 273
+   at Operation_Course.Page_Load(Object sender, EventArgs e) in d:\Projects\IPSM\eGurukul\skool365\Operation\Course.aspx.cs:line 76
+******************** Error Log - 10/16/2019 10:13:45 AM*********************
+
+Exception Type : HttpException
+Error Message : DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'STATUS'.
+Error Source : App_Web_31aihfse
+Error Trace :    at Operation_Course.getDetails(String strText) in d:\Projects\IPSM\eGurukul\skool365\Operation\Course.aspx.cs:line 273
+   at Operation_Course.Page_Load(Object sender, EventArgs e) in d:\Projects\IPSM\eGurukul\skool365\Operation\Course.aspx.cs:line 76
+******************** Error Log - 10/16/2019 10:13:57 AM*********************
+
+Exception Type : HttpException
+Error Message : A field or property with the name 'STATUS' was not found on the selected data source.
+Error Source : App_Web_xmgy4gbl
+Error Trace :    at Operation_Course.getDetails(String strText) in d:\Projects\IPSM\eGurukul\skool365\Operation\Course.aspx.cs:line 273
+   at Operation_Course.Page_Load(Object sender, EventArgs e) in d:\Projects\IPSM\eGurukul\skool365\Operation\Course.aspx.cs:line 76
+******************** Error Log - 10/16/2019 10:18:57 AM*********************
+
+Exception Type : HttpException
+Error Message : DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'STATUS'.
+Error Source : App_Web_fpfiqivr
+Error Trace :    at Operation_Course.getDetails(String strText) in d:\Projects\IPSM\eGurukul\skool365\Operation\Course.aspx.cs:line 273
+   at Operation_Course.Page_Load(Object sender, EventArgs e) in d:\Projects\IPSM\eGurukul\skool365\Operation\Course.aspx.cs:line 76
+******************** Error Log - 10/16/2019 10:21:04 AM*********************
+
+Exception Type : HttpException
+Error Message : DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'STATUS'.
+Error Source : App_Web_fpfiqivr
+Error Trace :    at Operation_Course.getDetails(String strText) in d:\Projects\IPSM\eGurukul\skool365\Operation\Course.aspx.cs:line 273
+   at Operation_Course.Page_Load(Object sender, EventArgs e) in d:\Projects\IPSM\eGurukul\skool365\Operation\Course.aspx.cs:line 76
+******************** Error Log - 10/16/2019 10:22:51 AM*********************
+
+Exception Type : HttpException
+Error Message : DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'STATUS'.
+Error Source : App_Web_a4eykexx
+Error Trace :    at Operation_Course.getDetails(String strText) in d:\Projects\IPSM\eGurukul\skool365\Operation\Course.aspx.cs:line 273
+   at Operation_Course.Page_Load(Object sender, EventArgs e) in d:\Projects\IPSM\eGurukul\skool365\Operation\Course.aspx.cs:line 76
+******************** Error Log - 10/16/2019 10:23:28 AM*********************
+
+Exception Type : ArgumentOutOfRangeException
+Error Message : 'ddlCourseSegment' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value
+Error Source : System.Web
+Error Trace :    at System.Web.UI.WebControls.ListControl.set_SelectedValue(String value)
+   at Operation_Course.grdStyled_SelectedIndexChanged(Object sender, EventArgs e) in d:\Projects\IPSM\eGurukul\skool365\Operation\Course.aspx.cs:line 320
+******************** Error Log - 10/16/2019 10:29:40 AM*********************
+
+Exception Type : ArgumentOutOfRangeException
+Error Message : 'ddlCourseSegment' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value
+Error Source : System.Web
+Error Trace :    at System.Web.UI.WebControls.ListControl.set_SelectedValue(String value)
+   at Operation_Course.grdStyled_SelectedIndexChanged(Object sender, EventArgs e) in d:\Projects\IPSM\eGurukul\skool365\Operation\Course.aspx.cs:line 320
+******************** Error Log - 10/16/2019 10:36:55 AM*********************
+
+Exception Type : SqlException
+Error Message : Procedure or function 'USP_UPDATE_COURSE' expects parameter '@P_COURSE_ID', which was not supplied.
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at BLCMR.clsCommonUtility.SaveCourse(ObjMaster master)
+   at Operation_Course.btnSubmit_Click(Object sender, EventArgs e) in d:\Projects\IPSM\eGurukul\skool365\Operation\Course.aspx.cs:line 198

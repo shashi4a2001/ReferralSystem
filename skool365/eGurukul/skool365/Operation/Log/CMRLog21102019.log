@@ -1,0 +1,18 @@
+******************** Error Log - 10/21/2019 9:28:09 AM*********************
+
+Exception Type : HttpException
+Error Message : DataBinding: 'System.Data.DataRow' does not contain a property with the name 'ID'.
+Error Source : System.Web
+Error Trace :    at System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   at System.Web.UI.WebControls.DataList.CreateControlHierarchy(Boolean useDataSource)
+   at System.Web.UI.WebControls.BaseDataList.OnDataBinding(EventArgs e)
+   at System.Web.UI.WebControls.BaseDataList.DataBind()
+   at Operation_FeeMaster.btnGetData_Click(Object sender, EventArgs e) in d:\Projects\IPSM\eGurukul\skool365\Operation\FeeMaster.aspx.cs:line 574
+******************** Error Log - 10/21/2019 9:41:00 AM*********************
+
+Exception Type : ArgumentException
+Error Message : Column 'Fee_header' does not belong to underlying table ''.
+Error Source : System.Data
+Error Trace :    at System.Data.DataView.ToTable(String tableName, Boolean distinct, String[] columnNames)
+   at System.Data.DataView.ToTable(Boolean distinct, String[] columnNames)
+   at Operation_FeeMaster.btnGetData_Click(Object sender, EventArgs e) in d:\Projects\IPSM\eGurukul\skool365\Operation\FeeMaster.aspx.cs:line 575

@@ -1,0 +1,8 @@
+******************** Error Log - 10/7/2018 10:35:55 PM*********************
+
+Exception Type : ArgumentOutOfRangeException
+Error Message : 'ddlState' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value
+Error Source : System.Web
+Error Trace :    at System.Web.UI.WebControls.ListControl.set_SelectedValue(String value)
+   at Operation_SchoolRegistration.grdStyled_SelectedIndexChanged(Object sender, EventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\SchoolRegistration.aspx.cs:line 498

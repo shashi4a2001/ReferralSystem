@@ -1,0 +1,7 @@
+D:\Projects\skool365\eGurukul\BLskool365\bin\Release\BLskool365.dll
+D:\Projects\skool365\eGurukul\BLskool365\bin\Release\BLskool365.pdb
+D:\Projects\skool365\eGurukul\BLskool365\bin\Release\DLskool365.dll
+D:\Projects\skool365\eGurukul\BLskool365\bin\Release\DLskool365.pdb
+D:\Projects\skool365\eGurukul\BLskool365\obj\Release\BLskool365.csprojResolveAssemblyReference.cache
+D:\Projects\skool365\eGurukul\BLskool365\obj\Release\BLskool365.dll
+D:\Projects\skool365\eGurukul\BLskool365\obj\Release\BLskool365.pdb

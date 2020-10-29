@@ -1,0 +1,78 @@
+******************** Error Log - 5/24/2020 11:47:00 AM*********************
+
+Exception Type : DirectoryNotFoundException
+Error Message : Could not find a part of the path 'D:\Projects\skool365\eGurukul\skool365\Operation\Uploads\ManageRequests\18512'.
+Error Source : mscorlib
+Error Trace :    at System.IO.__Error.WinIOError(Int32 errorCode, String maybeFullPath)
+   at System.IO.FileSystemEnumerableIterator`1.CommonInit()
+   at System.IO.FileSystemEnumerableIterator`1..ctor(String path, String originalUserPath, String searchPattern, SearchOption searchOption, SearchResultHandler`1 resultHandler, Boolean checkHost)
+   at System.IO.DirectoryInfo.InternalGetDirectories(String searchPattern, SearchOption searchOption)
+   at System.IO.DirectoryInfo.GetDirectories()
+   at Operation_SOVTree.PopulateTreeView(DirectoryInfo dirInfo, TreeNode treeNode) in d:\Projects\skool365\eGurukul\skool365\Operation\SOVTree.aspx.cs:line 99
+   at Operation_SOVTree.Page_Load(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Operation\SOVTree.aspx.cs:line 70
+******************** Error Log - 5/24/2020 11:54:08 AM*********************
+
+Exception Type : NullReferenceException
+Error Message : Object reference not set to an instance of an object.
+Error Source : App_Web_lpowrbd5
+Error Trace :    at Operation_MngRequests.getPendingAccountStatus() in d:\Projects\skool365\eGurukul\skool365\Operation\MngRequests.aspx.cs:line 1157
+   at Operation_MngRequests.ddlAssignments_SelectedIndexChanged(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Operation\MngRequests.aspx.cs:line 1343
+******************** Error Log - 5/24/2020 5:49:36 PM*********************
+
+Exception Type : SqlException
+Error Message : Could not find stored procedure 'USP_GET_MAIL_SERVER_DETAILS'.
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at Operation_SignupSt.getDefaultLogin() in d:\Projects\skool365\eGurukul\skool365\Operation\SignupSt.aspx.cs:line 929
+   at Operation_SignupSt.Page_Load(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Operation\SignupSt.aspx.cs:line 145
+******************** Error Log - 5/24/2020 5:49:56 PM*********************
+
+Exception Type : SqlException
+Error Message : Could not find stored procedure 'USP_GET_MAIL_SERVER_DETAILS'.
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at Operation_SignupSt.getDefaultLogin() in d:\Projects\skool365\eGurukul\skool365\Operation\SignupSt.aspx.cs:line 929
+   at Operation_SignupSt.Page_Load(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Operation\SignupSt.aspx.cs:line 145
+******************** Error Log - 5/24/2020 5:50:13 PM*********************
+
+Exception Type : SqlException
+Error Message : Could not find stored procedure 'USP_GET_MAIL_SERVER_DETAILS'.
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at Operation_SignupSt.getDefaultLogin() in d:\Projects\skool365\eGurukul\skool365\Operation\SignupSt.aspx.cs:line 929
+   at Operation_SignupSt.Page_Load(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Operation\SignupSt.aspx.cs:line 145
+******************** Error Log - 5/24/2020 5:50:51 PM*********************
+
+Exception Type : SqlException
+Error Message : Could not find stored procedure 'USP_GET_MAIL_SERVER_DETAILS'.
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at Operation_SignupSt.getDefaultLogin() in d:\Projects\skool365\eGurukul\skool365\Operation\SignupSt.aspx.cs:line 929
+   at Operation_SignupSt.Page_Load(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Operation\SignupSt.aspx.cs:line 145
+******************** Error Log - 5/24/2020 5:52:08 PM*********************
+
+Exception Type : SqlException
+Error Message : Could not find stored procedure 'USP_GET_MAIL_SERVER_DETAILS'.
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at Operation_SignupSt.getDefaultLogin() in d:\Projects\skool365\eGurukul\skool365\Operation\SignupSt.aspx.cs:line 929
+   at Operation_SignupSt.Page_Load(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Operation\SignupSt.aspx.cs:line 145
+******************** Error Log - 5/24/2020 7:16:07 PM*********************
+
+Exception Type : ArgumentOutOfRangeException
+Error Message : 'ddlAssignments' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value
+Error Source : System.Web
+Error Trace :    at System.Web.UI.WebControls.ListControl.set_SelectedValue(String value)
+   at Operation_MngRequests.grdStyled_SelectedIndexChanged(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Operation\MngRequests.aspx.cs:line 743
+******************** Error Log - 5/24/2020 10:19:05 PM*********************
+
+Exception Type : IndexOutOfRangeException
+Error Message : There is no row at position 0.
+Error Source : System.Data
+Error Trace :    at System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   at System.Data.DataRowCollection.get_Item(Int32 index)
+   at Operation_MngRequests.btnSubmit_Click(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Operation\MngRequests.aspx.cs:line 318
+******************** Error Log - 5/24/2020 10:30:37 PM*********************
+
+Exception Type : IndexOutOfRangeException
+Error Message : There is no row at position 0.
+Error Source : System.Data
+Error Trace :    at System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   at System.Data.DataRowCollection.get_Item(Int32 index)
+   at Operation_MngRequests.btnSubmit_Click(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Operation\MngRequests.aspx.cs:line 318

@@ -1,0 +1,6 @@
+D:\Projects\Attendence\DLAttendance\bin\Debug\DLAttendance.dll.config
+D:\Projects\Attendence\DLAttendance\bin\Debug\DLAttendance.dll
+D:\Projects\Attendence\DLAttendance\bin\Debug\DLAttendance.pdb
+D:\Projects\Attendence\DLAttendance\obj\Debug\ResolveAssemblyReference.cache
+D:\Projects\Attendence\DLAttendance\obj\Debug\DLAttendance.dll
+D:\Projects\Attendence\DLAttendance\obj\Debug\DLAttendance.pdb

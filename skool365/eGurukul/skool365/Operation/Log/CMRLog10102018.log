@@ -1,0 +1,102 @@
+******************** Error Log - 10/10/2018 3:46:33 AM*********************
+
+Exception Type : SqlException
+Error Message : A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Shared Memory Provider, error: 40 - Could not open a connection to SQL Server)
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at BLCMR.STPclsLogin.GetLogin(String Userid, String EmailId, String Password, String IPAddress, String strCon)
+   at Operation_Login.btnLogin_Click(Object sender, EventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Login.aspx.cs:line 99
+
+Exception Type : Win32Exception
+Error Message : The system cannot find the file specified
+Error Source : 
+Error Trace : 
+******************** Error Log - 10/10/2018 3:46:58 AM*********************
+
+Exception Type : SqlException
+Error Message : A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Shared Memory Provider, error: 40 - Could not open a connection to SQL Server)
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at BLCMR.STPclsLogin.GetLogin(String Userid, String EmailId, String Password, String IPAddress, String strCon)
+   at Operation_Login.btnLogin_Click(Object sender, EventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Login.aspx.cs:line 99
+
+Exception Type : Win32Exception
+Error Message : The system cannot find the file specified
+Error Source : 
+Error Trace : 
+******************** Error Log - 10/10/2018 3:49:10 AM*********************
+
+Exception Type : SqlException
+Error Message : A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Shared Memory Provider, error: 40 - Could not open a connection to SQL Server)
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at BLCMR.STPclsLogin.GetLogin(String Userid, String EmailId, String Password, String IPAddress, String strCon)
+   at Operation_Login.btnLogin_Click(Object sender, EventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Login.aspx.cs:line 99
+
+Exception Type : Win32Exception
+Error Message : The system cannot find the file specified
+Error Source : 
+Error Trace : 
+******************** Error Log - 10/10/2018 3:57:18 AM*********************
+
+Exception Type : ArgumentOutOfRangeException
+Error Message : 'ddlState' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value
+Error Source : System.Web
+Error Trace :    at System.Web.UI.WebControls.ListControl.set_SelectedValue(String value)
+   at Operation_SchoolRegistration.grdStyled_SelectedIndexChanged(Object sender, EventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\SchoolRegistration.aspx.cs:line 498
+******************** Error Log - 10/10/2018 4:11:51 AM*********************
+
+Exception Type : ArgumentOutOfRangeException
+Error Message : 'ddlState' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value
+Error Source : System.Web
+Error Trace :    at System.Web.UI.WebControls.ListControl.set_SelectedValue(String value)
+   at Operation_SchoolRegistration.grdStyled_SelectedIndexChanged(Object sender, EventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\SchoolRegistration.aspx.cs:line 498
+******************** Error Log - 10/10/2018 4:53:08 AM*********************
+
+Exception Type : IndexOutOfRangeException
+Error Message : There is no row at position 0.
+Error Source : System.Data
+Error Trace :    at System.Data.RBTree`1.GetNodeByIndex(Int32 userIndex)
+   at System.Data.DataRowCollection.get_Item(Int32 index)
+   at Operation_SchoolRegistration.grdStyled_RowDeleting(Object sender, GridViewDeleteEventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\SchoolRegistration.aspx.cs:line 432
+******************** Error Log - 10/10/2018 7:13:03 AM*********************
+
+Exception Type : SqlException
+Error Message : Procedure or function 'USP_GET_SCHOOL_REGISTRATION_REQUESTS' expects parameter '@P_User_ID', which was not supplied.
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at Operation_ActivateRegistration.getDetailsPending(String strText) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\ActivateRegistration.aspx.cs:line 382
+   at Operation_ActivateRegistration.Page_Load(Object sender, EventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\ActivateRegistration.aspx.cs:line 75
+******************** Error Log - 10/10/2018 7:13:14 AM*********************
+
+Exception Type : SqlException
+Error Message : Procedure or function 'USP_GET_SCHOOL_REGISTRATION_REQUESTS' expects parameter '@P_User_ID', which was not supplied.
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at Operation_ActivateRegistration.getDetailsPending(String strText) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\ActivateRegistration.aspx.cs:line 382
+   at Operation_ActivateRegistration.Page_Load(Object sender, EventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\ActivateRegistration.aspx.cs:line 75
+******************** Error Log - 10/10/2018 7:14:18 AM*********************
+
+Exception Type : SqlException
+Error Message : Procedure or function 'USP_GET_SCHOOL_REGISTRATION_REQUESTS' expects parameter '@P_User_ID', which was not supplied.
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at Operation_ActivateRegistration.getDetailsPending(String strText) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\ActivateRegistration.aspx.cs:line 382
+   at Operation_ActivateRegistration.Page_Load(Object sender, EventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\ActivateRegistration.aspx.cs:line 75
+******************** Error Log - 10/10/2018 7:19:46 AM*********************
+
+Exception Type : HttpException
+Error Message : DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'STATUS'.
+Error Source : App_Web_c1baxcfv
+Error Trace :    at Operation_ActivateRegistration.getDetailsPending(String strText) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\ActivateRegistration.aspx.cs:line 383
+   at Operation_ActivateRegistration.Page_Load(Object sender, EventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\ActivateRegistration.aspx.cs:line 75
+******************** Error Log - 10/10/2018 7:21:49 AM*********************
+
+Exception Type : HttpException
+Error Message : DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'STATUS'.
+Error Source : App_Web_c1baxcfv
+Error Trace :    at Operation_ActivateRegistration.getDetailsPending(String strText) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\ActivateRegistration.aspx.cs:line 383
+   at Operation_ActivateRegistration.Page_Load(Object sender, EventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\ActivateRegistration.aspx.cs:line 75
+******************** Error Log - 10/10/2018 7:24:11 AM*********************
+
+Exception Type : HttpException
+Error Message : DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'STATUS'.
+Error Source : App_Web_c1baxcfv
+Error Trace :    at Operation_ActivateRegistration.getDetailsPending(String strText) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\ActivateRegistration.aspx.cs:line 383
+   at Operation_ActivateRegistration.Page_Load(Object sender, EventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\ActivateRegistration.aspx.cs:line 75

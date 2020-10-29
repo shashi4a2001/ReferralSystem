@@ -1,0 +1,116 @@
+******************** Error Log - 4/28/2020 2:11:37 AM*********************
+
+Exception Type : NullReferenceException
+Error Message : Object reference not set to an instance of an object.
+Error Source : App_Web_ldlzq5xb
+Error Trace :    at Operation_SignupSt.Page_PreInit(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Operation\SignupSt.aspx.cs:line 44
+******************** Error Log - 4/28/2020 2:14:13 AM*********************
+
+Exception Type : NullReferenceException
+Error Message : Object reference not set to an instance of an object.
+Error Source : App_Web_ldlzq5xb
+Error Trace :    at Operation_SignupSt.Page_PreInit(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Operation\SignupSt.aspx.cs:line 44
+******************** Error Log - 4/28/2020 2:22:02 AM*********************
+
+Exception Type : SqlException
+Error Message : Procedure or function 'usp_CHECK_PAGE_ACCESSIBILITY' expects parameter '@P_USER_ID', which was not supplied.
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at BLCMR.clsCommon.checkPageAccessiblity(String strUserID, String strPageName, String strConn)
+   at Operation_SignupSt.Page_PreInit(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Operation\SignupSt.aspx.cs:line 49
+******************** Error Log - 4/28/2020 4:01:58 AM*********************
+
+Exception Type : SqlException
+Error Message : Could not find stored procedure 'dbo.USP_GET_SCHOOL_REGISTRATION_REQUESTS_COUNT'.
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at Operation_ActivateRegistration.getDetailsPending(String strText) in d:\Projects\skool365\eGurukul\skool365\Operation\ActivateRegistration.aspx.cs:line 173
+   at Operation_ActivateRegistration.Page_Load(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Operation\ActivateRegistration.aspx.cs:line 75
+******************** Error Log - 4/28/2020 4:11:34 AM*********************
+
+Exception Type : SqlException
+Error Message : Could not find stored procedure 'dbo.USP_GET_SCHOOL_REGISTRATION_REQUESTS_COUNT'.
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at Operation_ActivateRegistration.getDetailsPending(String strText) in d:\Projects\skool365\eGurukul\skool365\Operation\ActivateRegistration.aspx.cs:line 173
+   at Operation_ActivateRegistration.Page_Load(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Operation\ActivateRegistration.aspx.cs:line 75
+******************** Error Log - 4/28/2020 10:59:02 AM*********************
+
+Exception Type : NullReferenceException
+Error Message : Object reference not set to an instance of an object.
+Error Source : App_Web_x0mrcjhh
+Error Trace :    at Operation_SignupSt.btnSubmit_Click(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Operation\SignupSt.aspx.cs:line 222
+******************** Error Log - 4/28/2020 11:09:40 AM*********************
+
+Exception Type : NullReferenceException
+Error Message : Object reference not set to an instance of an object.
+Error Source : App_Web_bzhuy0th
+Error Trace :    at Operation_SignupSt.Page_PreInit(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Operation\SignupSt.aspx.cs:line 55
+******************** Error Log - 4/28/2020 11:12:04 AM*********************
+
+Exception Type : NullReferenceException
+Error Message : Object reference not set to an instance of an object.
+Error Source : App_Web_bzhuy0th
+Error Trace :    at Operation_SignupSt.Page_PreInit(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Operation\SignupSt.aspx.cs:line 55
+******************** Error Log - 4/28/2020 11:13:52 AM*********************
+
+Exception Type : NullReferenceException
+Error Message : Object reference not set to an instance of an object.
+Error Source : App_Web_bzhuy0th
+Error Trace :    at Operation_SignupSt.Page_PreInit(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Operation\SignupSt.aspx.cs:line 55
+******************** Error Log - 4/28/2020 11:14:34 AM*********************
+
+Exception Type : NullReferenceException
+Error Message : Object reference not set to an instance of an object.
+Error Source : App_Web_bzhuy0th
+Error Trace :    at Operation_SignupSt.Page_PreInit(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Operation\SignupSt.aspx.cs:line 55
+******************** Error Log - 4/28/2020 11:17:37 AM*********************
+
+Exception Type : NullReferenceException
+Error Message : Object reference not set to an instance of an object.
+Error Source : App_Web_3gfrg3jd
+Error Trace :    at Operation_SignupSt.Page_PreInit(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Operation\SignupSt.aspx.cs:line 55
+******************** Error Log - 4/28/2020 11:20:19 AM*********************
+
+Exception Type : NullReferenceException
+Error Message : Object reference not set to an instance of an object.
+Error Source : App_Web_54z5nsdi
+Error Trace :    at Operation_SignupSt.Page_PreInit(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Operation\SignupSt.aspx.cs:line 44
+******************** Error Log - 4/28/2020 11:26:35 AM*********************
+
+Exception Type : SqlException
+Error Message : Procedure or function 'usp_CHECK_PAGE_ACCESSIBILITY' expects parameter '@P_USER_ID', which was not supplied.
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at BLCMR.clsCommon.checkPageAccessiblity(String strUserID, String strPageName, String strConn)
+   at Operation_SignupSt.Page_PreInit(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Operation\SignupSt.aspx.cs:line 50
+******************** Error Log - 4/28/2020 11:40:03 AM*********************
+
+Exception Type : NullReferenceException
+Error Message : Object reference not set to an instance of an object.
+Error Source : App_Web_grsplthj
+Error Trace :    at Operation_SignupSt.getComboData() in d:\Projects\skool365\eGurukul\skool365\Operation\SignupSt.aspx.cs:line 729
+   at Operation_SignupSt.Page_Load(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Operation\SignupSt.aspx.cs:line 148
+******************** Error Log - 4/28/2020 11:41:58 AM*********************
+
+Exception Type : NullReferenceException
+Error Message : Object reference not set to an instance of an object.
+Error Source : App_Web_t34rlhue
+Error Trace :    at Operation_SignupSt.getComboData() in d:\Projects\skool365\eGurukul\skool365\Operation\SignupSt.aspx.cs:line 729
+   at Operation_SignupSt.Page_Load(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Operation\SignupSt.aspx.cs:line 148
+******************** Error Log - 4/28/2020 11:44:08 AM*********************
+
+Exception Type : NullReferenceException
+Error Message : Object reference not set to an instance of an object.
+Error Source : App_Web_t34rlhue
+Error Trace :    at Operation_SignupSt.getComboData() in d:\Projects\skool365\eGurukul\skool365\Operation\SignupSt.aspx.cs:line 729
+   at Operation_SignupSt.Page_Load(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Operation\SignupSt.aspx.cs:line 148
+******************** Error Log - 4/28/2020 11:51:05 AM*********************
+
+Exception Type : NullReferenceException
+Error Message : Object reference not set to an instance of an object.
+Error Source : App_Web_xnba2h3h
+Error Trace :    at Operation_SignupSt.Page_Load(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Operation\SignupSt.aspx.cs:line 127
+******************** Error Log - 4/28/2020 12:03:15 PM*********************
+
+Exception Type : SqlException
+Error Message : Procedure or function 'usp_CHECK_PAGE_ACCESSIBILITY' expects parameter '@P_USER_ID', which was not supplied.
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at BLCMR.clsCommon.checkPageAccessiblity(String strUserID, String strPageName, String strConn)
+   at Operation_SignupSt.Page_Load(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Operation\SignupSt.aspx.cs:line 130

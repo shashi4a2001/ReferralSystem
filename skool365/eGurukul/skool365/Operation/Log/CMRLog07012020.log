@@ -1,0 +1,86 @@
+******************** Error Log - 1/7/2020 9:26:46 AM*********************
+
+Exception Type : InvalidOperationException
+Error Message : Using the Title property of Page requires a header control on the page. (e.g. <head runat="server" />).
+Error Source : System.Web
+Error Trace :    at System.Web.UI.Page.set_Title(String value)
+   at Operation_Login.Page_Load(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Login.aspx.cs:line 38
+******************** Error Log - 1/7/2020 9:33:18 AM*********************
+
+Exception Type : InvalidOperationException
+Error Message : Using the Title property of Page requires a header control on the page. (e.g. <head runat="server" />).
+Error Source : System.Web
+Error Trace :    at System.Web.UI.Page.set_Title(String value)
+   at Operation_Login.Page_Load(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Login.aspx.cs:line 38
+******************** Error Log - 1/7/2020 9:34:53 AM*********************
+
+Exception Type : SqlException
+Error Message : A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Shared Memory Provider, error: 40 - Could not open a connection to SQL Server)
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at BLCMR.STPclsLogin.GetLogin(String Userid, String EmailId, String Password, String IPAddress, String strCon)
+   at Operation_Login.btnLogin_Click(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Login.aspx.cs:line 98
+
+Exception Type : Win32Exception
+Error Message : The system cannot find the file specified
+Error Source : 
+Error Trace : 
+******************** Error Log - 1/7/2020 9:39:09 AM*********************
+
+Exception Type : SqlException
+Error Message : A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Shared Memory Provider, error: 40 - Could not open a connection to SQL Server)
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at BLCMR.STPclsLogin.GetLogin(String Userid, String EmailId, String Password, String IPAddress, String strCon)
+   at Operation_Login.btnLogin_Click(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Login.aspx.cs:line 98
+
+Exception Type : Win32Exception
+Error Message : The system cannot find the file specified
+Error Source : 
+Error Trace : 
+******************** Error Log - 1/7/2020 9:55:47 AM*********************
+
+Exception Type : SqlException
+Error Message : A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Shared Memory Provider, error: 40 - Could not open a connection to SQL Server)
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at BLCMR.STPclsLogin.GetLogin(String Userid, String EmailId, String Password, String IPAddress, String strCon)
+   at Operation_Login.btnLogin_Click(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Login.aspx.cs:line 98
+
+Exception Type : Win32Exception
+Error Message : The system cannot find the file specified
+Error Source : 
+Error Trace : 
+******************** Error Log - 1/7/2020 9:57:13 AM*********************
+
+Exception Type : SqlException
+Error Message : A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Shared Memory Provider, error: 40 - Could not open a connection to SQL Server)
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at BLCMR.STPclsLogin.GetLogin(String Userid, String EmailId, String Password, String IPAddress, String strCon)
+   at Operation_Login.btnLogin_Click(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Login.aspx.cs:line 98
+
+Exception Type : Win32Exception
+Error Message : The system cannot find the file specified
+Error Source : 
+Error Trace : 
+******************** Error Log - 1/7/2020 10:08:06 AM*********************
+
+Exception Type : SqlException
+Error Message : A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Shared Memory Provider, error: 40 - Could not open a connection to SQL Server)
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at BLCMR.STPclsLogin.GetLogin(String Userid, String EmailId, String Password, String IPAddress, String strCon)
+   at Operation_Login.btnLogin_Click(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Login.aspx.cs:line 98
+
+Exception Type : Win32Exception
+Error Message : The system cannot find the file specified
+Error Source : 
+Error Trace : 
+******************** Error Log - 1/7/2020 10:17:29 AM*********************
+
+Exception Type : SqlException
+Error Message : A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Shared Memory Provider, error: 40 - Could not open a connection to SQL Server)
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at BLCMR.STPclsLogin.GetLogin(String Userid, String EmailId, String Password, String IPAddress, String strCon)
+   at Operation_Login.btnLogin_Click(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Login.aspx.cs:line 98
+
+Exception Type : Win32Exception
+Error Message : The system cannot find the file specified
+Error Source : 
+Error Trace : 

@@ -1,0 +1,136 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="CRMOperationArea.Master.cs"
+    Inherits="Operation_CRMOperationArea" %>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head id="Head1" runat="server">
+    <title></title>
+
+    <style type="text/css">
+        .MyCalendar .ajax__calendar_container
+        {
+            border: 1px solid #646464;
+            background-color: lemonchiffon;
+            color: red;
+        }
+
+        .MyCalendar .ajax__calendar_other .ajax__calendar_day, .MyCalendar .ajax__calendar_other .ajax__calendar_year
+        {
+            color: black;
+        }
+
+        .MyCalendar .ajax__calendar_hover .ajax__calendar_day, .MyCalendar .ajax__calendar_hover .ajax__calendar_month, .MyCalendar .ajax__calendar_hover .ajax__calendar_year
+        {
+            color: black;
+        }
+
+        .MyCalendar .ajax__calendar_active .ajax__calendar_day, .MyCalendar .ajax__calendar_active .ajax__calendar_month, .MyCalendar .ajax__calendar_active .ajax__calendar_year
+        {
+            color: black;
+            font-weight: bold;
+        }
+
+        .foot
+        {
+            background-color: #1f3e8e!important;
+            height: 2px;
+            color: #FFFFFF;
+            font-size: 12px;
+            text-align: center;
+            border-top: #7b7a7a dashed 1px;
+            line-height: 15px;
+            margin-top: 25px;
+            position: absolute;
+            width: 100%;
+            padding-top: 5px;
+        }
+
+        .logo
+        {
+            font-size: 38px;
+            font-weight: 600;
+            float: left;
+            padding-top: 0;
+            margin-top: -8px;
+            font-family: Arial, Helvetica, sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-left: 10px;
+            color: #fff;
+            margin-top: 3px;
+            text-shadow: 0 1px 0 #fff;
+        }
+    </style>
+    <!-- Template stylesheet -->
+    <link href="~/Common/CSS/blue/screen.css" rel="stylesheet" type="text/css" media="all" />
+
+    <!-- Jquery and plugins -->
+    <link href="../Common/CSS/Admin.css" type="text/css" rel="Stylesheet" />
+    <link href="../Common/css/blue/screen.css" rel="stylesheet" type="text/css" media="all" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="content_wrapper">
+            <!-- Begin header -->
+            <div id="header" style="height: 90px;">
+                <div class="logo">
+                    <img src="../Common/Images/LNVMLOGO.png" height="70px" /></div>
+                <div style="text-align: left; margin: 16px 10px 0 0; font-size: 13px; margin-top: 15px; float: right;">
+                    <%--<a href="UWSelect.aspx" id="SelectUW" runat="server">Select UW |</a>--%>
+                    <a href="DashBoard.aspx" id="dashBoard" runat="server">Dashboard |</a>
+                    Role:
+                <asp:Label ID="lblUserRole" runat="server" Font-Bold="true" ForeColor="White"></asp:Label>
+                    <img src="../Common/Images/icon_online.png" alt="Online" class="mid_align" />
+                    Welcome <a href="#" class="active">
+                        <asp:Literal ID="ltrlUserName" runat="server"></asp:Literal></a> | <a href="LogOut.aspx">Logout</a> | <a href="ChangePassword.aspx" id="changePwd" runat="server">Change Password</a>
+
+                    <br />
+
+                    Last Logged In :
+                        <asp:Label ID="lblLastLogIn" ForeColor="Black" runat="server" />
+                    |
+                    Last Password Changed :
+                        <asp:Label ID="lblLastPasswordChange" ForeColor="Black" runat="server" />
+                    <br />
+
+                    Organization:
+                        <asp:Label ID="lblOrganization" runat="server" ForeColor="Orange" Font-Bold="true"></asp:Label>
+                    | Work Location :
+                        <asp:Label ID="lblWorkLocation" runat="server" ForeColor="Orange"></asp:Label>
+                </div>
+            </div>
+
+            <!-- End header -->
+            <!-- Begin left panel -->
+            <!-- End left panel -->
+            <!-- Begin content -->
+            <div id="content">
+                <asp:ScriptManager ID="ManageOperation" runat="server">
+                </asp:ScriptManager>
+                <asp:ContentPlaceHolder ID="MiddleContent" runat="server">
+                </asp:ContentPlaceHolder>
+
+                <!-- Begin footer -->
+
+                <!-- End footer -->
+
+
+                <br class="clear" />
+                <!-- Begin footer -->
+
+            </div>
+
+
+            <!-- End content -->
+
+            <%--  <div class="foot" style="height: 80px;">
+                <img src="../Common/Images/lnvmOnline.png" alt="Posts" height="50" width="650" />
+                <br />
+                &copy; COPYRIGHT © 2019. ALL RIGHTS RESERVED
+            </div>--%>
+        </div>
+
+    </form>
+</body>
+</html>

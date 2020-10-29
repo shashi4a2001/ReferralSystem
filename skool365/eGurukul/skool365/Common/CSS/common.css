@@ -1,0 +1,152 @@
+
+.centercontent .hornav { padding: 0 20px; }
+
+.contentwrapper { padding: 0px; }
+.contentwrapper p { margin: 20px 0; }
+.contentwrapper .widgetbox { margin-bottom: 20px; margin-top: 0; }
+
+.subcontent { position: relative;
+    top: 6px;
+    left: 5px;
+}
+input[type='text']{font-size:13px;color:#000;}
+form input[type=radio], .stdform input[type=checkbox] { width: auto; margin: 0; vertical-align: middle; }
+.stdform p, .stdform div.par { margin: 20px 0; }
+
+.stdform p, .stdform div.par { margin: 20px 0; }
+.stdform div.par { overflow: hidden; }
+.stdform span.field, .stdform div.field { margin-left: 220px; display: block; position: relative; }
+.stdform .formwrapper { display: block; padding-top: 5px; margin-left: 220px; line-height: 25px; }
+.stdform label { float: left; width: 200px; text-align: right; padding: 5px 20px 0 0; }
+.stdform label.little {  width: 40px; text-align: left; padding: 10px; }
+.stdform label.big {  width: 320px; text-align: left; padding: 10px; }
+.stdform button.cancel { background: #eee; color: #666; border: 1px solid #ddd; }
+.stdform button.cancel:hover { background: #ddd; border: 1px solid #ccc; }
+.stdform button.cancel:active { 
+	-moz-box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.7); -webkit-box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.7); 
+	box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+.stdform small.desc { font-size: 11px; color: #999; font-style: italic; display: block; margin: 5px 0 0 220px; }
+.stdform .stdformbutton { margin-left: 220px; }
+
+/*** ANOTHER FORM STYLE ***/
+.stdform2 p, .stdform2 div.par { border: 1px solid #ddd; background: #fcfcfc; margin: 0; border-top: 0; }
+.stdform2 div.terms { border: 0; background: none; }
+.stdform2 p:first-child, .stdform2 div.par:first-child { border-top: 1px solid #ddd; }
+.stdform div.par { overflow: hidden; }
+.stdform2 label { display: inline-block; padding: 05px; vertical-align: top; text-align: left; font-weight: bold; }
+.stdform2 label.error { margin-left: 0; padding: 0; }
+.stdform2 label small { font-size: 11px; color: #999; display: block; font-weight: normal; line-height: 16px; }
+.stdform2 span.field, .stdform2 div.field { margin-left: 220px; display: block; background: #fff; padding: 5px; border-left: 1px solid #ddd; }
+.stdform2 span.field1, .stdform2 div.field1 { margin-left: 370px; display: block; background: #fff; padding: 5px; border-left: 1px solid #ddd; }
+.stdform2 .stdformbutton { margin-left: 0; padding: 20px; background: #fff; }
+
+.stdform small.desc { font-size: 11px; color: #999; font-style: italic; display: block; margin: 5px 0 0 220px; }
+.stdform .stdformbutton { margin-left: 220px; }
+
+.stdform2 p, .stdform2 div.par { border: 1px solid #ddd; background: #fcfcfc; margin: 0; border-top: 0; }
+.stdform2 div.terms { border: 0; background: none; }
+.stdform2 p:first-child, .stdform2 div.par:first-child { border-top: 1px solid #ddd; }
+.stdform div.par { overflow: hidden; }
+.stdform2 label { display: inline-block; padding: 05px; vertical-align: top; text-align: left; font-weight: bold; }
+.stdform2 label.error { margin-left: 0; padding: 0; }
+.stdform2 label small { font-size: 11px; color: #999; display: block; font-weight: normal; line-height: 16px; }
+.stdform2 span.field, .stdform2 div.field { margin-left: 220px; display: block; background: #fff; padding: 5px; border-left: 1px solid #ddd;
+    top: 0px;
+    left: -2px;
+    width: 579px;
+}
+.stdform2 span.field1, .stdform2 div.field1 { margin-left: 370px; display: block; background: #fff; padding: 5px; border-left: 1px solid #ddd; }
+.stdform2 .stdformbutton { margin-left: 0; padding: 20px; background: #fff; }
+
+
+#form table.tblenquiry
+{
+    width: 45em;
+}
+#form .tblenquiry td.secondrol,
+#form #tblOrderForm td.secondrol
+{
+    width: 30em;
+}
+
+ 
+#globalWrap .midCtnt #form table .firstrol,
+#globalWrap .midRightCtnt #form table .firstrol
+{
+ background-color:     #dedfd2;   
+}
+#globalWrap .midCtnt #form #flaDetails td.firstrol, 
+#globalWrap .midCtnt #form #flaQuestions td.firstrol
+{
+    width: 26%;
+}
+#globalWrap .midCtnt #form #flaDetails td.secondrol, 
+#globalWrap .midCtnt #form #flaQuestions td.secondrol
+{
+    width: 70%;
+}
+#form .tblenquiry td.secondrol,
+#form #tblOrderForm td.secondrol
+{
+    width: 30em;
+}
+
+
+.buttonCss
+        {
+            -moz-box-shadow: inset 0px 1px 0px 0px #97c4fe;
+            -webkit-box-shadow: inset 0px 1px 0px 0px #97c4fe;
+            box-shadow: inset 0px 1px 0px 0px #97c4fe;
+            background-color: #3d94f6;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            border-radius: 5px;
+            border: 1px solid #337fed;
+            display: inline-block;
+            color: #ffffff;
+            font-family: arial;
+            font-size: 13px;
+            font-weight: bold;
+            padding: 4px 15px;
+            text-decoration: none;
+            text-shadow: 1px 1px 0px #1570cd;
+    margin-top: 0px;
+    margin-left: 2px;
+}
+        .buttonCss:hover
+        {
+            background-color: #1e62d0;
+        }
+        .buttonCss:active
+        {
+            position: relative;
+            top: 1px;
+        }
+        
+        .Mandatory
+        {
+        	color:Red;
+        }
+        
+        
+        .MyCalendar .ajax__calendar_container {
+    border:1px solid #646464;
+    background-color: lemonchiffon;
+    color: red;
+}
+.MyCalendar .ajax__calendar_other .ajax__calendar_day,
+.MyCalendar .ajax__calendar_other .ajax__calendar_year {
+    color: black;
+}
+.MyCalendar .ajax__calendar_hover .ajax__calendar_day,
+.MyCalendar .ajax__calendar_hover .ajax__calendar_month,
+.MyCalendar .ajax__calendar_hover .ajax__calendar_year {
+    color: black;
+}
+.MyCalendar .ajax__calendar_active .ajax__calendar_day,
+.MyCalendar .ajax__calendar_active .ajax__calendar_month,
+.MyCalendar .ajax__calendar_active .ajax__calendar_year {
+    color: black;
+    font-weight:bold;
+}

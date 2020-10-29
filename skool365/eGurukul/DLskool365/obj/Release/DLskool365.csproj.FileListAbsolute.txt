@@ -1,0 +1,11 @@
+D:\Projects\VS2017 Projects\eGurukul\DLskool365\bin\Release\DLskool365.dll.config
+D:\Projects\VS2017 Projects\eGurukul\DLskool365\bin\Release\DLskool365.dll
+D:\Projects\VS2017 Projects\eGurukul\DLskool365\bin\Release\DLskool365.pdb
+D:\Projects\VS2017 Projects\eGurukul\DLskool365\obj\Release\DLskool365.dll
+D:\Projects\VS2017 Projects\eGurukul\DLskool365\obj\Release\DLskool365.pdb
+D:\Projects\skool365\eGurukul\DLskool365\bin\Release\DLskool365.dll.config
+D:\Projects\skool365\eGurukul\DLskool365\bin\Release\DLskool365.dll
+D:\Projects\skool365\eGurukul\DLskool365\bin\Release\DLskool365.pdb
+D:\Projects\skool365\eGurukul\DLskool365\obj\Release\DLskool365.csprojResolveAssemblyReference.cache
+D:\Projects\skool365\eGurukul\DLskool365\obj\Release\DLskool365.dll
+D:\Projects\skool365\eGurukul\DLskool365\obj\Release\DLskool365.pdb
