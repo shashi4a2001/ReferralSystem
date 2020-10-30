@@ -27,7 +27,7 @@ public partial class Operation_MasterPage : System.Web.UI.MasterPage
             Session.Clear();
             Session.RemoveAll();
             Session.Abandon();
-            Response.Redirect("login.aspx?Exp=Y", false);
+            //Response.Redirect("login.aspx?Exp=Y", false);
             return;
         }
     }

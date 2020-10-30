@@ -13,6 +13,15 @@ public partial class RoleManagement : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
+        if (!Context.User.Identity.IsAuthenticated)
+        {
+            Session.Clear();
+            Session.RemoveAll();
+            Session.Abandon();
+            Response.Redirect("SessionExpired.aspx", false);
+            return;
+        }
+
 
         if (Page.IsPostBack == false)
         {

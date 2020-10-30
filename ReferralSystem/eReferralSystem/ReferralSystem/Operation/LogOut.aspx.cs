@@ -29,13 +29,6 @@ public partial class Operation_LogOut : System.Web.UI.Page
         {
 
 
-            lblWorkLocation.Text = objclsCommon.DecryptData(ConfigurationManager.AppSettings["WorkLocation"].ToString());
-            lblOrganization.Text = objclsCommon.DecryptData(ConfigurationManager.AppSettings["Organization"].ToString());
-            lblPhone.Text = objclsCommon.DecryptData(ConfigurationManager.AppSettings["Phone"].ToString());
-            lblEmail.Text = objclsCommon.DecryptData(ConfigurationManager.AppSettings["Email"].ToString());
-            Page.Title = "@All Right Reserved." + lblOrganization.Text;
-
-
             //Validate User Authetication Starts
             if (Context.User.Identity.IsAuthenticated)
             {

@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="LogOut.aspx.cs" Inherits="Operation_LogOut" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="SessionExpired.aspx.cs" Inherits="Operation_SessionExpired" %>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -88,8 +88,8 @@
                 <div class="logo" style="margin-top: 3px;">
                     <img src="../Common/Images/LNVMLOGO.png" height="70px" width="200px" />
                 </div>
+ 
 
-                
 
                 <div style="text-align: left; margin: 16px 10px 0 0; font-size: 13px; margin-top: 30px; float: right;">
                     <a href="~/Login.aspx" id="changePwd" runat="server">LogIn</a>
