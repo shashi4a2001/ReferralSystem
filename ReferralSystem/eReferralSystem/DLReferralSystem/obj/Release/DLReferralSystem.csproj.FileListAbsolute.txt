@@ -1,0 +1,6 @@
+E:\GitRepository\ReferralSystem\ReferralSystem\ReferralSystem\eReferralSystem\DLReferralSystem\bin\Release\DLReferralSystem.dll.config
+E:\GitRepository\ReferralSystem\ReferralSystem\ReferralSystem\eReferralSystem\DLReferralSystem\bin\Release\DLReferralSystem.dll
+E:\GitRepository\ReferralSystem\ReferralSystem\ReferralSystem\eReferralSystem\DLReferralSystem\bin\Release\DLReferralSystem.pdb
+E:\GitRepository\ReferralSystem\ReferralSystem\ReferralSystem\eReferralSystem\DLReferralSystem\obj\Release\DLReferralSystem.csprojResolveAssemblyReference.cache
+E:\GitRepository\ReferralSystem\ReferralSystem\ReferralSystem\eReferralSystem\DLReferralSystem\obj\Release\DLReferralSystem.dll
+E:\GitRepository\ReferralSystem\ReferralSystem\ReferralSystem\eReferralSystem\DLReferralSystem\obj\Release\DLReferralSystem.pdb

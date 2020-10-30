@@ -1,0 +1,52 @@
+******************** Error Log - 10/24/2018 3:27:20 AM*********************
+
+Exception Type : SqlException
+Error Message : A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Shared Memory Provider, error: 40 - Could not open a connection to SQL Server)
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at BLCMR.STPclsLogin.GetLogin(String Userid, String EmailId, String Password, String IPAddress, String strCon)
+   at Operation_Login.btnLogin_Click(Object sender, EventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Login.aspx.cs:line 99
+
+Exception Type : Win32Exception
+Error Message : The system cannot find the file specified
+Error Source : 
+Error Trace : 
+******************** Error Log - 10/24/2018 3:41:31 AM*********************
+
+Exception Type : SqlException
+Error Message : A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Shared Memory Provider, error: 40 - Could not open a connection to SQL Server)
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at BLCMR.STPclsLogin.GetLogin(String Userid, String EmailId, String Password, String IPAddress, String strCon)
+   at Operation_Login.btnLogin_Click(Object sender, EventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Login.aspx.cs:line 99
+
+Exception Type : Win32Exception
+Error Message : The system cannot find the file specified
+Error Source : 
+Error Trace : 
+******************** Error Log - 10/24/2018 3:41:52 AM*********************
+
+Exception Type : SqlException
+Error Message : A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Shared Memory Provider, error: 40 - Could not open a connection to SQL Server)
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at BLCMR.STPclsLogin.GetLogin(String Userid, String EmailId, String Password, String IPAddress, String strCon)
+   at Operation_Login.btnLogin_Click(Object sender, EventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Login.aspx.cs:line 99
+
+Exception Type : Win32Exception
+Error Message : The system cannot find the file specified
+Error Source : 
+Error Trace : 
+******************** Error Log - 10/24/2018 3:52:55 AM*********************
+
+Exception Type : ArgumentOutOfRangeException
+Error Message : 'ddlEducationStatus' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value
+Error Source : App_Web_nrkysfv3
+Error Trace :    at Operation_Registration.PopulateControl(DataTable dtDetails) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\Registration.aspx.cs:line 1438
+   at Operation_Registration.grdStyled_SelectedIndexChanged(Object sender, EventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\Registration.aspx.cs:line 1184
+******************** Error Log - 10/24/2018 3:56:09 AM*********************
+
+Exception Type : ArgumentOutOfRangeException
+Error Message : 'ddlSchool' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value
+Error Source : App_Web_hairy3r5
+Error Trace :    at Operation_Registration.PopulateControl(DataTable dtDetails) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\Registration.aspx.cs:line 1438
+   at Operation_Registration.grdStyled_SelectedIndexChanged(Object sender, EventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\Registration.aspx.cs:line 1184

@@ -1,0 +1,22 @@
+******************** Error Log - 5/5/2020 8:04:05 PM*********************
+
+Exception Type : HttpException
+Error Message : DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'AssignmentId'.
+Error Source : App_Web_assgnebooks.aspx.4fc8750e.lekzdtfr
+Error Trace :    at Operation_AssgnEbooks.getDetails(String strText) in d:\Projects\skool365\eGurukul\skool365\Operation\AssgnEbooks.aspx.cs:line 1462
+   at Operation_AssgnEbooks.btnSearch_Click(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Operation\AssgnEbooks.aspx.cs:line 1420
+******************** Error Log - 5/5/2020 8:20:28 PM*********************
+
+Exception Type : ArgumentOutOfRangeException
+Error Message : 'ddlSession' has a SelectedValue which is invalid because it does not exist in the list of items.
+Parameter name: value
+Error Source : App_Web_assgnebooks.aspx.4fc8750e.lekzdtfr
+Error Trace :    at Operation_AssgnEbooks.bindCombos() in d:\Projects\skool365\eGurukul\skool365\Operation\AssgnEbooks.aspx.cs:line 182
+   at Operation_AssgnEbooks.grdEvents_SelectedIndexChanged(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Operation\AssgnEbooks.aspx.cs:line 471
+******************** Error Log - 5/5/2020 9:13:58 PM*********************
+
+Exception Type : NullReferenceException
+Error Message : Object reference not set to an instance of an object.
+Error Source : App_Web_assgnebooks.aspx.4fc8750e.lekzdtfr
+Error Trace :    at Operation_AssgnEbooks.bindCombos() in d:\Projects\skool365\eGurukul\skool365\Operation\AssgnEbooks.aspx.cs:line 182
+   at Operation_AssgnEbooks.grdEvents_SelectedIndexChanged(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Operation\AssgnEbooks.aspx.cs:line 471

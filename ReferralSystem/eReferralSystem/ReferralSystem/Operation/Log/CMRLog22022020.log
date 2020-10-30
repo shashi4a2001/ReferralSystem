@@ -1,0 +1,8 @@
+******************** Error Log - 2/22/2020 1:49:28 AM*********************
+
+Exception Type : SqlException
+Error Message : Cannot open database "IPSM" requested by the login. The login failed.
+Login failed for user 'ranjan-PC\ranjan'.
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at BLCMR.STPclsLogin.GetLogin(String Userid, String EmailId, String Password, String IPAddress, String strCon)
+   at Operation_Login.btnLogin_Click(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Login.aspx.cs:line 98

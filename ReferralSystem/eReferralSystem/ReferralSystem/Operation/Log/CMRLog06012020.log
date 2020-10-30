@@ -1,0 +1,42 @@
+******************** Error Log - 1/6/2020 11:38:51 AM*********************
+
+Exception Type : InvalidOperationException
+Error Message : Using the Title property of Page requires a header control on the page. (e.g. <head runat="server" />).
+Error Source : System.Web
+Error Trace :    at System.Web.UI.Page.set_Title(String value)
+   at Operation_Login.Page_Load(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Login.aspx.cs:line 38
+******************** Error Log - 1/6/2020 11:39:16 AM*********************
+
+Exception Type : InvalidOperationException
+Error Message : Using the Title property of Page requires a header control on the page. (e.g. <head runat="server" />).
+Error Source : System.Web
+Error Trace :    at System.Web.UI.Page.set_Title(String value)
+   at Operation_Login.Page_Load(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Login.aspx.cs:line 38
+******************** Error Log - 1/6/2020 11:40:27 AM*********************
+
+Exception Type : InvalidOperationException
+Error Message : Using the Title property of Page requires a header control on the page. (e.g. <head runat="server" />).
+Error Source : System.Web
+Error Trace :    at System.Web.UI.Page.set_Title(String value)
+   at Operation_Login.Page_Load(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Login.aspx.cs:line 38
+******************** Error Log - 1/6/2020 11:41:12 AM*********************
+
+Exception Type : InvalidOperationException
+Error Message : Using the Title property of Page requires a header control on the page. (e.g. <head runat="server" />).
+Error Source : System.Web
+Error Trace :    at System.Web.UI.Page.set_Title(String value)
+   at Operation_Login.Page_Load(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Login.aspx.cs:line 38
+******************** Error Log - 1/6/2020 11:54:43 AM*********************
+
+Exception Type : InvalidOperationException
+Error Message : Using the Title property of Page requires a header control on the page. (e.g. <head runat="server" />).
+Error Source : System.Web
+Error Trace :    at System.Web.UI.Page.set_Title(String value)
+   at Operation_Login.Page_Load(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Login.aspx.cs:line 38
+******************** Error Log - 1/6/2020 11:55:43 AM*********************
+
+Exception Type : InvalidOperationException
+Error Message : Using the Title property of Page requires a header control on the page. (e.g. <head runat="server" />).
+Error Source : System.Web
+Error Trace :    at System.Web.UI.Page.set_Title(String value)
+   at Operation_Login.Page_Load(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Login.aspx.cs:line 38

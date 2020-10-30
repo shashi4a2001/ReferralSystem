@@ -1,0 +1,7 @@
+******************** Error Log - 8/13/2020 12:57:23 AM*********************
+
+Exception Type : SqlException
+Error Message : Procedure or function 'USP_Add_Remove_Assignments_Marks' expects parameter '@P_USER', which was not supplied.
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at BLCMR.clsAssignments.Add_Remove_Assignments_Marks(EC_Assignments objEC_Assignments)
+   at Operation_AssMapping.btnSave_Click(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Operation\AssMapping.aspx.cs:line 595

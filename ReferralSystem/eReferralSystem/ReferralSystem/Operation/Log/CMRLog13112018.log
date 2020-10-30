@@ -1,0 +1,20 @@
+******************** Error Log - 11/13/2018 3:41:47 AM*********************
+
+Exception Type : SqlException
+Error Message : Could not find stored procedure 'USP_GET_OLYMPIAD_REGISTRATION_DETAILS'.
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at Operation_Registration.getOlympiadRegisteredDetails() in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\Registration.aspx.cs:line 178
+   at Operation_Registration.Page_Load(Object sender, EventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\Registration.aspx.cs:line 83
+******************** Error Log - 11/13/2018 10:31:23 AM*********************
+
+Exception Type : NullReferenceException
+Error Message : Object reference not set to an instance of an object.
+Error Source : App_Web_3pekev4i
+Error Trace :    at Operation_ConfigMails.btnSubmit_Click(Object sender, EventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\ConfigMails.aspx.cs:line 115
+******************** Error Log - 11/13/2018 10:54:30 AM*********************
+
+Exception Type : SqlException
+Error Message : Could not find stored procedure 'USP_GET_OLYMPIAD_REGISTRATION_DETAILS'.
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at Operation_Registration.getOlympiadRegisteredDetails() in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\Registration.aspx.cs:line 178
+   at Operation_Registration.Page_Load(Object sender, EventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\Registration.aspx.cs:line 83

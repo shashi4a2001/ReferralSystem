@@ -1,0 +1,14 @@
+******************** Error Log - 29/10/2020 12:31:42*********************
+
+Exception Type : SqlException
+Error Message : Could not find stored procedure 'USP_VALIDATE_USER_LOGIN'.
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at BLCMR.STPclsLogin.GetLogin(String Userid, String EmailId, String Password, String IPAddress, String strCon)
+   at Operation_Login.btnLogin_Click(Object sender, EventArgs e) in e:\GitRepository\ReferralSystem\ReferralSystem\skool365\eGurukul\skool365\Login.aspx.cs:line 104
+******************** Error Log - 29/10/2020 16:43:51*********************
+
+Exception Type : SqlException
+Error Message : Invalid object name 'ROLE_Menu_Privilege'.
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at Operation_DashBoard.InsertParentNodes() in e:\GitRepository\ReferralSystem\ReferralSystem\ReferralSystem\eReferralSystem\ReferralSystem\Operation\DashBoard.aspx.cs:line 144
+   at Operation_DashBoard.Page_Load(Object sender, EventArgs e) in e:\GitRepository\ReferralSystem\ReferralSystem\ReferralSystem\eReferralSystem\ReferralSystem\Operation\DashBoard.aspx.cs:line 72

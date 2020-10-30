@@ -1,0 +1,19 @@
+******************** Error Log - 11/7/2018 8:09:28 AM*********************
+
+Exception Type : FormatException
+Error Message : The input is not a valid Base-64 string as it contains a non-base 64 character, more than two padding characters, or an illegal character among the padding characters. 
+Error Source : mscorlib
+Error Trace :    at System.Convert.FromBase64_Decode(Char* startInputPtr, Int32 inputLength, Byte* startDestPtr, Int32 destLength)
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at BLCMR.clsCommon.DecryptData(String cipherText)
+   at Operation_SchoolRegistration.Page_Load(Object sender, EventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\SchoolRegistration.aspx.cs:line 49
+******************** Error Log - 11/7/2018 8:57:39 AM*********************
+
+Exception Type : SqlException
+Error Message : Invalid column name 'School_Id'.
+Invalid column name 'School_Id'.
+Invalid column name 'SCHOOL_ID'.
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at Operation_Registration.getOlympiadRegisteredDetails() in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\Registration.aspx.cs:line 178
+   at Operation_Registration.Page_Load(Object sender, EventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\Registration.aspx.cs:line 85

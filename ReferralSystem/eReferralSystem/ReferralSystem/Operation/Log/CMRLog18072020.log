@@ -1,0 +1,46 @@
+******************** Error Log - 7/18/2020 11:45:15 AM*********************
+
+Exception Type : SqlException
+Error Message : Error converting data type nvarchar to datetime.
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at BLCMR.clsAssignments.SaveAssignments(EC_Assignments objEC_Assignments, Boolean isInsert)
+   at Operation_AssgnEbooks.btnSubmit_Click(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Operation\AssgnEbooks.aspx.cs:line 287
+******************** Error Log - 7/18/2020 11:48:09 AM*********************
+
+Exception Type : SqlException
+Error Message : Error converting data type nvarchar to datetime.
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at BLCMR.clsAssignments.SaveAssignments(EC_Assignments objEC_Assignments, Boolean isInsert)
+   at Operation_AssgnEbooks.btnSubmit_Click(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Operation\AssgnEbooks.aspx.cs:line 287
+******************** Error Log - 7/18/2020 11:49:46 AM*********************
+
+Exception Type : SqlException
+Error Message : Error converting data type nvarchar to datetime.
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at BLCMR.clsAssignments.SaveAssignments(EC_Assignments objEC_Assignments, Boolean isInsert)
+   at Operation_AssgnEbooks.btnSubmit_Click(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Operation\AssgnEbooks.aspx.cs:line 287
+******************** Error Log - 7/18/2020 5:38:24 PM*********************
+
+Exception Type : SqlException
+Error Message : Timeout expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at BLCMR.STPclsLogin.GetLogin(String Userid, String EmailId, String Password, String IPAddress, String strCon)
+   at Operation_Login.btnLogin_Click(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Login.aspx.cs:line 104
+
+Exception Type : Win32Exception
+Error Message : The wait operation timed out
+Error Source : 
+Error Trace : 
+******************** Error Log - 7/18/2020 6:25:47 PM*********************
+
+Exception Type : NullReferenceException
+Error Message : Object reference not set to an instance of an object.
+Error Source : App_Web_etklm0dh
+Error Trace :    at Operation_AssgnEbooks.bindCombos() in d:\Projects\skool365\eGurukul\skool365\Operation\AssgnEbooks.aspx.cs:line 182
+   at Operation_AssgnEbooks.grdEvents_SelectedIndexChanged(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Operation\AssgnEbooks.aspx.cs:line 515
+******************** Error Log - 7/18/2020 11:31:11 PM*********************
+
+Exception Type : IndexOutOfRangeException
+Error Message : Index was outside the bounds of the array.
+Error Source : App_Web_xmvrbte3
+Error Trace :    at Operation_AssgnEbooks.grdEvents_SelectedIndexChanged(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Operation\AssgnEbooks.aspx.cs:line 518

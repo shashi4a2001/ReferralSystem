@@ -1,0 +1,220 @@
+******************** Error Log - 10/21/2018 2:13:32 AM*********************
+
+Exception Type : SqlException
+Error Message : A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Shared Memory Provider, error: 40 - Could not open a connection to SQL Server)
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at BLCMR.STPclsLogin.GetLogin(String Userid, String EmailId, String Password, String IPAddress, String strCon)
+   at Operation_Login.btnLogin_Click(Object sender, EventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Login.aspx.cs:line 99
+
+Exception Type : Win32Exception
+Error Message : The system cannot find the file specified
+Error Source : 
+Error Trace : 
+******************** Error Log - 10/21/2018 2:13:56 AM*********************
+
+Exception Type : SqlException
+Error Message : A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Shared Memory Provider, error: 40 - Could not open a connection to SQL Server)
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at BLCMR.STPclsLogin.GetLogin(String Userid, String EmailId, String Password, String IPAddress, String strCon)
+   at Operation_Login.btnLogin_Click(Object sender, EventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Login.aspx.cs:line 99
+
+Exception Type : Win32Exception
+Error Message : The system cannot find the file specified
+Error Source : 
+Error Trace : 
+******************** Error Log - 10/21/2018 2:15:18 AM*********************
+
+Exception Type : SqlException
+Error Message : A network-related or instance-specific error occurred while establishing a connection to SQL Server. The server was not found or was not accessible. Verify that the instance name is correct and that SQL Server is configured to allow remote connections. (provider: Shared Memory Provider, error: 40 - Could not open a connection to SQL Server)
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at BLCMR.STPclsLogin.GetLogin(String Userid, String EmailId, String Password, String IPAddress, String strCon)
+   at Operation_Login.btnLogin_Click(Object sender, EventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Login.aspx.cs:line 99
+
+Exception Type : Win32Exception
+Error Message : The system cannot find the file specified
+Error Source : 
+Error Trace : 
+******************** Error Log - 10/21/2018 2:19:18 AM*********************
+
+Exception Type : SqlException
+Error Message : The conversion of a char data type to a datetime data type resulted in an out-of-range datetime value.
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at DLCMR.DLClsGeneric.SpDataTable(String SpName, SqlCommand SpCmd, String strCon)
+   at BLCMR.clsOlympiad.OlympiadRegistration(String strCon, ObjStudentRegistrationInfo objRegistrationUser, Boolean isInsert)
+   at Operation_Registration.btnSubmit_Click(Object sender, EventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\Registration.aspx.cs:line 326
+******************** Error Log - 10/21/2018 2:19:28 AM*********************
+
+Exception Type : HttpException
+Error Message : DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'ID'.
+Error Source : App_Web_cue2zrxs
+Error Trace :    at Operation_Registration.getOlympiadRegisteredDetails() in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\Registration.aspx.cs:line 170
+   at Operation_Registration.Page_Load(Object sender, EventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\Registration.aspx.cs:line 83
+******************** Error Log - 10/21/2018 2:22:20 AM*********************
+
+Exception Type : HttpException
+Error Message : A field or property with the name 'STS_DESC' was not found on the selected data source.
+Error Source : App_Web_cue2zrxs
+Error Trace :    at Operation_Registration.getOlympiadRegisteredDetails() in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\Registration.aspx.cs:line 170
+   at Operation_Registration.Page_Load(Object sender, EventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\Registration.aspx.cs:line 83
+******************** Error Log - 10/21/2018 2:23:48 AM*********************
+
+Exception Type : HttpException
+Error Message : A field or property with the name 'STS_DESC' was not found on the selected data source.
+Error Source : App_Web_cue2zrxs
+Error Trace :    at Operation_Registration.getOlympiadRegisteredDetails() in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\Registration.aspx.cs:line 170
+   at Operation_Registration.Page_Load(Object sender, EventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\Registration.aspx.cs:line 83
+******************** Error Log - 10/21/2018 2:24:56 AM*********************
+
+Exception Type : HttpException
+Error Message : A field or property with the name 'EMAIL_ID' was not found on the selected data source.
+Error Source : App_Web_cue2zrxs
+Error Trace :    at Operation_Registration.getOlympiadRegisteredDetails() in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\Registration.aspx.cs:line 170
+   at Operation_Registration.Page_Load(Object sender, EventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\Registration.aspx.cs:line 83
+******************** Error Log - 10/21/2018 2:25:23 AM*********************
+
+Exception Type : HttpException
+Error Message : A field or property with the name 'EMAIL_ID' was not found on the selected data source.
+Error Source : App_Web_cue2zrxs
+Error Trace :    at Operation_Registration.getOlympiadRegisteredDetails() in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\Registration.aspx.cs:line 170
+   at Operation_Registration.Page_Load(Object sender, EventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\Registration.aspx.cs:line 83
+******************** Error Log - 10/21/2018 2:28:55 AM*********************
+
+Exception Type : SqlException
+Error Message : The conversion of a char data type to a datetime data type resulted in an out-of-range datetime value.
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at DLCMR.DLClsGeneric.SpDataTable(String SpName, SqlCommand SpCmd, String strCon)
+   at BLCMR.clsOlympiad.OlympiadRegistration(String strCon, ObjStudentRegistrationInfo objRegistrationUser, Boolean isInsert)
+   at Operation_Registration.btnSubmit_Click(Object sender, EventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\Registration.aspx.cs:line 326
+******************** Error Log - 10/21/2018 3:15:26 AM*********************
+
+Exception Type : SqlException
+Error Message : The conversion of a char data type to a datetime data type resulted in an out-of-range datetime value.
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at DLCMR.DLClsGeneric.SpDataTable(String SpName, SqlCommand SpCmd, String strCon)
+   at BLCMR.clsOlympiad.OlympiadRegistration(String strCon, ObjStudentRegistrationInfo objRegistrationUser, Boolean isInsert)
+   at Operation_Registration.btnSubmit_Click(Object sender, EventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\Registration.aspx.cs:line 327
+******************** Error Log - 10/21/2018 3:25:49 AM*********************
+
+Exception Type : SqlException
+Error Message : The conversion of a char data type to a datetime data type resulted in an out-of-range datetime value.
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection, Action`1 wrapCloseInAction)
+   at System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj, Boolean callerHasConnectionLock, Boolean asyncClose)
+   at System.Data.SqlClient.TdsParser.TryRun(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj, Boolean& dataReady)
+   at System.Data.SqlClient.SqlDataReader.TryConsumeMetaData()
+   at System.Data.SqlClient.SqlDataReader.get_MetaData()
+   at System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async, Int32 timeout, Task& task, Boolean asyncWrite, SqlDataReader ds, Boolean describeParameterEncryptionRequest)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, TaskCompletionSource`1 completion, Int32 timeout, Task& task, Boolean asyncWrite)
+   at System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   at System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   at System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable[] dataTables, Int32 startRecord, Int32 maxRecords, IDbCommand command, CommandBehavior behavior)
+   at System.Data.Common.DbDataAdapter.Fill(DataTable dataTable)
+   at DLCMR.DLClsGeneric.SpDataTable(String SpName, SqlCommand SpCmd, String strCon)
+   at BLCMR.clsOlympiad.OlympiadRegistration(String strCon, ObjStudentRegistrationInfo objRegistrationUser, Boolean isInsert)
+   at Operation_Registration.btnSubmit_Click(Object sender, EventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\Registration.aspx.cs:line 327
+******************** Error Log - 10/21/2018 5:10:00 AM*********************
+
+Exception Type : NullReferenceException
+Error Message : Object reference not set to an instance of an object.
+Error Source : App_Web_fliwmo3d
+Error Trace :    at Operation_Registration.grdStyled_RowDeleting(Object sender, GridViewDeleteEventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\Registration.aspx.cs:line 1248
+******************** Error Log - 10/21/2018 6:45:16 AM*********************
+
+Exception Type : NullReferenceException
+Error Message : Object reference not set to an instance of an object.
+Error Source : App_Web_hsah14fe
+Error Trace :    at Operation_Registration.grdStyled_RowDeleting(Object sender, GridViewDeleteEventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\Registration.aspx.cs:line 1254
+******************** Error Log - 10/21/2018 6:49:42 AM*********************
+
+Exception Type : HttpException
+Error Message : DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'USER_ID'.
+Error Source : App_Web_2rwuncyn
+Error Trace :    at Operation_Registration.getOlympiadRegisteredDetails() in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\Registration.aspx.cs:line 178
+   at Operation_Registration.Page_Load(Object sender, EventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\Registration.aspx.cs:line 83
+******************** Error Log - 10/21/2018 6:50:44 AM*********************
+
+Exception Type : HttpException
+Error Message : DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'USER_ID'.
+Error Source : App_Web_2rwuncyn
+Error Trace :    at Operation_Registration.getOlympiadRegisteredDetails() in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\Registration.aspx.cs:line 178
+   at Operation_Registration.Page_Load(Object sender, EventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\Registration.aspx.cs:line 83
+******************** Error Log - 10/21/2018 6:51:54 AM*********************
+
+Exception Type : HttpException
+Error Message : DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'USER_ID'.
+Error Source : App_Web_2rwuncyn
+Error Trace :    at Operation_Registration.getOlympiadRegisteredDetails() in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\Registration.aspx.cs:line 178
+   at Operation_Registration.Page_Load(Object sender, EventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\Registration.aspx.cs:line 83
+******************** Error Log - 10/21/2018 6:52:45 AM*********************
+
+Exception Type : HttpException
+Error Message : DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'USER_ID'.
+Error Source : App_Web_2rwuncyn
+Error Trace :    at Operation_Registration.getOlympiadRegisteredDetails() in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\Registration.aspx.cs:line 178
+   at Operation_Registration.Page_Load(Object sender, EventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\Registration.aspx.cs:line 83
+******************** Error Log - 10/21/2018 7:02:14 AM*********************
+
+Exception Type : SqlException
+Error Message : Invalid object name 'SCHOOL_REGISTRATION'.
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at BLCMR.clsOlympiad.DeleteOlympiadRegistrationRequests(objOlympiad Olympiad)
+   at Operation_Registration.grdStyled_RowDeleting(Object sender, GridViewDeleteEventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\Registration.aspx.cs:line 1257
+******************** Error Log - 10/21/2018 7:39:43 AM*********************
+
+Exception Type : NullReferenceException
+Error Message : Object reference not set to an instance of an object.
+Error Source : App_Web_1mwa2dhv
+Error Trace :    at Operation_Registration.grdStyled_SelectedIndexChanged(Object sender, EventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\Registration.aspx.cs:line 1179

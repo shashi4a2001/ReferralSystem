@@ -1,0 +1,21 @@
+D:\Projects\VS2017 Projects\eGurukul\BLskool365\bin\Debug\BLskool365.dll
+D:\Projects\VS2017 Projects\eGurukul\BLskool365\bin\Debug\BLskool365.pdb
+D:\Projects\VS2017 Projects\eGurukul\BLskool365\bin\Debug\DLskool365.dll
+D:\Projects\VS2017 Projects\eGurukul\BLskool365\bin\Debug\DLskool365.pdb
+D:\Projects\VS2017 Projects\eGurukul\BLskool365\obj\Debug\BLskool365.csprojResolveAssemblyReference.cache
+D:\Projects\VS2017 Projects\eGurukul\BLskool365\obj\Debug\BLskool365.dll
+D:\Projects\VS2017 Projects\eGurukul\BLskool365\obj\Debug\BLskool365.pdb
+D:\Projects\IPSM\eGurukul\BLskool365\bin\Debug\BLskool365.dll
+D:\Projects\IPSM\eGurukul\BLskool365\bin\Debug\BLskool365.pdb
+D:\Projects\IPSM\eGurukul\BLskool365\bin\Debug\DLskool365.dll
+D:\Projects\IPSM\eGurukul\BLskool365\bin\Debug\DLskool365.pdb
+D:\Projects\IPSM\eGurukul\BLskool365\obj\Debug\BLskool365.csprojResolveAssemblyReference.cache
+D:\Projects\IPSM\eGurukul\BLskool365\obj\Debug\BLskool365.dll
+D:\Projects\IPSM\eGurukul\BLskool365\obj\Debug\BLskool365.pdb
+D:\Projects\skool365\eGurukul\BLskool365\bin\Debug\BLskool365.dll
+D:\Projects\skool365\eGurukul\BLskool365\bin\Debug\BLskool365.pdb
+D:\Projects\skool365\eGurukul\BLskool365\bin\Debug\DLskool365.dll
+D:\Projects\skool365\eGurukul\BLskool365\bin\Debug\DLskool365.pdb
+D:\Projects\skool365\eGurukul\BLskool365\obj\Debug\BLskool365.csprojResolveAssemblyReference.cache
+D:\Projects\skool365\eGurukul\BLskool365\obj\Debug\BLskool365.dll
+D:\Projects\skool365\eGurukul\BLskool365\obj\Debug\BLskool365.pdb

@@ -1,0 +1,19 @@
+******************** Error Log - 10/25/2019 12:59:41 AM*********************
+
+Exception Type : InvalidCastException
+Error Message : Unable to cast object of type 'System.Web.UI.WebControls.DataKey' to type 'System.IConvertible'.
+Error Source : mscorlib
+Error Trace :    at System.Convert.ToInt16(Object value)
+   at Operation_FeeMaster.btnSubmit_Click(Object sender, EventArgs e) in d:\Projects\IPSM\eGurukul\skool365\Operation\FeeMaster.aspx.cs:line 141
+******************** Error Log - 10/25/2019 1:10:46 AM*********************
+
+Exception Type : NullReferenceException
+Error Message : Object reference not set to an instance of an object.
+Error Source : App_Web_kjl4app0
+Error Trace :    at Operation_FeeMaster.btnSubmit_Click(Object sender, EventArgs e) in d:\Projects\IPSM\eGurukul\skool365\Operation\FeeMaster.aspx.cs:line 141
+******************** Error Log - 10/25/2019 1:12:22 AM*********************
+
+Exception Type : NullReferenceException
+Error Message : Object reference not set to an instance of an object.
+Error Source : App_Web_kowscywm
+Error Trace :    at Operation_FeeMaster.btnSubmit_Click(Object sender, EventArgs e) in d:\Projects\IPSM\eGurukul\skool365\Operation\FeeMaster.aspx.cs:line 178

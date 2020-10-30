@@ -1,0 +1,105 @@
+﻿ <tr>
+        <td width="336" rowspan="4">
+           <u> Remarks / Payment Instructions</u>
+            <br />
+            #RECEIPT_REMARKS#
+        </td>
+        <td colspan="4" align="right">
+            Total Paying Amount
+        </td>
+        <td width="59" align="right">
+            #RECEIPT_TOTAL#
+        </td>
+    </tr>
+    <tr>
+        <td colspan="4" align="right">
+            Total SGST (Included #RECEIPT_SGST#%, if any)
+        </td>
+        <td width="59" align="right">
+             #RECEIPT_SGST_TOTAL#
+        </td>
+    </tr>
+    <tr>
+        <td colspan="4" align="right">
+            Total CGST (Included #RECEIPT_CGST#%, if any)
+        </td>
+        <td width="59" align="right">
+            #RECEIPT_CGST_TOTAL#
+        </td>
+    </tr>
+    <tr>
+        <td colspan="4" align="right">
+            Total IGST (Included #RECEIPT_IGST#%, if any)
+        </td>
+        <td width="59" align="right">
+             #RECEIPT_IGST_TOTAL#
+        </td>
+    </tr>
+</table>
+<table width='100%' style="font-family: arial, sans-serif; font-size: 12px; font-style: normal;
+    font-variant-ligatures: normal;">
+    <tr>
+        <td>
+            <br />
+        </td>
+        <td>
+        </td>
+        <br />
+    </tr>
+    <tr>
+        <td align='left'>
+            <strong>Signature of Student/Parents/Gaurdian</strong>
+        </td>
+        <td align='right'>
+            <strong>Signature/Stamp NATA Authorities</strong>
+        </td>
+    </tr>
+</table>
+<br />
+<table width='100%' cellspacing='0' cellpadding='2' style="font-family: arial, sans-serif;
+    font-size: 10px; font-style: normal; font-variant-ligatures: normal;">
+    <tr>
+        <td colspan='2'>
+            1. The amount receipted for is against part/full payment fee aforementioned course
+            only.
+        </td>
+    </tr>
+    <tr>
+        <td colspan='2'>
+            2. There is no replacement guarantee.
+        </td>
+    </tr>
+    <tr>
+        <td colspan='2'>
+            3. The fee part/full once paid shall not be refunded under any circumstances.
+        </td>
+    </tr>
+    <tr>
+        <td colspan='2'>
+            4. In case you don’t pay the fees by due date, late fee charges will be applicable.
+        </td>
+    </tr>
+    <tr>
+        <td colspan='2'>
+            5. In case any of your post dated cheques is dishonored by bank of any reason whatever,
+            you will not be allowed to attend the class. Further, if you are not able to pay
+            the balance fee within the notice period given by the management, your admission
+            to the course shall be cancelled and the fee already paid shall not be refunded
+            and shall stand forehanded without prejudice to other available remedies.
+        </td>
+    </tr>
+    <tr>
+        <td colspan='2'>
+            6. The detailed terms and conditions are contained in student agreement between
+            organization and student/legal guardian.
+        </td>
+    </tr>
+    <tr>
+        <td colspan='2'>
+            7. The management reserves the right to refuse the admission to candidate. If he/she
+            does not submit the required document or complete all the admission formalities
+            by the stipulated date given by management with shall in no case be later than 10
+            days from the date of taking registration.
+        </td>
+    </tr>
+</table>

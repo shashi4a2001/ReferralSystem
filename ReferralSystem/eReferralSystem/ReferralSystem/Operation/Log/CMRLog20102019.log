@@ -1,0 +1,121 @@
+******************** Error Log - 10/20/2019 3:26:01 AM*********************
+
+Exception Type : SqlException
+Error Message : Timeout expired.  The timeout period elapsed prior to completion of the operation or the server is not responding.
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at BLCMR.STPclsLogin.GetLogin(String Userid, String EmailId, String Password, String IPAddress, String strCon)
+   at Operation_Login.btnLogin_Click(Object sender, EventArgs e) in d:\Projects\IPSM\eGurukul\skool365\Login.aspx.cs:line 99
+
+Exception Type : Win32Exception
+Error Message : The wait operation timed out
+Error Source : 
+Error Trace : 
+******************** Error Log - 10/20/2019 3:33:58 AM*********************
+
+Exception Type : SqlException
+Error Message : Could not find stored procedure 'USP_INSERT_FEE_HEADER'.
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at BLCMR.clsCommonUtility.SaveFeeHeader(ObjMaster master)
+   at Operation_FeeHeader.btnSubmit_Click(Object sender, EventArgs e) in d:\Projects\IPSM\eGurukul\skool365\Operation\FeeHeader.aspx.cs:line 192
+******************** Error Log - 10/20/2019 3:35:07 AM*********************
+
+Exception Type : SqlException
+Error Message : Could not find stored procedure 'USP_INSERT_FEE_HEADER'.
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at BLCMR.clsCommonUtility.SaveFeeHeader(ObjMaster master)
+   at Operation_FeeHeader.btnSubmit_Click(Object sender, EventArgs e) in d:\Projects\IPSM\eGurukul\skool365\Operation\FeeHeader.aspx.cs:line 192
+******************** Error Log - 10/20/2019 3:38:28 AM*********************
+
+Exception Type : SqlException
+Error Message : Could not find stored procedure 'USP_INSERT_FEE_HEADER'.
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at BLCMR.clsCommonUtility.SaveFeeHeader(ObjMaster master)
+   at Operation_FeeHeader.btnSubmit_Click(Object sender, EventArgs e) in d:\Projects\IPSM\eGurukul\skool365\Operation\FeeHeader.aspx.cs:line 192
+******************** Error Log - 10/20/2019 3:46:53 AM*********************
+
+Exception Type : NullReferenceException
+Error Message : Object reference not set to an instance of an object.
+Error Source : App_Web_v1byhya2
+Error Trace :    at Operation_FeeHeader.grdStyled_SelectedIndexChanged(Object sender, EventArgs e) in d:\Projects\IPSM\eGurukul\skool365\Operation\FeeHeader.aspx.cs:line 306
+******************** Error Log - 10/20/2019 3:48:26 AM*********************
+
+Exception Type : NullReferenceException
+Error Message : Object reference not set to an instance of an object.
+Error Source : App_Web_v1byhya2
+Error Trace :    at Operation_FeeHeader.grdStyled_SelectedIndexChanged(Object sender, EventArgs e) in d:\Projects\IPSM\eGurukul\skool365\Operation\FeeHeader.aspx.cs:line 306
+******************** Error Log - 10/20/2019 3:49:16 AM*********************
+
+Exception Type : NullReferenceException
+Error Message : Object reference not set to an instance of an object.
+Error Source : App_Web_v1byhya2
+Error Trace :    at Operation_FeeHeader.grdStyled_SelectedIndexChanged(Object sender, EventArgs e) in d:\Projects\IPSM\eGurukul\skool365\Operation\FeeHeader.aspx.cs:line 306
+******************** Error Log - 10/20/2019 3:52:44 AM*********************
+
+Exception Type : NullReferenceException
+Error Message : Object reference not set to an instance of an object.
+Error Source : App_Web_lzthgvem
+Error Trace :    at Operation_FeeHeader.grdStyled_SelectedIndexChanged(Object sender, EventArgs e) in d:\Projects\IPSM\eGurukul\skool365\Operation\FeeHeader.aspx.cs:line 306
+******************** Error Log - 10/20/2019 4:10:37 AM*********************
+
+Exception Type : NullReferenceException
+Error Message : Object reference not set to an instance of an object.
+Error Source : App_Web_bmcnafw2
+Error Trace :    at Operation_FeeHeader.grdStyled_RowDeleting(Object sender, GridViewDeleteEventArgs e) in d:\Projects\IPSM\eGurukul\skool365\Operation\FeeHeader.aspx.cs:line 372
+******************** Error Log - 10/20/2019 5:43:49 AM*********************
+
+Exception Type : NullReferenceException
+Error Message : Object reference not set to an instance of an object.
+Error Source : BLskool365
+Error Trace :    at BLCMR.clsCommonUtility.ShowHeader(ObjMaster master)
+   at Operation_FeeMaster.btnGetData_Click(Object sender, EventArgs e) in d:\Projects\IPSM\eGurukul\skool365\Operation\FeeMaster.aspx.cs:line 568
+******************** Error Log - 10/20/2019 5:45:21 AM*********************
+
+Exception Type : NullReferenceException
+Error Message : Object reference not set to an instance of an object.
+Error Source : BLskool365
+Error Trace :    at BLCMR.clsCommonUtility.ShowHeader(ObjMaster master)
+   at Operation_FeeMaster.btnGetData_Click(Object sender, EventArgs e) in d:\Projects\IPSM\eGurukul\skool365\Operation\FeeMaster.aspx.cs:line 568
+******************** Error Log - 10/20/2019 5:54:27 AM*********************
+
+Exception Type : EvaluateException
+Error Message : Cannot perform '=' operation on System.String and System.Int32.
+Error Source : System.Data
+Error Trace :    at System.Data.BinaryNode.SetTypeMismatchError(Int32 op, Type left, Type right)
+   at System.Data.BinaryNode.BinaryCompare(Object vLeft, Object vRight, StorageType resultType, Int32 op, CompareInfo comparer)
+   at System.Data.Select.Eval(BinaryNode expr, DataRow row, DataRowVersion version)
+   at System.Data.Select.Evaluate(Int32 record)
+   at System.Data.Select.FindFirstMatchingRecord()
+   at System.Data.Select.GetBinaryFilteredRecords()
+   at System.Data.Select.SelectRows()
+   at System.Data.DataTable.Select(String filterExpression)
+   at Operation_FeeMaster.btnGetData_Click(Object sender, EventArgs e) in d:\Projects\IPSM\eGurukul\skool365\Operation\FeeMaster.aspx.cs:line 573
+******************** Error Log - 10/20/2019 5:55:44 AM*********************
+
+Exception Type : HttpException
+Error Message : DataBinding: 'System.Data.DataRow' does not contain a property with the name 'SectionID'.
+Error Source : System.Web
+Error Trace :    at System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   at System.Web.UI.WebControls.DataList.CreateControlHierarchy(Boolean useDataSource)
+   at System.Web.UI.WebControls.BaseDataList.OnDataBinding(EventArgs e)
+   at System.Web.UI.WebControls.BaseDataList.DataBind()
+   at Operation_FeeMaster.btnGetData_Click(Object sender, EventArgs e) in d:\Projects\IPSM\eGurukul\skool365\Operation\FeeMaster.aspx.cs:line 574
+******************** Error Log - 10/20/2019 6:01:02 AM*********************
+
+Exception Type : HttpException
+Error Message : DataBinding: 'System.Data.DataRow' does not contain a property with the name 'SectionID'.
+Error Source : System.Web
+Error Trace :    at System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   at System.Web.UI.WebControls.DataList.CreateControlHierarchy(Boolean useDataSource)
+   at System.Web.UI.WebControls.BaseDataList.OnDataBinding(EventArgs e)
+   at System.Web.UI.WebControls.BaseDataList.DataBind()
+   at Operation_FeeMaster.btnGetData_Click(Object sender, EventArgs e) in d:\Projects\IPSM\eGurukul\skool365\Operation\FeeMaster.aspx.cs:line 574
+******************** Error Log - 10/20/2019 6:05:03 AM*********************
+
+Exception Type : HttpException
+Error Message : DataBinding: 'System.Data.DataRow' does not contain a property with the name 'ID'.
+Error Source : System.Web
+Error Trace :    at System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   at System.Web.UI.WebControls.DataList.CreateControlHierarchy(Boolean useDataSource)
+   at System.Web.UI.WebControls.BaseDataList.OnDataBinding(EventArgs e)
+   at System.Web.UI.WebControls.BaseDataList.DataBind()
+   at Operation_FeeMaster.btnGetData_Click(Object sender, EventArgs e) in d:\Projects\IPSM\eGurukul\skool365\Operation\FeeMaster.aspx.cs:line 574

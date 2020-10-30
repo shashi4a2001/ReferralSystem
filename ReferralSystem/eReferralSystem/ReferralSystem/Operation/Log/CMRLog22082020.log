@@ -1,0 +1,7 @@
+******************** Error Log - 8/22/2020 8:56:31 PM*********************
+
+Exception Type : NullReferenceException
+Error Message : Object reference not set to an instance of an object.
+Error Source : App_Web_eke5cq00
+Error Trace :    at Operation_AssMapping.bindAssignmentDetails(Int32 RegNo) in d:\Projects\skool365\eGurukul\skool365\Operation\AssMapping.aspx.cs:line 1287
+   at Operation_AssMapping.ddlStudents_SelectedIndexChanged(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Operation\AssMapping.aspx.cs:line 359

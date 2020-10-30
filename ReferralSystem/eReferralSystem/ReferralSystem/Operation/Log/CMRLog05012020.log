@@ -1,0 +1,54 @@
+******************** Error Log - 1/5/2020 8:14:11 PM*********************
+
+Exception Type : InvalidOperationException
+Error Message : Using the Title property of Page requires a header control on the page. (e.g. <head runat="server" />).
+Error Source : System.Web
+Error Trace :    at System.Web.UI.Page.set_Title(String value)
+   at Operation_Login.Page_Load(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Login.aspx.cs:line 38
+******************** Error Log - 1/5/2020 8:15:15 PM*********************
+
+Exception Type : SqlException
+Error Message : Connection Timeout Expired.  The timeout period elapsed during the post-login phase.  The connection could have timed out while waiting for server to complete the login process and respond; Or it could have timed out while attempting to create multiple active connections.  The duration spent while attempting to connect to this server was - [Pre-Login] initialization=554; handshake=1827; [Login] initialization=14; authentication=13; [Post-Login] complete=12550; 
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at BLCMR.STPclsLogin.GetLogin(String Userid, String EmailId, String Password, String IPAddress, String strCon)
+   at Operation_Login.btnLogin_Click(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Login.aspx.cs:line 98
+
+Exception Type : Win32Exception
+Error Message : The wait operation timed out
+Error Source : 
+Error Trace : 
+******************** Error Log - 1/5/2020 8:36:26 PM*********************
+
+Exception Type : InvalidOperationException
+Error Message : Using the Title property of Page requires a header control on the page. (e.g. <head runat="server" />).
+Error Source : System.Web
+Error Trace :    at System.Web.UI.Page.set_Title(String value)
+   at Operation_Login.Page_Load(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Login.aspx.cs:line 38
+******************** Error Log - 1/5/2020 8:37:39 PM*********************
+
+Exception Type : InvalidOperationException
+Error Message : Using the Title property of Page requires a header control on the page. (e.g. <head runat="server" />).
+Error Source : System.Web
+Error Trace :    at System.Web.UI.Page.set_Title(String value)
+   at Operation_Login.Page_Load(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Login.aspx.cs:line 38
+******************** Error Log - 1/5/2020 8:39:48 PM*********************
+
+Exception Type : InvalidOperationException
+Error Message : Using the Title property of Page requires a header control on the page. (e.g. <head runat="server" />).
+Error Source : System.Web
+Error Trace :    at System.Web.UI.Page.set_Title(String value)
+   at Operation_Login.Page_Load(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Login.aspx.cs:line 38
+******************** Error Log - 1/5/2020 8:42:04 PM*********************
+
+Exception Type : InvalidOperationException
+Error Message : Using the Title property of Page requires a header control on the page. (e.g. <head runat="server" />).
+Error Source : System.Web
+Error Trace :    at System.Web.UI.Page.set_Title(String value)
+   at Operation_Login.Page_Load(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Login.aspx.cs:line 38
+******************** Error Log - 1/5/2020 8:42:36 PM*********************
+
+Exception Type : InvalidOperationException
+Error Message : Using the Title property of Page requires a header control on the page. (e.g. <head runat="server" />).
+Error Source : System.Web
+Error Trace :    at System.Web.UI.Page.set_Title(String value)
+   at Operation_Login.Page_Load(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Login.aspx.cs:line 38

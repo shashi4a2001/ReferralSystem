@@ -1,0 +1,34 @@
+******************** Error Log - 11/3/2018 4:07:35 AM*********************
+
+Exception Type : ArgumentException
+Error Message : Column 'SCHOOL_ID' does not belong to table .
+Error Source : System.Data
+Error Trace :    at System.Data.DataRow.GetDataColumn(String columnName)
+   at System.Data.DataRow.get_Item(String columnName)
+   at Operation_Login.btnLogin_Click(Object sender, EventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Login.aspx.cs:line 153
+******************** Error Log - 11/3/2018 4:08:41 AM*********************
+
+Exception Type : ArgumentException
+Error Message : Column 'SCHOOL_ID' does not belong to table .
+Error Source : System.Data
+Error Trace :    at System.Data.DataRow.GetDataColumn(String columnName)
+   at System.Data.DataRow.get_Item(String columnName)
+   at Operation_Login.btnLogin_Click(Object sender, EventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Login.aspx.cs:line 153
+******************** Error Log - 11/3/2018 4:29:45 AM*********************
+
+Exception Type : ArgumentException
+Error Message : Column 'SCHOOL_ID' does not belong to table .
+Error Source : System.Data
+Error Trace :    at System.Data.DataRow.GetDataColumn(String columnName)
+   at System.Data.DataRow.get_Item(String columnName)
+   at Operation_Login.btnLogin_Click(Object sender, EventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Login.aspx.cs:line 153
+******************** Error Log - 11/3/2018 5:23:09 AM*********************
+
+Exception Type : FormatException
+Error Message : Invalid length for a Base-64 char array or string.
+Error Source : mscorlib
+Error Trace :    at System.Convert.FromBase64_Decode(Char* startInputPtr, Int32 inputLength, Byte* startDestPtr, Int32 destLength)
+   at System.Convert.FromBase64CharPtr(Char* inputPtr, Int32 inputLength)
+   at System.Convert.FromBase64String(String s)
+   at BLCMR.clsCommon.DecryptData(String cipherText)
+   at Operation_SchoolRegistration.Page_Load(Object sender, EventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\SchoolRegistration.aspx.cs:line 48

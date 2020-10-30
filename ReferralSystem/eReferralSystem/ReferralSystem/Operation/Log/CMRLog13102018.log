@@ -1,0 +1,31 @@
+******************** Error Log - 10/13/2018 9:21:06 AM*********************
+
+Exception Type : ArgumentOutOfRangeException
+Error Message : Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+Error Source : mscorlib
+Error Trace :    at System.Collections.ArrayList.get_Item(Int32 index)
+   at System.Web.UI.WebControls.DataKeyArray.get_Item(Int32 index)
+   at Operation_ActivateRegistration.grdStyled_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\ActivateRegistration.aspx.cs:line 697
+******************** Error Log - 10/13/2018 9:22:03 AM*********************
+
+Exception Type : ArgumentOutOfRangeException
+Error Message : Index was out of range. Must be non-negative and less than the size of the collection.
+Parameter name: index
+Error Source : mscorlib
+Error Trace :    at System.Collections.ArrayList.get_Item(Int32 index)
+   at System.Web.UI.WebControls.DataKeyArray.get_Item(Int32 index)
+   at Operation_ActivateRegistration.grdStyled_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\ActivateRegistration.aspx.cs:line 697
+******************** Error Log - 10/13/2018 9:27:56 AM*********************
+
+Exception Type : InvalidCastException
+Error Message : Unable to cast object of type 'System.Web.UI.WebControls.ImageButton' to type 'System.Web.UI.WebControls.Button'.
+Error Source : App_Web_qrp4fm30
+Error Trace :    at Operation_ActivateRegistration.grdStyled_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\ActivateRegistration.aspx.cs:line 695
+******************** Error Log - 10/13/2018 9:30:08 AM*********************
+
+Exception Type : SqlException
+Error Message : Could not find stored procedure 'dbo.USP_ACTIVATE_OLYMPIAD_DEACTIVATE_REGISTRATION'.
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at BLCMR.clsOlympiad.ActivatDeActivatedRegistrationRequests(objOlympiad Olympiad)
+   at Operation_ActivateRegistration.grdStyled_RowCommand(Object sender, GridViewCommandEventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\ActivateRegistration.aspx.cs:line 705

@@ -1,0 +1,21 @@
+******************** Error Log - 5/22/2020 2:30:17 AM*********************
+
+Exception Type : SqlException
+Error Message : Could not find stored procedure 'usp_SelectAssignments'.
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at Operation_AssgnEbooks.BindGrid() in d:\Projects\skool365\eGurukul\skool365\Operation\AssgnEbooks.aspx.cs:line 327
+   at Operation_AssgnEbooks.Page_Load(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Operation\AssgnEbooks.aspx.cs:line 83
+******************** Error Log - 5/22/2020 3:34:38 AM*********************
+
+Exception Type : InvalidOperationException
+Error Message : String[11]: the Size property has an invalid size of 0.
+Error Source : System.Data
+Error Trace :    at BLCMR.clsUnderWriter.CreateUnderWriterRequest(objUnderWriter UnderWriter)
+   at Operation_MngRequests.btnSubmit_Click(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Operation\MngRequests.aspx.cs:line 299
+******************** Error Log - 5/22/2020 3:57:12 AM*********************
+
+Exception Type : SqlException
+Error Message : Procedure or function 'USP_CREATE_UNDERWRITER_REQUEST' expects parameter '@P_REQUEST_ID', which was not supplied.
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at BLCMR.clsUnderWriter.CreateUnderWriterRequest(objUnderWriter UnderWriter)
+   at Operation_MngRequests.btnSubmit_Click(Object sender, EventArgs e) in d:\Projects\skool365\eGurukul\skool365\Operation\MngRequests.aspx.cs:line 299

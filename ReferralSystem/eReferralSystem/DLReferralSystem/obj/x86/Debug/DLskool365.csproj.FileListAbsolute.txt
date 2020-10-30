@@ -1,0 +1,6 @@
+E:\GitRepository\ReferralSystem\ReferralSystem\skool365\eGurukul\DLskool365\bin\x86\Debug\DLskool365.dll.config
+E:\GitRepository\ReferralSystem\ReferralSystem\skool365\eGurukul\DLskool365\bin\x86\Debug\DLskool365.dll
+E:\GitRepository\ReferralSystem\ReferralSystem\skool365\eGurukul\DLskool365\bin\x86\Debug\DLskool365.pdb
+E:\GitRepository\ReferralSystem\ReferralSystem\skool365\eGurukul\DLskool365\obj\x86\Debug\DLskool365.csprojResolveAssemblyReference.cache
+E:\GitRepository\ReferralSystem\ReferralSystem\skool365\eGurukul\DLskool365\obj\x86\Debug\DLskool365.dll
+E:\GitRepository\ReferralSystem\ReferralSystem\skool365\eGurukul\DLskool365\obj\x86\Debug\DLskool365.pdb

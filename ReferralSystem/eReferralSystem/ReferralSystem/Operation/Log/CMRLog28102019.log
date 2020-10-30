@@ -1,0 +1,211 @@
+******************** Error Log - 10/28/2019 9:40:18 AM*********************
+
+Exception Type : NullReferenceException
+Error Message : Object reference not set to an instance of an object.
+Error Source : App_Web_aasrtsqv
+Error Trace :    at Operation_ConfigMails.btnSubmit_Click(Object sender, EventArgs e) in d:\Projects\IPSM\eGurukul\skool365\Operation\ConfigMails.aspx.cs:line 115
+******************** Error Log - 10/28/2019 10:42:54 AM*********************
+
+Exception Type : EvaluateException
+Error Message : Cannot perform '=' operation on System.Int32 and System.String.
+Error Source : System.Data
+Error Trace :    at System.Data.BinaryNode.SetTypeMismatchError(Int32 op, Type left, Type right)
+   at System.Data.BinaryNode.BinaryCompare(Object vLeft, Object vRight, StorageType resultType, Int32 op, CompareInfo comparer)
+   at System.Data.BinaryNode.EvalBinaryOp(Int32 op, ExpressionNode left, ExpressionNode right, DataRow row, DataRowVersion version, Int32[] recordNos)
+   at System.Data.BinaryNode.Eval(DataRow row, DataRowVersion version)
+   at System.Data.BinaryNode.Eval(ExpressionNode expr, DataRow row, DataRowVersion version, Int32[] recordNos)
+   at System.Data.BinaryNode.EvalBinaryOp(Int32 op, ExpressionNode left, ExpressionNode right, DataRow row, DataRowVersion version, Int32[] recordNos)
+   at System.Data.BinaryNode.Eval(DataRow row, DataRowVersion version)
+   at System.Data.DataExpression.Invoke(DataRow row, DataRowVersion version)
+   at System.Data.Index.AcceptRecord(Int32 record, IFilter filter)
+   at System.Data.Index.InitRecords(IFilter filter)
+   at System.Data.Index..ctor(DataTable table, IndexField[] indexFields, Comparison`1 comparison, DataViewRowState recordStates, IFilter rowFilter)
+   at System.Data.DataTable.GetIndex(IndexField[] indexDesc, DataViewRowState recordStates, IFilter rowFilter)
+   at System.Data.DataView.UpdateIndex(Boolean force, Boolean fireEvent)
+   at System.Data.DataView.UpdateIndex(Boolean force)
+   at System.Data.DataView.SetIndex2(String newSort, DataViewRowState newRowStates, IFilter newRowFilter, Boolean fireEvent)
+   at System.Data.DataView.SetIndex(String newSort, DataViewRowState newRowStates, IFilter newRowFilter)
+   at System.Data.DataView.set_RowFilter(String value)
+   at Operation_FeeMaster.btnGetData_Click(Object sender, EventArgs e) in d:\Projects\IPSM\eGurukul\skool365\Operation\FeeMaster.aspx.cs:line 325
+******************** Error Log - 10/28/2019 10:48:24 AM*********************
+
+Exception Type : EvaluateException
+Error Message : Cannot perform '=' operation on System.Int32 and System.String.
+Error Source : System.Data
+Error Trace :    at System.Data.BinaryNode.SetTypeMismatchError(Int32 op, Type left, Type right)
+   at System.Data.BinaryNode.BinaryCompare(Object vLeft, Object vRight, StorageType resultType, Int32 op, CompareInfo comparer)
+   at System.Data.BinaryNode.EvalBinaryOp(Int32 op, ExpressionNode left, ExpressionNode right, DataRow row, DataRowVersion version, Int32[] recordNos)
+   at System.Data.BinaryNode.Eval(DataRow row, DataRowVersion version)
+   at System.Data.BinaryNode.Eval(ExpressionNode expr, DataRow row, DataRowVersion version, Int32[] recordNos)
+   at System.Data.BinaryNode.EvalBinaryOp(Int32 op, ExpressionNode left, ExpressionNode right, DataRow row, DataRowVersion version, Int32[] recordNos)
+   at System.Data.BinaryNode.Eval(DataRow row, DataRowVersion version)
+   at System.Data.DataExpression.Invoke(DataRow row, DataRowVersion version)
+   at System.Data.Index.AcceptRecord(Int32 record, IFilter filter)
+   at System.Data.Index.InitRecords(IFilter filter)
+   at System.Data.Index..ctor(DataTable table, IndexField[] indexFields, Comparison`1 comparison, DataViewRowState recordStates, IFilter rowFilter)
+   at System.Data.DataTable.GetIndex(IndexField[] indexDesc, DataViewRowState recordStates, IFilter rowFilter)
+   at System.Data.DataView.UpdateIndex(Boolean force, Boolean fireEvent)
+   at System.Data.DataView.UpdateIndex(Boolean force)
+   at System.Data.DataView.SetIndex2(String newSort, DataViewRowState newRowStates, IFilter newRowFilter, Boolean fireEvent)
+   at System.Data.DataView.SetIndex(String newSort, DataViewRowState newRowStates, IFilter newRowFilter)
+   at System.Data.DataView.set_RowFilter(String value)
+   at Operation_FeeMaster.btnGetData_Click(Object sender, EventArgs e) in d:\Projects\IPSM\eGurukul\skool365\Operation\FeeMaster.aspx.cs:line 325
+******************** Error Log - 10/28/2019 10:54:51 AM*********************
+
+Exception Type : HttpException
+Error Message : DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'AMOUNT'.
+Error Source : System.Web
+Error Trace :    at System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   at System.Web.UI.DataBinder.Eval(Object container, String[] expressionParts)
+   at System.Web.UI.DataBinder.Eval(Object container, String expression)
+   at ASP.operation_feemaster_aspx.__DataBinding__control36(Object sender, EventArgs e) in d:\Projects\IPSM\eGurukul\skool365\Operation\FeeMaster.aspx:line 261
+   at System.Web.UI.Control.OnDataBinding(EventArgs e)
+   at System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   at System.Web.UI.Control.DataBind()
+   at System.Web.UI.Control.DataBindChildren()
+   at System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   at System.Web.UI.Control.DataBind()
+   at System.Web.UI.Control.DataBindChildren()
+   at System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   at System.Web.UI.Control.DataBind()
+   at System.Web.UI.WebControls.GridView.CreateRow(Int32 rowIndex, Int32 dataSourceIndex, DataControlRowType rowType, DataControlRowState rowState, Boolean dataBind, Object dataItem, DataControlField[] fields, TableRowCollection rows, PagedDataSource pagedDataSource)
+   at System.Web.UI.WebControls.GridView.CreateChildControls(IEnumerable dataSource, Boolean dataBinding)
+   at System.Web.UI.WebControls.CompositeDataBoundControl.PerformDataBinding(IEnumerable data)
+   at System.Web.UI.WebControls.GridView.PerformDataBinding(IEnumerable data)
+   at System.Web.UI.WebControls.DataBoundControl.OnDataSourceViewSelectCallback(IEnumerable data)
+   at System.Web.UI.DataSourceView.Select(DataSourceSelectArguments arguments, DataSourceViewSelectCallback callback)
+   at System.Web.UI.WebControls.DataBoundControl.PerformSelect()
+   at System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   at System.Web.UI.WebControls.GridView.DataBind()
+   at Operation_FeeMaster.btnGetData_Click(Object sender, EventArgs e) in d:\Projects\IPSM\eGurukul\skool365\Operation\FeeMaster.aspx.cs:line 327
+******************** Error Log - 10/28/2019 10:57:01 AM*********************
+
+Exception Type : HttpException
+Error Message : DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'AMOUNT'.
+Error Source : System.Web
+Error Trace :    at System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   at System.Web.UI.DataBinder.Eval(Object container, String[] expressionParts)
+   at System.Web.UI.DataBinder.Eval(Object container, String expression)
+   at ASP.operation_feemaster_aspx.__DataBinding__control36(Object sender, EventArgs e) in d:\Projects\IPSM\eGurukul\skool365\Operation\FeeMaster.aspx:line 261
+   at System.Web.UI.Control.OnDataBinding(EventArgs e)
+   at System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   at System.Web.UI.Control.DataBind()
+   at System.Web.UI.Control.DataBindChildren()
+   at System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   at System.Web.UI.Control.DataBind()
+   at System.Web.UI.Control.DataBindChildren()
+   at System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   at System.Web.UI.Control.DataBind()
+   at System.Web.UI.WebControls.GridView.CreateRow(Int32 rowIndex, Int32 dataSourceIndex, DataControlRowType rowType, DataControlRowState rowState, Boolean dataBind, Object dataItem, DataControlField[] fields, TableRowCollection rows, PagedDataSource pagedDataSource)
+   at System.Web.UI.WebControls.GridView.CreateChildControls(IEnumerable dataSource, Boolean dataBinding)
+   at System.Web.UI.WebControls.CompositeDataBoundControl.PerformDataBinding(IEnumerable data)
+   at System.Web.UI.WebControls.GridView.PerformDataBinding(IEnumerable data)
+   at System.Web.UI.WebControls.DataBoundControl.OnDataSourceViewSelectCallback(IEnumerable data)
+   at System.Web.UI.DataSourceView.Select(DataSourceSelectArguments arguments, DataSourceViewSelectCallback callback)
+   at System.Web.UI.WebControls.DataBoundControl.PerformSelect()
+   at System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   at System.Web.UI.WebControls.GridView.DataBind()
+   at Operation_FeeMaster.btnGetData_Click(Object sender, EventArgs e) in d:\Projects\IPSM\eGurukul\skool365\Operation\FeeMaster.aspx.cs:line 327
+******************** Error Log - 10/28/2019 10:57:51 AM*********************
+
+Exception Type : HttpException
+Error Message : DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'AMOUNT'.
+Error Source : System.Web
+Error Trace :    at System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   at System.Web.UI.DataBinder.Eval(Object container, String[] expressionParts)
+   at System.Web.UI.DataBinder.Eval(Object container, String expression)
+   at ASP.operation_feemaster_aspx.__DataBinding__control36(Object sender, EventArgs e) in d:\Projects\IPSM\eGurukul\skool365\Operation\FeeMaster.aspx:line 261
+   at System.Web.UI.Control.OnDataBinding(EventArgs e)
+   at System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   at System.Web.UI.Control.DataBind()
+   at System.Web.UI.Control.DataBindChildren()
+   at System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   at System.Web.UI.Control.DataBind()
+   at System.Web.UI.Control.DataBindChildren()
+   at System.Web.UI.Control.DataBind(Boolean raiseOnDataBinding)
+   at System.Web.UI.Control.DataBind()
+   at System.Web.UI.WebControls.GridView.CreateRow(Int32 rowIndex, Int32 dataSourceIndex, DataControlRowType rowType, DataControlRowState rowState, Boolean dataBind, Object dataItem, DataControlField[] fields, TableRowCollection rows, PagedDataSource pagedDataSource)
+   at System.Web.UI.WebControls.GridView.CreateChildControls(IEnumerable dataSource, Boolean dataBinding)
+   at System.Web.UI.WebControls.CompositeDataBoundControl.PerformDataBinding(IEnumerable data)
+   at System.Web.UI.WebControls.GridView.PerformDataBinding(IEnumerable data)
+   at System.Web.UI.WebControls.DataBoundControl.OnDataSourceViewSelectCallback(IEnumerable data)
+   at System.Web.UI.DataSourceView.Select(DataSourceSelectArguments arguments, DataSourceViewSelectCallback callback)
+   at System.Web.UI.WebControls.DataBoundControl.PerformSelect()
+   at System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   at System.Web.UI.WebControls.GridView.DataBind()
+   at Operation_FeeMaster.btnGetData_Click(Object sender, EventArgs e) in d:\Projects\IPSM\eGurukul\skool365\Operation\FeeMaster.aspx.cs:line 327
+******************** Error Log - 10/28/2019 10:59:17 AM*********************
+
+Exception Type : HttpException
+Error Message : DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'ID'.
+Error Source : System.Web
+Error Trace :    at System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   at System.Web.UI.WebControls.GridView.CreateChildControls(IEnumerable dataSource, Boolean dataBinding)
+   at System.Web.UI.WebControls.CompositeDataBoundControl.PerformDataBinding(IEnumerable data)
+   at System.Web.UI.WebControls.GridView.PerformDataBinding(IEnumerable data)
+   at System.Web.UI.WebControls.DataBoundControl.OnDataSourceViewSelectCallback(IEnumerable data)
+   at System.Web.UI.DataSourceView.Select(DataSourceSelectArguments arguments, DataSourceViewSelectCallback callback)
+   at System.Web.UI.WebControls.DataBoundControl.PerformSelect()
+   at System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   at System.Web.UI.WebControls.GridView.DataBind()
+   at Operation_FeeMaster.btnGetData_Click(Object sender, EventArgs e) in d:\Projects\IPSM\eGurukul\skool365\Operation\FeeMaster.aspx.cs:line 327
+******************** Error Log - 10/28/2019 10:59:54 AM*********************
+
+Exception Type : HttpException
+Error Message : DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'ID'.
+Error Source : System.Web
+Error Trace :    at System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   at System.Web.UI.WebControls.GridView.CreateChildControls(IEnumerable dataSource, Boolean dataBinding)
+   at System.Web.UI.WebControls.CompositeDataBoundControl.PerformDataBinding(IEnumerable data)
+   at System.Web.UI.WebControls.GridView.PerformDataBinding(IEnumerable data)
+   at System.Web.UI.WebControls.DataBoundControl.OnDataSourceViewSelectCallback(IEnumerable data)
+   at System.Web.UI.DataSourceView.Select(DataSourceSelectArguments arguments, DataSourceViewSelectCallback callback)
+   at System.Web.UI.WebControls.DataBoundControl.PerformSelect()
+   at System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   at System.Web.UI.WebControls.GridView.DataBind()
+   at Operation_FeeMaster.btnGetData_Click(Object sender, EventArgs e) in d:\Projects\IPSM\eGurukul\skool365\Operation\FeeMaster.aspx.cs:line 327
+******************** Error Log - 10/28/2019 11:01:03 AM*********************
+
+Exception Type : HttpException
+Error Message : DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'ID'.
+Error Source : System.Web
+Error Trace :    at System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   at System.Web.UI.WebControls.GridView.CreateChildControls(IEnumerable dataSource, Boolean dataBinding)
+   at System.Web.UI.WebControls.CompositeDataBoundControl.PerformDataBinding(IEnumerable data)
+   at System.Web.UI.WebControls.GridView.PerformDataBinding(IEnumerable data)
+   at System.Web.UI.WebControls.DataBoundControl.OnDataSourceViewSelectCallback(IEnumerable data)
+   at System.Web.UI.DataSourceView.Select(DataSourceSelectArguments arguments, DataSourceViewSelectCallback callback)
+   at System.Web.UI.WebControls.DataBoundControl.PerformSelect()
+   at System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   at System.Web.UI.WebControls.GridView.DataBind()
+   at Operation_FeeMaster.btnGetData_Click(Object sender, EventArgs e) in d:\Projects\IPSM\eGurukul\skool365\Operation\FeeMaster.aspx.cs:line 327
+******************** Error Log - 10/28/2019 11:03:39 AM*********************
+
+Exception Type : HttpException
+Error Message : DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'ID'.
+Error Source : System.Web
+Error Trace :    at System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   at System.Web.UI.WebControls.GridView.CreateChildControls(IEnumerable dataSource, Boolean dataBinding)
+   at System.Web.UI.WebControls.CompositeDataBoundControl.PerformDataBinding(IEnumerable data)
+   at System.Web.UI.WebControls.GridView.PerformDataBinding(IEnumerable data)
+   at System.Web.UI.WebControls.DataBoundControl.OnDataSourceViewSelectCallback(IEnumerable data)
+   at System.Web.UI.DataSourceView.Select(DataSourceSelectArguments arguments, DataSourceViewSelectCallback callback)
+   at System.Web.UI.WebControls.DataBoundControl.PerformSelect()
+   at System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   at System.Web.UI.WebControls.GridView.DataBind()
+   at Operation_FeeMaster.btnGetData_Click(Object sender, EventArgs e) in d:\Projects\IPSM\eGurukul\skool365\Operation\FeeMaster.aspx.cs:line 327
+******************** Error Log - 10/28/2019 11:03:51 AM*********************
+
+Exception Type : HttpException
+Error Message : DataBinding: 'System.Data.DataRowView' does not contain a property with the name 'ID'.
+Error Source : System.Web
+Error Trace :    at System.Web.UI.DataBinder.GetPropertyValue(Object container, String propName)
+   at System.Web.UI.WebControls.GridView.CreateChildControls(IEnumerable dataSource, Boolean dataBinding)
+   at System.Web.UI.WebControls.CompositeDataBoundControl.PerformDataBinding(IEnumerable data)
+   at System.Web.UI.WebControls.GridView.PerformDataBinding(IEnumerable data)
+   at System.Web.UI.WebControls.DataBoundControl.OnDataSourceViewSelectCallback(IEnumerable data)
+   at System.Web.UI.DataSourceView.Select(DataSourceSelectArguments arguments, DataSourceViewSelectCallback callback)
+   at System.Web.UI.WebControls.DataBoundControl.PerformSelect()
+   at System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   at System.Web.UI.WebControls.GridView.DataBind()
+   at Operation_FeeMaster.btnGetData_Click(Object sender, EventArgs e) in d:\Projects\IPSM\eGurukul\skool365\Operation\FeeMaster.aspx.cs:line 327

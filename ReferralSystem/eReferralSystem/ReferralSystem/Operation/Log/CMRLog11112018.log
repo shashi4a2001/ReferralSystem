@@ -1,0 +1,7 @@
+******************** Error Log - 11/11/2018 2:27:23 AM*********************
+
+Exception Type : SqlException
+Error Message : The conversion of a char data type to a datetime data type resulted in an out-of-range datetime value.
+Error Source : .Net SqlClient Data Provider
+Error Trace :    at Operation_Registration.getOlympiadRegisteredDetails() in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\Registration.aspx.cs:line 178
+   at Operation_Registration.Page_Load(Object sender, EventArgs e) in d:\Projects\VS2017 Projects\eGurukul\skool365\Operation\Registration.aspx.cs:line 83

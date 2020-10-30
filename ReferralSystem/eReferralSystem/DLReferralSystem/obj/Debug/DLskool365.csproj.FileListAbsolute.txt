@@ -1,0 +1,16 @@
+D:\Projects\VS2017 Projects\eGurukul\DLskool365\bin\Debug\DLskool365.dll.config
+D:\Projects\VS2017 Projects\eGurukul\DLskool365\bin\Debug\DLskool365.dll
+D:\Projects\VS2017 Projects\eGurukul\DLskool365\bin\Debug\DLskool365.pdb
+D:\Projects\VS2017 Projects\eGurukul\DLskool365\obj\Debug\DLskool365.dll
+D:\Projects\VS2017 Projects\eGurukul\DLskool365\obj\Debug\DLskool365.pdb
+D:\Projects\IPSM\eGurukul\DLskool365\bin\Debug\DLskool365.dll.config
+D:\Projects\IPSM\eGurukul\DLskool365\bin\Debug\DLskool365.dll
+D:\Projects\IPSM\eGurukul\DLskool365\bin\Debug\DLskool365.pdb
+D:\Projects\IPSM\eGurukul\DLskool365\obj\Debug\DLskool365.csprojResolveAssemblyReference.cache
+D:\Projects\IPSM\eGurukul\DLskool365\obj\Debug\DLskool365.dll
+D:\Projects\IPSM\eGurukul\DLskool365\obj\Debug\DLskool365.pdb
+D:\Projects\skool365\eGurukul\DLskool365\bin\Debug\DLskool365.dll.config
+D:\Projects\skool365\eGurukul\DLskool365\bin\Debug\DLskool365.dll
+D:\Projects\skool365\eGurukul\DLskool365\bin\Debug\DLskool365.pdb
+D:\Projects\skool365\eGurukul\DLskool365\obj\Debug\DLskool365.dll
+D:\Projects\skool365\eGurukul\DLskool365\obj\Debug\DLskool365.pdb
