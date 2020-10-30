@@ -17,9 +17,10 @@ Begin
 	If Exists (select 1 From ClientMaster With(NoLock) Where LoginId =@LoginId and LoginPassword = @LoginPassword)
 	Begin
 		Declare @ClientTypeCode varchar(50)
+		Declare @ClientName varchar(2000)
 		Declare @ClientId BigInt
-		select @ClientId=ClientId, @ClientTypeCode=ClientTypeCode From ClientMaster With(NoLock) Where LoginId =@LoginId
-		select 'USEREXISTS' As [Msg],@ClientId as ClientId,@ClientTypeCode As [ClientTypeCode]
+		select @ClientId=ClientId, @ClientTypeCode=ClientTypeCode,@ClientName=ClientName From ClientMaster With(NoLock) Where LoginId =@LoginId
+		select 'USEREXISTS' As [Msg],@ClientId as ClientId,@ClientTypeCode As [ClientTypeCode],@ClientName As [ClientName]
 		Return
 	End 	
 End
