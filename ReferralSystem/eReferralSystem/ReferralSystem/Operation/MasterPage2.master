@@ -60,10 +60,7 @@
 
                     <%--<a href="UWSelect.aspx" id="SelectUW" runat="server">Select UW |</a>--%>
                     
-                    <img src="../Common/images/icon_online.png" alt="Online" class="mid_align" />
-                    Welcome <a href="#" class="active">
-                        <asp:Literal ID="ltrlUserName" runat="server"></asp:Literal></a> | <a href="LogOut.aspx">Logout</a> | <a href="ChangePassword.aspx" id="changePwd" runat="server">Change Password</a>
-
+                       <a href="~/Login.aspx" id="changePwd" runat="server">LogIn</a>
                     <br />
 
                    
