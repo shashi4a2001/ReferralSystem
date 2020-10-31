@@ -94,6 +94,6 @@ Begin
 	Insert Into EmailTemplateMaster (TemplateType,SubjectLine,TemplateText)
 	values ('PasswordChanged',
 	'Your password has been changed...',
-	'<table><tr><td colspan=''4''> Dear Investor,</td></tr><tr><td colspan=''4''></td></tr><tr><td>Your Password has been changed successfully..   </td><td></td><td colspan=''2''></td></tr><tr><td colspan=''4''></td></tr><tr><td colspan=''4''></td></tr><tr><td colspan=''4''></td></tr><tr><td colspan=''4''>Happy Investing!</td></tr><tr><td colspan=''4''>Regards,<span style=''mso-fareast-font-family: ''Times New Roman''''><o:p></o:p></span></td></tr><tr><td colspan=''4''>Aadi Wealth Management Private Limited</td></tr></table>')
+	'<table><tr><td colspan=''4''> Dear Investor,</td></tr><tr><td colspan=''4''></td></tr><tr><td>Your Password has been changed successfully..   </td><td></td><td colspan=''2''></td></tr><tr><td colspan=''4''></td></tr><tr><td colspan=''4''></td></tr><tr><td colspan=''4''></td></tr><tr><td colspan=''4''>Happy Investing!</td></tr><tr><td colspan=''4''>Regards,<span style=''mso-fareast-font-family: ''Times New Roman''''><o:p></o:p></span></td></tr><tr><td colspan=''4''>Invest 19</td></tr></table>')
 End
 
