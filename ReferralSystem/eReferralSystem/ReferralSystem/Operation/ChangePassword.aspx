@@ -1,5 +1,5 @@
 ﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="ChangePassword.aspx.cs" Inherits="Operation_ChangePassword"
-    MasterPageFile="~/Operation/CRMOperationArea2.Master" ValidateRequest="false" %>
+    MasterPageFile="~/Operation/MasterPage.master" ValidateRequest="false" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
 <%@ Register Src="~/UserControl/UC_PageHeader.ascx" TagName="UC_PageHeader" TagPrefix="uc1" %>
@@ -108,6 +108,11 @@
                                 <br />
                                 <center>
                                     <asp:Button ID="btnSubmit" runat="server" Text="Change Password" OnClick="btnSubmit_Click" /></center>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <asp:Label ID="lblmsg" runat="server"></asp:Label>
                             </td>
                         </tr>
                         <tr>

@@ -5,7 +5,6 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using BLCMR;
 using System.Data.SqlClient;
 using System.Configuration;
 using System.Text.RegularExpressions;
@@ -13,100 +12,35 @@ using System.Threading;
 using System.Web.Security;
 using System.Security;
 using System.Security.Authentication;
+using BLCMR;
+using DLCMR;
 
 public partial class Operation_ChangePassword : System.Web.UI.Page
 {
-    ObjPortalUser user;
+    
     string _strAlertMessage = string.Empty;
     string _strMsgType = string.Empty;
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        clsErrorLogger objclsErrorLogger = new clsErrorLogger();
-        clsCommon objClsCommon = new clsCommon();
-
-        try
+        if (!Context.User.Identity.IsAuthenticated)
         {
-            user = new ObjPortalUser();
-
-            //Validate User Authetication Starts
-            if (Context.User.Identity.IsAuthenticated)
-            {
-                //Check User Session and Connection String 
-                if (Session["PortalUserDtl"] != null)
-                {
-                    user = (ObjPortalUser)Session["PortalUserDtl"];
-
-                    //Check Browser Address
-                    if (objClsCommon.GetIPAddress() != user.IPAddress)
-                    {
-                        Session.Clear();
-                        Session.RemoveAll();
-                        Session.Abandon();
-                        Response.Redirect("login.aspx?Exp=Y", false);
-                    }
-                }
-                else
-                {
-                    Session.Clear();
-                    Session.RemoveAll();
-                    Session.Abandon();
-                    Response.Redirect("login.aspx?Exp=Y", false);
-                    return;
-                }
-            }
-            else
-            {
-                Session.Clear();
-                Session.RemoveAll();
-                Session.Abandon();
-                Response.Redirect("login.aspx?Exp=Y", false);
-                return;
-            }
-
-            if (Page.IsPostBack == false)
-            {
-                if (Request.QueryString.Keys.Count != 0)
-                {
-                    txtOldPassword.Focus();
-                }
-            }
-            //Check Page Accessibility
-            if (Request.QueryString.Keys.Count == 0)//ByPass when redirected from login page
-            {
-                if (user != null)
-                {
-                    if (objClsCommon.checkPageAccessiblity(user.EmailId, System.IO.Path.GetFileName(Request.Path), user.ConnectionString) != "Y")
-                        Response.Redirect("~/Operation/AccessDenied.aspx", false);
-                }
-            }
+            Session.Clear();
+            Session.RemoveAll();
+            Session.Abandon();
+            Response.Redirect("SessionExpired.aspx", false);
+            return;
         }
-        catch (Exception ex)
-        {
-            _strMsgType = "Error";
-            _strAlertMessage = ex.Message;
-            objclsErrorLogger.WriteError(System.IO.Path.GetFileName(Request.Path), "", user == null ? "" : user.ConnectionString, ex);
-            Response.Redirect("~/Operation/Err.aspx");
-        }
-        finally
-        {
-            //Alert Message
-            if (_strAlertMessage != string.Empty && _strAlertMessage.Trim() != "")
-            {
-                lblMessage.Text = _strAlertMessage;
-                objClsCommon.setLabelMessage(lblMessage, _strMsgType);
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "AutoHide", "<script>HideLabel();</script>", false);
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "Alert", "<script>alert('" + _strAlertMessage + "');</script>", false);
-            }
 
-            objclsErrorLogger = null;
-            objClsCommon = null;
+        if (Page.IsPostBack == false)
+        {
+            txtOldPassword.Focus();
         }
     }
 
     protected void btnSubmit_Click(object sender, EventArgs e)
     {
-        DataTable dtResult;
+        lblmsg.ForeColor = System.Drawing.Color.Red;
         clsErrorLogger objclsErrorLogger = new clsErrorLogger();
         //STPclsLogin objSTPclsLogin = new STPclsLogin();
         clsCommon objclsCommon = new clsCommon();
@@ -117,6 +51,7 @@ public partial class Operation_ChangePassword : System.Web.UI.Page
             if (txtOldPassword.Text.Trim() == "")
             {
                 _strAlertMessage = "Please enter old password.";
+                lblmsg.Text = _strAlertMessage;
                 txtOldPassword.Focus();
                 return;
             }
@@ -124,6 +59,7 @@ public partial class Operation_ChangePassword : System.Web.UI.Page
             if (txtNewPassword.Text.Trim() == "")
             {
                 _strAlertMessage = "Please enter New password.";
+                lblmsg.Text = _strAlertMessage;
                 txtNewPassword.Focus();
                 return;
             }
@@ -131,6 +67,7 @@ public partial class Operation_ChangePassword : System.Web.UI.Page
             if (txtConfirmPassword.Text.Trim().Length < 6)
             {
                 _strAlertMessage = "Minimum password length should be 6";
+                lblmsg.Text = _strAlertMessage;
                 txtConfirmPassword.Focus();
                 return;
             }
@@ -138,6 +75,7 @@ public partial class Operation_ChangePassword : System.Web.UI.Page
             if (txtNewPassword.Text.Trim().Length < 6)
             {
                 _strAlertMessage = "Minimum password length should be 6";
+                lblmsg.Text = _strAlertMessage;
                 txtNewPassword.Focus();
                 return;
             }
@@ -145,6 +83,7 @@ public partial class Operation_ChangePassword : System.Web.UI.Page
             if (txtConfirmPassword.Text.Trim() == "")
             {
                 _strAlertMessage = "Please enter Confirm password.";
+                lblmsg.Text = _strAlertMessage;
                 txtConfirmPassword.Focus();
                 return;
             }
@@ -152,6 +91,7 @@ public partial class Operation_ChangePassword : System.Web.UI.Page
             if (txtConfirmPassword.Text.Trim() != txtNewPassword.Text.Trim())
             {
                 _strAlertMessage = "New Password and Confirm Password must be same";
+                lblmsg.Text = _strAlertMessage;
                 txtConfirmPassword.Focus();
                 return;
             }
@@ -160,73 +100,59 @@ public partial class Operation_ChangePassword : System.Web.UI.Page
             {
                 txtConfirmPassword.Focus();
                 _strAlertMessage = "Passowrd is not strong.";
+                lblmsg.Text = _strAlertMessage;
                 return;
             }
 
-            if (objclsCommon.isValidInput(user.RestrictedInputChar, txtNewPassword.Text.Trim()) == false)
-            {
-                _strAlertMessage = "Paswword contains Invalid Characters";
-                txtNewPassword.Focus();
-                return;
-            }
+            //if (objclsCommon.isValidInput(user.RestrictedInputChar, txtNewPassword.Text.Trim()) == false)
+            //{
+            //    _strAlertMessage = "Paswword contains Invalid Characters";
+            //    txtNewPassword.Focus();
+            //    return;
+            //}
 
-            if (objclsCommon.isValidInput(user.RestrictedInputChar, txtConfirmPassword.Text.Trim()) == false)
-            {
-                _strAlertMessage = "Paswword Branch contains Invalid Characters";
-                txtConfirmPassword.Focus();
-                return;
-            }
+            //if (objclsCommon.isValidInput(user.RestrictedInputChar, txtConfirmPassword.Text.Trim()) == false)
+            //{
+            //    _strAlertMessage = "Paswword Branch contains Invalid Characters";
+            //    txtConfirmPassword.Focus();
+            //    return;
+            //}
 
             lblMessage.Text = "";
 
-            string UserID = user.EmailId;
-            string NewPassword = objclsCommon.EncryptData(txtNewPassword.Text.Trim());
+            ObjPortalUser user;
+            user = (ObjPortalUser)Session["PortalUserDtl"];
+
+            string UserID = user.UserId ;
             string OldPassword = objclsCommon.EncryptData(txtOldPassword.Text.Trim());
+            string NewPassword = objclsCommon.EncryptData(txtNewPassword.Text.Trim());
+           
 
-            dtResult = null;// objSTPclsLogin.changePassword(UserID, OldPassword, NewPassword, user.IPAddress, user.ConnectionString);
-
-            if (dtResult != null)
+            DLClsGeneric objDLGeneric = new DLClsGeneric();
+            SqlCommand cmd = new SqlCommand();
+            cmd.Parameters.AddWithValue("@LoginId", UserID);
+            cmd.Parameters.AddWithValue("@OldPassword", OldPassword);
+            cmd.Parameters.AddWithValue("@NewPassword", NewPassword);
+            string msg= objDLGeneric.SpExecuteScalar ("usp_UpdateUserPassword", cmd, user.ConnectionString);
+            if (msg == "Success")
             {
-                if (dtResult.Columns.Contains("ERROR"))
-                {
-                    if (dtResult.Rows[0]["ERROR"].ToString().Trim() != "")
-                    {
-                        _strMsgType = "Error_DB";
-                        _strAlertMessage = dtResult.Rows[0]["ERROR"].ToString().Trim();
-                        return;
-                    }
-                }
-                FormsAuthentication.SignOut();
-                Session.Clear();
-                Session.Abandon();
-
-                _strMsgType = "Success";
-                _strAlertMessage = dtResult.Rows[0]["SUCCESS"].ToString().Trim();
-                Response.Redirect("../Login.aspx", false);
+                lblmsg.ForeColor = System.Drawing.Color.Green;
+                lblmsg.Text = "Password Changed Successfully...";
+                lblmsg.ForeColor = System.Drawing.Color.Green;
+                SendMail(UserID);
+                Response.Redirect("LogOut.aspx?msg=2");
+            }
+            else
+            {
+                lblmsg.Text = msg;
+                lblmsg.ForeColor = System.Drawing.Color.Red;
             }
 
-        }
-        catch (ThreadAbortException)
-        {
         }
         catch (Exception ex)
         {
-            _strAlertMessage = ex.Message;
-            objclsErrorLogger.WriteError(System.IO.Path.GetFileName(Request.Path), "", user == null ? "" : user.ConnectionString, ex);
-            Response.Redirect("~/Operation/Err.aspx");
-        }
-        finally
-        {
-            if (_strAlertMessage != string.Empty)
-            {
-                lblMessage.Text = _strAlertMessage;
-                objclsCommon.setLabelMessage(lblMessage, _strMsgType);
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "AutoHide", "<script>HideLabel();</script>", false);
-                ScriptManager.RegisterStartupScript(this, typeof(Page), "Alert", "<script>alert('" + _strAlertMessage + "');</script>", false);
-            }
-            dtResult = null;
-            //objSTPclsLogin = null;
-            objclsErrorLogger = null;
+            lblmsg.Text = ex.Message.ToString();
+            lblmsg.ForeColor = System.Drawing.Color.Red;
         }
     }
     private Boolean validatePassword(string strPassword)
@@ -235,5 +161,66 @@ public partial class Operation_ChangePassword : System.Web.UI.Page
         isValidFormat = false;
         isValidFormat = Regex.IsMatch(strPassword, @"^.*(?=.{7,})(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[@'#.$;%^&+=!""()*,-/:<>?]).*$");
         return isValidFormat;
+    }
+
+    private bool SendMail(string userid)
+    {
+        clsErrorLogger objclsErrorLogger = new clsErrorLogger();
+        ObjPortalUser user;
+        user = (ObjPortalUser)Session["PortalUserDtl"];
+
+        bool status = false;
+        try
+        {
+            ObjSendEmail SendMail = new ObjSendEmail();
+
+            DLClsGeneric objDLGeneric = new DLClsGeneric();
+            SqlCommand cmd = new SqlCommand();
+            cmd.Parameters.AddWithValue("@UserId", userid);
+            cmd.Parameters.AddWithValue("@TemplateType", "PasswordChanged");
+            DataSet ds = objDLGeneric.SpDataSet("usp_SelectEmailMsg", cmd, user.ConnectionString);
+
+            DataTable dtSMTP = ds.Tables[0];
+            DataTable dtEmailTemplate = ds.Tables[1];
+
+            if (ds != null && dtSMTP != null && dtEmailTemplate != null && 
+                dtSMTP.Rows.Count>0 && dtEmailTemplate.Rows.Count > 0 &&
+                Convert.ToString(dtEmailTemplate.Rows[0]["ToEmailId"])!=""
+                )
+            {
+                SendMail.From = Convert.ToString(dtSMTP.Rows[0]["SenderEmailID"]);
+                //SendMail.CC = objClsCommon.getConfigKeyValue("EMAIL IDS FOR CC OF MAIL MESSAGE FOR EACH OPERATION", "EMAIL RECEPIENTS GROUP", user.ConnectionString);
+                SendMail.SMTPHost = Convert.ToString(dtSMTP.Rows[0]["HostName"]);
+                SendMail.SMTPPort = Convert.ToInt16(dtSMTP.Rows[0]["PortNo"]);
+                SendMail.UserId = Convert.ToString(dtSMTP.Rows[0]["UserId"]);
+                SendMail.Password = Convert.ToString(dtSMTP.Rows[0]["UserPwd"]);
+                string enablessl = Convert.ToString(dtSMTP.Rows[0]["EnableSSL"]).ToLower();
+                if (enablessl == "y" || enablessl == "yes" || enablessl == "1")
+                    SendMail.SMTPSSL = true;
+                else
+                    SendMail.SMTPSSL = false;
+               
+                
+
+                SendMail.Subject = Convert.ToString(dtEmailTemplate.Rows[0]["SubjectLine"]);
+                SendMail.To = Convert.ToString(dtEmailTemplate.Rows[0]["ToEmailId"]);
+                SendMail.MailBody = Convert.ToString(dtEmailTemplate.Rows[0]["TemplateText"]);
+
+                SendMail.ConnectionString = user.ConnectionString;
+
+                clsCommon objclsCommon = new clsCommon();
+                objclsCommon.SendEmail(SendMail);
+            }
+        }
+        catch (Exception ex)
+        {
+            status = false;
+            objclsErrorLogger.WriteError(System.IO.Path.GetFileName(Request.Path), "Problem In Sending Mail To UserId: "+ userid, user == null ? "" : user.ConnectionString, ex);
+
+            return status;
+        }
+        
+        status = true;
+        return status;
     }
 }

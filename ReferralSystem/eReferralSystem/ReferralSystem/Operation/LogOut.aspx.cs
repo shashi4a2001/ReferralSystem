@@ -19,10 +19,20 @@ public partial class Operation_LogOut : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        lblMessage.Text = "You have successfully Logged Out.";
+        string msg = Request.QueryString["msg"];
+        lblMessage.Text = GetMsg(msg);
         Session.Clear();
         Session.RemoveAll();
         Session.Abandon();
         FormsAuthentication.SignOut();
+    }
+    private string GetMsg(string id)
+    {
+        string msg = "";
+        if (id == null)
+            msg = "You have successfully Logged Out.";
+        if (id == "2")
+            msg = "Password Changed Successfully...";
+        return msg;
     }
 }

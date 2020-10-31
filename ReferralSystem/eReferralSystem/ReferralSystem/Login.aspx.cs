@@ -116,6 +116,7 @@ public partial class Operation_Login : System.Web.UI.Page
                     user.LogId = Convert.ToInt16( dt.Rows[0]["ClientId"]);
                     user.UserId = _strEmailID;
                     user.UserRole = dt.Rows[0]["ClientTypeCode"].ToString();
+                    user.UserName  = dt.Rows[0]["ClientName"].ToString();
 
                     // Create a new ticket used for authentication
                     FormsAuthenticationTicket ticket = new FormsAuthenticationTicket(
