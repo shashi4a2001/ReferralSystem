@@ -88,3 +88,12 @@ Begin
 	values ('smtp.gmail.com','587','Yes','Yes','shashi4a2001@gmail.com','goo461983',
 	'shashi4a2001@gmail.com','shashi kant kumar','Active','sys',getdate(),'')
 End
+
+If Not Exists (Select 1 From EmailTemplateMaster Where TemplateType ='PasswordChanged') 
+Begin
+	Insert Into EmailTemplateMaster (TemplateType,SubjectLine,TemplateText)
+	values ('PasswordChanged',
+	'Your password has been changed...',
+	'<table><tr><td colspan=''4''> Dear Investor,</td></tr><tr><td colspan=''4''></td></tr><tr><td>Your Password has been changed successfully..   </td><td></td><td colspan=''2''></td></tr><tr><td colspan=''4''></td></tr><tr><td colspan=''4''></td></tr><tr><td colspan=''4''></td></tr><tr><td colspan=''4''>Happy Investing!</td></tr><tr><td colspan=''4''>Regards,<span style=''mso-fareast-font-family: ''Times New Roman''''><o:p></o:p></span></td></tr><tr><td colspan=''4''>Aadi Wealth Management Private Limited</td></tr></table>')
+End
+
