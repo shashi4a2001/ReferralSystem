@@ -6,7 +6,8 @@
                     <img src="../Common/images/shortcut/dashboardwatermark.png" alt="Access Panel" />
           </div>
         <div>
-            <a href="RoleManagement.aspx">Role Management</a>
+            <a href="RoleManagement.aspx">Role Management</a>&nbsp;&nbsp;
+            <a href="ClientRegistration.aspx">Client Registration</a>
         </div>
 
     </div>

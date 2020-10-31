@@ -110,7 +110,7 @@ namespace BLCMR
 
                 try
                 {
-
+                    mySmtpClient.UseDefaultCredentials = false;
                     mySmtpClient.Credentials = new System.Net.NetworkCredential(SendMail.UserId, SendMail.Password);
                     message.IsBodyHtml = true;
                     message.Priority = MailPriority.High;
@@ -142,7 +142,7 @@ namespace BLCMR
                             }
                         }
                     }
-
+                    
 
                     mySmtpClient.Timeout = 1000000;
                     mySmtpClient.Send (message );
