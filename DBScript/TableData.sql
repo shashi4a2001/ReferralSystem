@@ -80,3 +80,11 @@ Begin
 	'sys',getdate()
 	)
 End
+GO
+If Not Exists (Select 1 From SMTPServerDetails)
+Begin
+	Insert Into SMTPServerDetails(HostName,PortNo,ReqAuth,EnableSSL,UserId,UserPWD,
+	SenderEmailID,DisplayName,Status,CreatedBy,CreationDate,ChangedRemarks)
+	values ('smtp.gmail.com','587','Yes','Yes','shashi4a2001@gmail.com','goo461983',
+	'shashi4a2001@gmail.com','shashi kant kumar','Active','sys',getdate(),'')
+End
