@@ -44,4 +44,6 @@ Begin
 	@IFSCCode,@SharingPercentage,@SelfReferralCode,@ReferredReferralCode,@ReferralAmount,
 	@ReferredReferralRevenue,@UserId,getdate())
 
+	Select 'Success' As [Result]
+
 End
