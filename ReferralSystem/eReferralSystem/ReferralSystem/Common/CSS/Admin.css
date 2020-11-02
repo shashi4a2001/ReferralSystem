@@ -44,7 +44,7 @@ input[type='text'], input[type='password'] {
 
 input[type='text'] 
 {
-    text-transform: uppercase;
+    /*text-transform: uppercase;*/
    
     color: #0033CC;
     background-color: #FFFFFF;
