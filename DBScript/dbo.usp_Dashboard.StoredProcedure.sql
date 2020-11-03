@@ -34,13 +34,13 @@ Begin
 	From ClientMaster With(NoLock) Where ReferredReferralCode=@SelfReferralCode
 
 		
-	Select 'Total Account Opened (Current Month)..',IsNull(Count(1),0) As [AccountCount]
+	Select 'Total Account Opened (Current Month)..' As [Summary],IsNull(Count(1),0) As [Count]
 	From #Dashboard Where CreatedDate Between @StartDateOfCurrentMonth And @CurrentDate
 		Union All
-	Select 'Total Account Opened (Previous Month)..',IsNull(Count(1),0) As [AccountCount]
+	Select 'Total Account Opened (Previous Month)..' As [Summary],IsNull(Count(1),0) As [Count]
 	From #Dashboard Where CreatedDate Between @StartDateOfPreviousMonth And @EndDateOfPreviousMonth
 		Union All
-	Select 'Total Account Opened..',IsNull(Count(1),0) As [AccountCount]
+	Select 'Total Account Opened..' As [Summary],IsNull(Count(1),0) As [Count]
 	From #Dashboard
 
 		 
