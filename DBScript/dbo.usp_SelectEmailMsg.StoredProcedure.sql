@@ -9,7 +9,7 @@ SET ANSI_NULLS ON
 SET QUOTED_IDENTIFIER ON
 GO
 Create Procedure usp_SelectEmailMsg
-@ClientId varchar(100),
+@ClientId varchar(100)=null,
 @TemplateType varchar(100)
 As
 Begin
@@ -44,4 +44,12 @@ Begin
 		Select @ToEmailId As [ToEmailId],@SubjectLine As [SubjectLine],@TemplateText As [TemplateText]
 
 	End
+	if (@TemplateType='ForgotPassword')
+	Begin
+
+		Set @TemplateText=Replace(@TemplateText,'(LoginId)',@LoginId)
+		Select @ToEmailId As [ToEmailId],@SubjectLine As [SubjectLine],@TemplateText As [TemplateText]
+
+	End
+	
 End

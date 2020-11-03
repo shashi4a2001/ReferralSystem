@@ -115,3 +115,22 @@ Begin
 	<tr><td colspan=''4''>Invest 19</td></tr>
 	</table>')
 End
+
+If Not Exists (Select 1 From EmailTemplateMaster Where TemplateType ='ForgotPassword') 
+Begin
+	Insert Into EmailTemplateMaster (TemplateType,SubjectLine,TemplateText)
+	values ('ForgotPassword',
+	'Password Recovery...',
+	'<table><tr><td colspan=''4''> Dear ,</td></tr>
+	<tr><td colspan=''4''></td></tr>
+	<tr>
+		<td colspan=''4''>Your login detail is..   </td>		
+	</tr>
+	<tr> <td>Login Id: </td><td>(LoginId)</td> <td colspan=''2''></td></tr>
+	<tr> <td>Password: </td><td>(Password)</td> <td colspan=''2''></td></tr>
+	<tr><td colspan=''4''></td></tr>
+	<tr><td colspan=''4''>Happy Investing!</td></tr>
+	<tr><td colspan=''4''>Regards,<span style=''mso-fareast-font-family: ''Times New Roman''''><o:p></o:p></span></td></tr>
+	<tr><td colspan=''4''>Invest 19</td></tr>
+	</table>')
+End
