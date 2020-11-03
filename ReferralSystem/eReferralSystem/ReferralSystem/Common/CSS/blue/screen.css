@@ -23,8 +23,8 @@ body{margin:auto;padding:auto;font:300 16px/1.6 "Ubuntu", Arial, sans-serif !imp
 background:url('../../images/blue/bg_login_window.png') no-repeat 50% top;
 }#login_body_window .inner{margin:auto;padding:auto;width:300px;height:235px;padding-top:10px;}#login_body_window .inner p{margin-top:30px;}#login_footer_window{margin:auto;width:351px;height:48px;
 }#login_reflect{margin:auto;padding:auto;margin-top:3px;width:350px;height:107px;}
-#header{width:100%;min-width:960px;height:58px;color:#fff; background-color:#1f3e8e!important;}
-#header a{font-weight:bold;color:#fff; padding-right:4px;}#header a:hover{color:#f57f23;}#header a.active{color:#f57f23;}
+#header{width:100%;min-width:960px;height:58px;color:#00c2a8; background-color:#fff!important;}
+#header a{font-weight:bold;color:#00c2a8; padding-right:4px;}#header a:hover{color:#f57f23;}#header a.active{color:#f57f23;}
 #header #logo{width:210px;float:left;margin:11px 0 0 12px;}
 #header #search{width:220px;height:30px;margin:9px 1px 0 0;background:transparent url('../../images/bg_search.png') no-repeat;padding:3px 10px 0 13px;text-align:left;float:right;}
 #header #account_info{text-align:left;margin:16px 10px 0 0;font-size: 13px; }
@@ -74,8 +74,14 @@ table#graph_data td.hover{background:#fff5d3;}
     padding:6px;
     }
     
-#MiddleContent_grdStyled th{padding:6px 8px; border-left:thin solid #eaeced; font-size:13px; /*white-space:nowrap!important;*/ background-color: #1f3e8e;
-    color: white;}
+#MiddleContent_grdStyled th {
+    padding: 6px 8px;
+    border-left: thin solid #00c2a8;
+    font-size: 13px;
+    /* white-space: nowrap!important; */
+    background-color: #f3fbfa;
+    color: #00c2a8;
+}
 #MiddleContent_grdStyled>tbody>tr td{
     vertical-align: middle;
     border-top: 1px solid #808080;
@@ -116,7 +122,7 @@ table#graph_data td.hover{background:#fff5d3;}
 
 #form1 table tr td {
     margin: 0px;
-    padding: 0px;
+    padding: 2px;
     vertical-align: top;
     font-size: 13px;
     white-space:nowrap !important;
@@ -164,5 +170,33 @@ td{border-style: none;
 	 
 	margin-top:0px !important;
 	height:19px;
-	}    
-	
+	}  
+
+.card {
+    background-color: #fff;
+    margin-bottom: 25px;
+    -webkit-box-shadow: 0 0 4px 0 rgba(0,0,0,.04);
+    box-shadow: 0 0 4px 0 rgba(0,0,0,.04);
+    border-width: 0;
+    border-radius: 3px;
+    display: block;
+}
+.card-header {
+    font-size: 18px;
+    font-weight: 300;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 1.5384rem;
+    margin: 0 1.538rem;
+    border-bottom-width: 0;
+    border-radius: 3px 3px 0 0;
+    background-color: transparent;
+}
+.title{    font-size: 22px;
+    font-weight: 200;
+    color: #00c2a8;}
+.strong{font-weight:bold;}
+.subTitle{    border-bottom: 1px solid #00c2a8;
+    color: #00c2a8;
+    padding: 5px;
+    background: #e6f9f6;}

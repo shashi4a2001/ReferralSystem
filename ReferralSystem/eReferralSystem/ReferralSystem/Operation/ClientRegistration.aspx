@@ -7,8 +7,16 @@
 </asp:Content> 
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MiddleContent" Runat="Server">
-    <div>
-        <table>
+    <style>
+    hr{    margin-top: 6px !important;
+    margin-bottom: 6px !important;
+    }
+</style>
+     <div class="row">
+             <div class="col-md-10 col-md-offset-1">
+                 <div class="card card-table">
+                     <div class="card-header">
+        <table style="width:100%">
             <tr>
                 <td>Mobile No. <span style="color:red;">*</span></td>
                 <td>
@@ -45,7 +53,7 @@
             <tr>
                 <td>Client Type <span style="color:red;">*</span></td>
                 <td>
-                    <asp:DropDownList ID="ddlClientType" runat="server" Width="213px"></asp:DropDownList>
+                    <asp:DropDownList ID="ddlClientType" runat="server" Width="200px"></asp:DropDownList>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Required.." BorderStyle="Dashed" ControlToValidate="ddlClientType" ForeColor="#FF3300" InitialValue="-1"></asp:RequiredFieldValidator>
                 </td>
                 <td></td>
@@ -177,6 +185,9 @@
              
 
         </table>
+                         </div>
+                     </div>
+                 </div>
     </div>
     <div><asp:Label ID="lblmsg" runat="server"></asp:Label></div>
 </asp:Content>

@@ -47,7 +47,7 @@ input[type='text']
 {
     /*text-transform: uppercase;*/
    
-    color: #0033CC;
+    color:#00c2a8!important;
     background-color: #FFFFFF;
 }
 
@@ -128,11 +128,11 @@ input[type='submit']
 {
   border-color: inherit;
     /* border-width: 2px; */
-    background-color: #1f3e8e!important;
+    background-color: #00c2a8!important;
     font-weight: 700;
     text-align: center;
     color: White;
-    padding: 7px 17px;
+    padding: 2px 16px;
     border-radius: 4px;
     border: none;
     

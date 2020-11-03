@@ -47,8 +47,8 @@ public partial class RoleManagement : System.Web.UI.Page
         ObjPortalUser user;
         user = (ObjPortalUser)Session["PortalUserDtl"];
         DataTable dt = objDLGeneric.SpDataTable("usp_SelectClientTypeMaster", cmd, user.ConnectionString);
-        GridView1.DataSource = dt;
-        GridView1.DataBind();
+        grdStyled.DataSource = dt;
+        grdStyled.DataBind();
     }
 
     protected void UpdateData_Click(object sender, EventArgs e)
@@ -63,15 +63,15 @@ public partial class RoleManagement : System.Web.UI.Page
             user = (ObjPortalUser)Session["PortalUserDtl"];
 
 
-            for (int i = 0; i < GridView1.Rows.Count; i++)
+            for (int i = 0; i < grdStyled.Rows.Count; i++)
             {
-                string code = ((Label)GridView1.Rows[i].FindControl("lblCode")).Text.Trim();
-                Boolean blSuperAdmin = ((CheckBox)GridView1.Rows[i].FindControl("chkSuperAdmin")).Checked;
-                Boolean blMasterAgent = ((CheckBox)GridView1.Rows[i].FindControl("chkMasterAgent")).Checked;
-                Boolean blSubAgent = ((CheckBox)GridView1.Rows[i].FindControl("chkSubAgent")).Checked;
-                Boolean blFranchisee = ((CheckBox)GridView1.Rows[i].FindControl("chkFranchisee")).Checked;
-                Boolean blFranchiseeAgent = ((CheckBox)GridView1.Rows[i].FindControl("chkFranchiseeAgent")).Checked;
-                Boolean blIndividual = ((CheckBox)GridView1.Rows[i].FindControl("chkIndividual")).Checked;
+                string code = ((Label)grdStyled.Rows[i].FindControl("lblCode")).Text.Trim();
+                Boolean blSuperAdmin = ((CheckBox)grdStyled.Rows[i].FindControl("chkSuperAdmin")).Checked;
+                Boolean blMasterAgent = ((CheckBox)grdStyled.Rows[i].FindControl("chkMasterAgent")).Checked;
+                Boolean blSubAgent = ((CheckBox)grdStyled.Rows[i].FindControl("chkSubAgent")).Checked;
+                Boolean blFranchisee = ((CheckBox)grdStyled.Rows[i].FindControl("chkFranchisee")).Checked;
+                Boolean blFranchiseeAgent = ((CheckBox)grdStyled.Rows[i].FindControl("chkFranchiseeAgent")).Checked;
+                Boolean blIndividual = ((CheckBox)grdStyled.Rows[i].FindControl("chkIndividual")).Checked;
 
                 SqlCommand cmd = new SqlCommand();
                 cmd.Parameters.AddWithValue("@ClientTypeCode", code);

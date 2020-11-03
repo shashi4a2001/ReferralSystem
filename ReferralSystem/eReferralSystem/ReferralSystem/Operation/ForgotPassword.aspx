@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Operation/MasterPage2.master" AutoEventWireup="true" CodeFile="ForgotPassword.aspx.cs" Inherits="Operation_ForgotPassword" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MiddleContent" Runat="Server">
-    Forget Password..
+    <div class="subTitle">Forget Password..</div>
 
     <div>
         <table>

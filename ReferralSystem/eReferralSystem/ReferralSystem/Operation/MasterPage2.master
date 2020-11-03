@@ -54,7 +54,7 @@
             <!-- Begin header -->
              <div id="header" style="height: 90px;">
                 <div class="logo" style="margin-top: 3px;">
-                    <img src="../Common/Images/LNVMLOGO.png" height="70px" />
+                     <img src="../Common/Images/invest-19-logo.svg"  />
                 </div>
                 <div style="text-align: left; margin: 10px 10px 0 0; font-size: 13px; margin-top: 15px; float: right;">
 

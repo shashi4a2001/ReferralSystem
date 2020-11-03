@@ -66,10 +66,10 @@
                                 <asp:Button ID="btnGo" runat="server" Text="Go" CausesValidation="true" OnClick="btnGo_Click" />
                             </span>
                            
-                                <span><asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/Common/Images/export_toExcel.png" OnClick="ImageButton1_Click" /></span>
+                                <span style="position:relative;top:10px; left:10px"><asp:ImageButton ID="ImageButton1" runat="server" ImageUrl="~/Common/Images/export_toExcel.png" OnClick="ImageButton1_Click" /></span>
                                 
                         </div>
-                        <div style="width: 100%; overflow: auto; border: 2px solid #000; max-height: 400px;">
+                        <div style="width: 100%; overflow: auto; border: 2px solid #d4d4d4; max-height: 400px;padding:3px">
                             <asp:GridView ID="grdStyled" runat="server" AutoGenerateColumns="true"
                                 CellPadding="20" CellSpacing="20"
                                 RowStyle-BorderWidth="1" RowStyle-BorderStyle="Solid" Width="100%">

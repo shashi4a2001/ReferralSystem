@@ -14,8 +14,8 @@
 
         .header
         {
-            height: 58px;
-            background-color: #1f3e8e !important;
+            height: 62px;
+            background-color: #00c2a8 !important;
         }
 
             .header img
@@ -30,7 +30,7 @@
             margin-left: 50%;
             width: 75%;
             margin: 0 auto;
-            background: url(Common/LoginPageFiles/images/lnvmOnline.png) left no-repeat;
+            background: url(../Common/Images/invest-19-logo.svg) left no-repeat;
             height: 500px;
             margin-top: 1%;
         }
@@ -97,13 +97,13 @@
 
         .foot
         {
-            background-color: #1f3e8e !important;
+            background-color:#00c2a8 !important;
             height: 2px;
             color: #FFFFFF;
             font-family: Arial, Helvetica, sans-serif;
             font-size: 12px;
             text-align: center;
-            border-top: #14285d dashed 1px;
+            border-top: #038876  dashed 1px;
             line-height: 15px;
             margin-top: 25px;
         }
@@ -111,18 +111,19 @@
         .logo
         {
             font-size: 38px;
-            font-weight: 600;
-            float: left;
-            padding-top: 0;
-            margin-top: -8px;
-            font-family: Arial, Helvetica, sans-serif;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-left: 10px;
-            color: #fff;
-            margin-top: 10px;
-            text-shadow: 0 1px 0 #fff;
+        font-family: impact;
+     letter-spacing: 1px;
+    margin-left: 10px;
+    color: #fff;
+    margin-top: 10px;
+    text-shadow: 0 2px 1px #3b3e3d;
+    position: relative;
+    top: 4px;
         }
+        .forgotpass{font-family: arial;
+    font-size: 13px;
+    text-decoration: none;
+    color: red;}
     </style>
 
     <script type="text/javascript">
@@ -183,7 +184,7 @@
 
                         </div>
                         <div>
-                            <a href="Operation/ForgotPassword.aspx">Forgot Password..</a>
+                            <a href="Operation/ForgotPassword.aspx" class="forgotpass">Forgot Password..</a>
                             <asp:Button ID="btnLogin" runat="server" Text="Login" CssClass="btn" OnClick="btnLogin_Click" OnClientClick="return validateLogin();"
                                 ValidationGroup="Login" CausesValidation="true" />
                             
