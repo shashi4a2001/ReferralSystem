@@ -87,6 +87,6 @@ Begin
 	@IFSCCode,@SharingPercentage,@SelfReferralCode,@ReferredReferralCode,@ReferralAmount,
 	@ReferredReferralRevenue,@UserId,getdate())
 
-	Select 'Success' As [Result]
+	Select 'Success' As [Result],SCOPE_IDENTITY() as ClientId
 
 End
