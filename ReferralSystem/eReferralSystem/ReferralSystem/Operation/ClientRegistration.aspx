@@ -26,7 +26,11 @@
                 <td></td>
 
                 <td colspan="2">
-                    <asp:Button ID="btnFetchDetail0" runat="server" Text="Check Availability" Width="156px" /></td>
+                    <asp:Button ID="btnFetchDetail0" runat="server" Text="Check Availability" Width="156px" CausesValidation="False" OnClick="btnFetchDetail0_Click" />
+                    &nbsp;
+                    <asp:Label ID="lblmsgCheckAvailability" runat="server"></asp:Label>
+                    
+                </td>
                 <td></td>
             </tr>
             <tr>

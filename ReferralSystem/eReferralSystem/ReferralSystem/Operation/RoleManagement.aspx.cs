@@ -22,6 +22,13 @@ public partial class RoleManagement : System.Web.UI.Page
             return;
         }
 
+        ObjPortalUser user;
+        user = (ObjPortalUser)Session["PortalUserDtl"];
+        if (user.UserRole != "100") //Not Super Admin
+        {
+            Response.Redirect("UnauthorizeAccess.aspx", false);
+            return;
+        }
 
         if (Page.IsPostBack == false)
         {

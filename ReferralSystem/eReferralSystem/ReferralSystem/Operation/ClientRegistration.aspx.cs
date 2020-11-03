@@ -195,9 +195,27 @@ public partial class Operation_ClientRegistration : System.Web.UI.Page
 
             DataTable dt = objDLGeneric.SpDataTable("usp_InsertClientMaster", cmd, user.ConnectionString);
 
-            lblmsg.Text = "Client Created Successfully...";
-            lblmsg.ForeColor = System.Drawing.Color.Green;
-            ClearControls();
+            if (dt!=null  && dt.Rows.Count > 0)
+            {
+                if (dt.Rows[0][0].ToString() == "Success")
+                {
+                    lblmsg.Text = "Client Created Successfully...";
+                    lblmsg.ForeColor = System.Drawing.Color.Green;
+                    ClearControls();
+                }
+                else
+                {
+                    lblmsg.Text = dt.Rows[0][0].ToString();
+                    lblmsg.ForeColor = System.Drawing.Color.Red;
+                }
+
+            }
+            else
+            {
+                lblmsg.Text = "Oops! some problem in creating client..";
+                lblmsg.ForeColor = System.Drawing.Color.Red;
+            }
+           
         }
         catch (Exception ex)
         {
@@ -228,5 +246,32 @@ public partial class Operation_ClientRegistration : System.Web.UI.Page
         txtIFSCCode.Text = "";
         txtSharingPercnt.Text = "";
         txtReferredReferralCode.Text = "";
+    }
+
+    protected void btnFetchDetail0_Click(object sender, EventArgs e)
+    {
+        if (txtLoginId.Text.Trim() == "")
+        {
+            lblmsgCheckAvailability.Text = "LoginId Required..";
+            lblmsgCheckAvailability.ForeColor = System.Drawing.Color.Red;
+            return;
+        }
+        DLClsGeneric objDLGeneric = new DLClsGeneric();
+        SqlCommand cmd = new SqlCommand();
+        cmd.Parameters.AddWithValue("@LoginId", txtLoginId.Text.Trim());        
+
+        string Result  = objDLGeneric.SpExecuteScalar("usp_IsExistsLoginId", cmd, user.ConnectionString);
+        if (Result.StartsWith("Success"))
+        {
+            lblmsgCheckAvailability.Text = Result.Replace("Success - ", "");
+            lblmsgCheckAvailability.ForeColor = System.Drawing.Color.Green;
+        }
+        else
+        {
+            lblmsgCheckAvailability.Text = Result;
+            lblmsgCheckAvailability.ForeColor = System.Drawing.Color.Red;
+            txtLoginId.Text = "";
+        }
+
     }
 }
