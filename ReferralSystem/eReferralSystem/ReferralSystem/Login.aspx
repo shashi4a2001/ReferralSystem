@@ -183,7 +183,7 @@
 
                         </div>
                         <div>
-                            
+                            <a href="Operation/ForgotPassword.aspx">Forgot Password..</a>
                             <asp:Button ID="btnLogin" runat="server" Text="Login" CssClass="btn" OnClick="btnLogin_Click" OnClientClick="return validateLogin();"
                                 ValidationGroup="Login" CausesValidation="true" />
                             

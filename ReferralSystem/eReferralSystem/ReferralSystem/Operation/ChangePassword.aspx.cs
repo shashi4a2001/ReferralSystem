@@ -23,7 +23,7 @@ public partial class Operation_ChangePassword : System.Web.UI.Page
 
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (!Context.User.Identity.IsAuthenticated)
+        if (!Context.User.Identity.IsAuthenticated || Session["PortalUserDtl"] == null)
         {
             Session.Clear();
             Session.RemoveAll();
