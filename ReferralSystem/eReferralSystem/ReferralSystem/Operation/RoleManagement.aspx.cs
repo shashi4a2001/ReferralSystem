@@ -13,7 +13,9 @@ public partial class RoleManagement : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (!Context.User.Identity.IsAuthenticated)
+        UC_PageLabel.pagelabelProperty = "Role Management";
+
+        if (!Context.User.Identity.IsAuthenticated || Session["PortalUserDtl"]==null)
         {
             Session.Clear();
             Session.RemoveAll();

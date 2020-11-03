@@ -5,11 +5,8 @@
          <div style="position: fixed; top: 8em; z-index: 999999; right: 33px;">
                     <img src="../Common/images/shortcut/dashboardwatermark.png" alt="Access Panel" />
           </div>
-        <div>
-            <a href="RoleManagement.aspx">Role Management</a>&nbsp;&nbsp;
-            <a href="ClientRegistration.aspx">Client Registration</a>
-        </div>
-
+       
+         
     </div>
 </asp:Content>
  

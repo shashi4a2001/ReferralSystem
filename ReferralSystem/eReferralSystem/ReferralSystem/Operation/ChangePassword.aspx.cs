@@ -124,6 +124,7 @@ public partial class Operation_ChangePassword : System.Web.UI.Page
             user = (ObjPortalUser)Session["PortalUserDtl"];
 
             string UserID = user.UserId ;
+            string ClientId = user.LogId.ToString();
             string OldPassword = objclsCommon.EncryptData(txtOldPassword.Text.Trim());
             string NewPassword = objclsCommon.EncryptData(txtNewPassword.Text.Trim());
            
@@ -139,7 +140,7 @@ public partial class Operation_ChangePassword : System.Web.UI.Page
                 lblmsg.ForeColor = System.Drawing.Color.Green;
                 lblmsg.Text = "Password Changed Successfully...";
                 lblmsg.ForeColor = System.Drawing.Color.Green;
-                SendMail(UserID);
+                SendMail(ClientId);
                 Response.Redirect("LogOut.aspx?msg=2");
             }
             else
@@ -163,7 +164,7 @@ public partial class Operation_ChangePassword : System.Web.UI.Page
         return isValidFormat;
     }
 
-    private bool SendMail(string userid)
+    private bool SendMail(string clientid)
     {
         clsErrorLogger objclsErrorLogger = new clsErrorLogger();
         ObjPortalUser user;
@@ -176,7 +177,7 @@ public partial class Operation_ChangePassword : System.Web.UI.Page
 
             DLClsGeneric objDLGeneric = new DLClsGeneric();
             SqlCommand cmd = new SqlCommand();
-            cmd.Parameters.AddWithValue("@UserId", userid);
+            cmd.Parameters.AddWithValue("@ClientId", clientid);
             cmd.Parameters.AddWithValue("@TemplateType", "PasswordChanged");
             DataSet ds = objDLGeneric.SpDataSet("usp_SelectEmailMsg", cmd, user.ConnectionString);
 
@@ -215,7 +216,7 @@ public partial class Operation_ChangePassword : System.Web.UI.Page
         catch (Exception ex)
         {
             status = false;
-            objclsErrorLogger.WriteError(System.IO.Path.GetFileName(Request.Path), "Problem In Sending Mail To UserId: "+ userid, user == null ? "" : user.ConnectionString, ex);
+            objclsErrorLogger.WriteError(System.IO.Path.GetFileName(Request.Path), "Problem In Sending Mail To ClientId: "+ clientid, user == null ? "" : user.ConnectionString, ex);
 
             return status;
         }

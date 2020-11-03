@@ -69,6 +69,15 @@
                 </div>
             </div>
 
+             <div style="background-color:#7693de;">
+                    <a href="RoleManagement.aspx" style="color:#f5f5f5;">Role Management</a>&nbsp;&nbsp;
+                    <a href="ClientRegistration.aspx" style="color:#f5f5f5;">Client Registration</a>
+             </div>
+
+            <div>
+                 <asp:ContentPlaceHolder ID="PageLabelContent" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
             <!-- End header -->
             <!-- Begin left panel -->
             <!-- End left panel -->
@@ -76,6 +85,7 @@
             <div id="content">
                 <asp:ScriptManager ID="ManageOperation" runat="server">
                 </asp:ScriptManager>
+                
                 <asp:ContentPlaceHolder ID="MiddleContent" runat="server">
                 </asp:ContentPlaceHolder>
 

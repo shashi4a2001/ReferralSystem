@@ -20,5 +20,9 @@ public partial class Operation_SessionExpired : System.Web.UI.Page
     protected void Page_Load(object sender, EventArgs e)
     {
         lblMessage.Text = "Session Expired..";
+        Session.Clear();
+        Session.RemoveAll();
+        Session.Abandon();
+        System.Web.Security.FormsAuthentication.SignOut();
     }
 }

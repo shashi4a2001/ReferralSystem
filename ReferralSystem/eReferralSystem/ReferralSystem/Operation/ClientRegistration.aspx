@@ -1,4 +1,10 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Operation/MasterPage.master" AutoEventWireup="true" CodeFile="ClientRegistration.aspx.cs" Inherits="Operation_ClientRegistration" %>
+<%@ Register Src="~/UserControl/UC_PageLabel.ascx" TagPrefix="uc1" TagName="UC_PageLabel" %>
+
+
+<asp:Content ID="Content2" ContentPlaceHolderID="PageLabelContent" Runat="Server">
+    <uc1:UC_PageLabel runat="server" ID="UC_PageLabel" />
+</asp:Content> 
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MiddleContent" Runat="Server">
     <div>

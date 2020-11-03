@@ -15,7 +15,9 @@ public partial class Operation_ClientRegistration : System.Web.UI.Page
     ObjPortalUser user;
     protected void Page_Load(object sender, EventArgs e)
     {
-        if (!Context.User.Identity.IsAuthenticated)
+        UC_PageLabel.pagelabelProperty = "Client Registration";
+
+        if (!Context.User.Identity.IsAuthenticated || Session["PortalUserDtl"] == null)
         {
             Session.Clear();
             Session.RemoveAll();
@@ -202,6 +204,9 @@ public partial class Operation_ClientRegistration : System.Web.UI.Page
                     lblmsg.Text = "Client Created Successfully...";
                     lblmsg.ForeColor = System.Drawing.Color.Green;
                     ClearControls();
+
+                    string InsertedClientId = dt.Rows[0][1].ToString();
+                    SendMail(InsertedClientId, MobileNo);
                 }
                 else
                 {
@@ -273,5 +278,71 @@ public partial class Operation_ClientRegistration : System.Web.UI.Page
             txtLoginId.Text = "";
         }
 
+    }
+
+    private bool SendMail(string clientid,string password)
+    {
+        clsErrorLogger objclsErrorLogger = new clsErrorLogger();
+        ObjPortalUser user;
+        user = (ObjPortalUser)Session["PortalUserDtl"];
+
+        bool status = false;
+        try
+        {
+            ObjSendEmail SendMail = new ObjSendEmail();
+
+            DLClsGeneric objDLGeneric = new DLClsGeneric();
+            SqlCommand cmd = new SqlCommand();
+            cmd.Parameters.AddWithValue("@ClientId", clientid);
+            cmd.Parameters.AddWithValue("@TemplateType", "LoginCreation");
+            DataSet ds = objDLGeneric.SpDataSet("usp_SelectEmailMsg", cmd, user.ConnectionString);
+
+            DataTable dtSMTP = ds.Tables[0];
+            DataTable dtEmailTemplate = ds.Tables[1];
+
+            if (ds != null && dtSMTP != null && dtEmailTemplate != null &&
+                dtSMTP.Rows.Count > 0 && dtEmailTemplate.Rows.Count > 0 &&
+                Convert.ToString(dtEmailTemplate.Rows[0]["ToEmailId"]) != ""
+                )
+            {
+                if (dtEmailTemplate.Rows[0]["TemplateText"].ToString().Contains("(Password)"))
+                {
+                    dtEmailTemplate.Rows[0]["TemplateText"] = dtEmailTemplate.Rows[0]["TemplateText"].ToString().Replace("(Password)", password);
+                }
+
+                SendMail.From = Convert.ToString(dtSMTP.Rows[0]["SenderEmailID"]);
+                //SendMail.CC = objClsCommon.getConfigKeyValue("EMAIL IDS FOR CC OF MAIL MESSAGE FOR EACH OPERATION", "EMAIL RECEPIENTS GROUP", user.ConnectionString);
+                SendMail.SMTPHost = Convert.ToString(dtSMTP.Rows[0]["HostName"]);
+                SendMail.SMTPPort = Convert.ToInt16(dtSMTP.Rows[0]["PortNo"]);
+                SendMail.UserId = Convert.ToString(dtSMTP.Rows[0]["UserId"]);
+                SendMail.Password = Convert.ToString(dtSMTP.Rows[0]["UserPwd"]);
+                string enablessl = Convert.ToString(dtSMTP.Rows[0]["EnableSSL"]).ToLower();
+                if (enablessl == "y" || enablessl == "yes" || enablessl == "1")
+                    SendMail.SMTPSSL = true;
+                else
+                    SendMail.SMTPSSL = false;
+
+
+
+                SendMail.Subject = Convert.ToString(dtEmailTemplate.Rows[0]["SubjectLine"]);
+                SendMail.To = Convert.ToString(dtEmailTemplate.Rows[0]["ToEmailId"]);
+                SendMail.MailBody = Convert.ToString(dtEmailTemplate.Rows[0]["TemplateText"]);
+
+                SendMail.ConnectionString = user.ConnectionString;
+
+                clsCommon objclsCommon = new clsCommon();
+                objclsCommon.SendEmail(SendMail);
+            }
+        }
+        catch (Exception ex)
+        {
+            status = false;
+            objclsErrorLogger.WriteError(System.IO.Path.GetFileName(Request.Path), "Problem In Sending Mail To ClientId: " + clientid, user == null ? "" : user.ConnectionString, ex);
+
+            return status;
+        }
+
+        status = true;
+        return status;
     }
 }
