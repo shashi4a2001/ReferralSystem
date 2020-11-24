@@ -7,5 +7,5 @@ GO
 Create Procedure Test
 As
 Begin
-	select 1
+	select 12
 End
