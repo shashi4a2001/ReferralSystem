@@ -25,7 +25,8 @@ Begin
 		Return
 	End
 
-	Update ClientMaster Set LoginPassword = @NewPassword,ModifiedDate=GETDATE() Where LoginId = @LoginId
+
+	Update ClientMaster Set LoginPassword = @NewPassword,ModifiedDate=dbo.fnGetDate() Where LoginId = @LoginId
 
 	Select 'Success'
 

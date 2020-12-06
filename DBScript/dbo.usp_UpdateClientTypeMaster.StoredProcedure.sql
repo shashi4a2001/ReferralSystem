@@ -19,6 +19,7 @@ Create Procedure usp_UpdateClientTypeMaster
 @UserId varchar(100)
 As
 Begin
+
 	Update ClientTypeMaster Set 
 	CanMakeSuperAdmin=@CanMakeSuperAdmin,
 	CanMakeMasterAgent=@CanMakeMasterAgent,
@@ -27,7 +28,7 @@ Begin
 	CanMakeFranchiseeAgent=@CanMakeFranchiseeAgent,
 	CanMakeIndividual=@CanMakeIndividual,
 	ModifiedBy=@UserId,
-	ModifiedDate=getdate()
+	ModifiedDate=dbo.fnGetDate()
 	Where ClientTypeCode=@ClientTypeCode
 
 End

@@ -31,10 +31,10 @@ Begin
 	Declare @StartDateOfPreviousMonth DateTime
 	Declare @EndDateOfPreviousMonth DateTime
 	
-	Set @StartDateOfCurrentMonth = DATEADD(m, DATEDIFF(m, 0, GETDATE()), 0)
-	Set @CurrentDate=getdate()
-	Set @StartDateOfPreviousMonth = DATEADD(MONTH, DATEDIFF(MONTH, 0, GETDATE()) - 1, 0)
-	Set @EndDateOfPreviousMonth = DATEADD(ms,-2,DATEADD(month, DATEDIFF(month, 0, GETDATE()), 0))
+	Set @StartDateOfCurrentMonth = DATEADD(m, DATEDIFF(m, 0, dbo.fnGetDate()), 0)
+	Set @CurrentDate=dbo.fnGetDate()
+	Set @StartDateOfPreviousMonth = DATEADD(MONTH, DATEDIFF(MONTH, 0, dbo.fnGetDate()) - 1, 0)
+	Set @EndDateOfPreviousMonth = DATEADD(ms,-2,DATEADD(month, DATEDIFF(month, 0, dbo.fnGetDate()), 0))
 
 
 	Declare @SelfReferralCode varchar(100)

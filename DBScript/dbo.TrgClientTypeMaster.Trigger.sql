@@ -43,7 +43,7 @@ AS
          ,d.[ModifiedBy]
          ,d.[ModifiedDate]
          ,i.[ModifiedBy]
-         ,GetDate()
+         ,dbo.fnGetDate()
     FROM deleted d
     LEFT JOIN inserted i on i.ClientTypeLevel  = d.ClientTypeLevel
     WHERE

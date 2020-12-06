@@ -91,7 +91,7 @@ Begin
 	@MobileNo,@ClientRefId,@ClientCode,@ClientName,@ClientTypeCode,@ContactPerson,@EmailId,
 	@LandlineNo,@Address,@LoginId,@LoginPassword,@BankName,@ClientNameAsPerBank,@AccountNo,
 	@IFSCCode,@ReferralSharingPercentage,@SelfReferralCode,@ReferredReferralCode,@ReferralAmount,
-	@ReferredReferralRevenue,@RevenueSharingPercentage,@UserId,getdate())
+	@ReferredReferralRevenue,@RevenueSharingPercentage,@UserId,dbo.fnGetDate())
 
 	Select 'Success' As [Result],SCOPE_IDENTITY() as ClientId
 
