@@ -14,7 +14,7 @@ As
 Begin
 	If Exists (Select 1 From ClientMaster With(NoLock) Where LoginId = @LoginId)
 	Begin
-		Select 'Oops Login Id unavailable..'
+		Select 'Login Id is unavailable..'
 		Return
 	End
 	Select 'Success - Login Id is available..'
