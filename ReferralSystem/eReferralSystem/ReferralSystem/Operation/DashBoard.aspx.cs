@@ -52,8 +52,9 @@ public partial class Operation_DashBoard : System.Web.UI.Page
             ltrlClientNameAsperBank.Text = dr["ClientNameAsPerBank"].ToString();
             ltrlAccountNo .Text = dr["AccountNo"].ToString();
             ltrlIFSCCode.Text = dr["IFSCCode"].ToString();
-            ltrlSharingPercnt.Text = dr["SharingPercentage"].ToString();
-            ltrlReferredReferralCode.Text = dr["ReferredReferralCode"].ToString();
+            ltrlReferralSharingPercnt.Text = dr["ReferralSharingPercentage"].ToString();
+            ltrlSelfReferralCode.Text = dr["SelfReferralCode"].ToString();
+            ltflRevenueSharingPercnt.Text = dr["RevenueSharingPercentage"].ToString();
 
         }
 

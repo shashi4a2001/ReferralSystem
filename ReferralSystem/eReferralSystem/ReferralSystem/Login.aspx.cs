@@ -111,6 +111,14 @@ public partial class Operation_Login : System.Web.UI.Page
             {
                 if (dt.Rows[0][0].ToString() == "USEREXISTS")
                 {
+                    if (dt.Rows[0]["IsFirstTimeLogin"].ToString() != "0")
+                    {
+                        //First Time Login
+                    }
+                    if ( Convert.ToDateTime( dt.Rows[0]["PwdExpireOn"])< Convert.ToDateTime(dt.Rows[0]["CurrentDate"]))
+                    {
+                        //Password Expired
+                    }
 
                     string strUrl = "Operation/dashboard.aspx";
                     user.LogId = Convert.ToInt16( dt.Rows[0]["ClientId"]);

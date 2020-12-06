@@ -51,7 +51,7 @@
                 <td colspan="6"><hr /></td>
             </tr>
             <tr>
-                <td>Client Type <span style="color:red;">*</span></td>
+                <td>Login Type <span style="color:red;">*</span></td>
                 <td>
                     <asp:DropDownList ID="ddlClientType" runat="server" Width="200px"></asp:DropDownList>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Required.." BorderStyle="Dashed" ControlToValidate="ddlClientType" ForeColor="#FF3300" InitialValue="-1"></asp:RequiredFieldValidator>
@@ -104,10 +104,10 @@
             </tr>
              
              <tr>
-                <td>Landline No. <span style="color:red;">*</span></td>
+                <td>Landline No.</td>
                 <td> 
                     <asp:TextBox ID="txtLandlineNo" runat="server" Width="200px"></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator9" runat="server" ErrorMessage="Required.." BorderStyle="Dashed" ControlToValidate="txtLandlineNo" ForeColor="#FF3300" Display = "Dynamic"></asp:RequiredFieldValidator>
+                    
                 </td>
                 <td></td>  
             </tr>
@@ -117,12 +117,13 @@
             </tr>                     
 
              <tr>
-                <td>Bank Name <span style="color:red;">*</span></td>
+                 <td>IFSC Code <span style="color:red;">*</span></td>
                 <td> 
-                    <asp:TextBox ID="txtBankName" runat="server" Width="200px"></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator10" runat="server" ErrorMessage="Required.." BorderStyle="Dashed" ControlToValidate="txtBankName" ForeColor="#FF3300" Display = "Dynamic"></asp:RequiredFieldValidator>
+                    <asp:TextBox ID="txtIFSCCode" runat="server" Width="200px"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator13" runat="server" ErrorMessage="Required.." BorderStyle="Dashed" ControlToValidate="txtIFSCCode" ForeColor="#FF3300" Display = "Dynamic"></asp:RequiredFieldValidator>
+
                 </td>
-                <td></td>
+                <td></td>                
 
                 <td>Client Name As Per Bank <span style="color:red;">*</span></td>
                 <td> 
@@ -134,6 +135,13 @@
             </tr>
              
             <tr>
+                <td>Bank Name <span style="color:red;">*</span></td>
+                <td> 
+                    <asp:TextBox ID="txtBankName" runat="server" Width="200px"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator10" runat="server" ErrorMessage="Required.." BorderStyle="Dashed" ControlToValidate="txtBankName" ForeColor="#FF3300" Display = "Dynamic"></asp:RequiredFieldValidator>
+                </td>
+                <td></td>
+
                 <td>Account No. <span style="color:red;">*</span></td>
                 <td> 
                     <asp:TextBox ID="txtAccountNo" runat="server" Width="200px"></asp:TextBox>
@@ -141,36 +149,45 @@
 
                 </td>
                 <td></td>
-
-                <td>IFSC Code <span style="color:red;">*</span></td>
-                <td> 
-                    <asp:TextBox ID="txtIFSCCode" runat="server" Width="200px"></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator13" runat="server" ErrorMessage="Required.." BorderStyle="Dashed" ControlToValidate="txtIFSCCode" ForeColor="#FF3300" Display = "Dynamic"></asp:RequiredFieldValidator>
-
-                </td>
-                <td></td>
+                
             </tr>
              <tr>
                 <td colspan="6"><hr /></td>
             </tr> 
             <tr>
-                <td>Sharing (%) <span style="color:red;">*</span></td>
+                <td>Referral  Sharing (%) <span style="color:red;">*</span></td>
                 <td> 
-                    <asp:TextBox ID="txtSharingPercnt" runat="server" Width="200px"></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator14" runat="server" ErrorMessage="Required.." BorderStyle="Dashed" ControlToValidate="txtSharingPercnt" ForeColor="#FF3300" Display = "Dynamic"></asp:RequiredFieldValidator>
+                    <asp:TextBox ID="txtReferralSharingPercnt" runat="server" Width="200px"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator14" runat="server" ErrorMessage="Required.." BorderStyle="Dashed" ControlToValidate="txtReferralSharingPercnt" ForeColor="#FF3300" Display = "Dynamic"></asp:RequiredFieldValidator>
                     <asp:RegularExpressionValidator ID="Regex1" runat="server" ValidationExpression="((\d+)((\.\d{1,2})?))$"
                     ErrorMessage="Enter valid number" ForeColor="#FF3300" Display = "Dynamic"
-                    ControlToValidate="txtSharingPercnt" />
+                    ControlToValidate="txtReferralSharingPercnt" />
                 </td>
                 <td></td>
 
-                <td>Referred Referral Code <span style="color:red;">*</span></td>
+                <td>Referral Code <span style="color:red;">*</span></td>
                 <td> 
-                    <asp:TextBox ID="txtReferredReferralCode" runat="server" Width="200px"></asp:TextBox>
-                    <asp:RequiredFieldValidator ID="RequiredFieldValidator15" runat="server" ErrorMessage="Required.." BorderStyle="Dashed" ControlToValidate="txtReferredReferralCode" ForeColor="#FF3300" Display = "Dynamic"></asp:RequiredFieldValidator>
+                    <asp:TextBox ID="txtReferralCode" runat="server" Width="200px"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator15" runat="server" ErrorMessage="Required.." BorderStyle="Dashed" ControlToValidate="txtReferralCode" ForeColor="#FF3300" Display = "Dynamic"></asp:RequiredFieldValidator>
 
                 </td>
                 <td></td>
+            </tr>
+            <tr>
+                <td>Revenue Sharing (%) <span style="color:red;">*</span></td>
+                <td> 
+                    <asp:TextBox ID="txtRevenueSharingPercnt" runat="server" Width="200px"></asp:TextBox>
+                    <asp:RequiredFieldValidator ID="RequiredFieldValidator9" runat="server" ErrorMessage="Required.." BorderStyle="Dashed" ControlToValidate="txtRevenueSharingPercnt" ForeColor="#FF3300" Display = "Dynamic"></asp:RequiredFieldValidator>
+                    <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ValidationExpression="((\d+)((\.\d{1,2})?))$"
+                    ErrorMessage="Enter valid number" ForeColor="#FF3300" Display = "Dynamic"
+                    ControlToValidate="txtRevenueSharingPercnt" />
+                </td>
+                <td>&nbsp;</td>
+
+                <td>&nbsp;</td>
+                <td> 
+                    &nbsp;</td>
+                <td>&nbsp;</td>
             </tr>
             <tr>
                 <td colspan="6"><hr /></td>

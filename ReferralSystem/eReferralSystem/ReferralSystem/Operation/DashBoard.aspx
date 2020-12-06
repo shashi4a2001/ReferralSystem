@@ -69,12 +69,14 @@
                              
                              <div class="col-md-2 strong">IFSC Code</div>
                              <div class="col-md-4">  <asp:Literal ID="ltrlIFSCCode" runat="server"></asp:Literal></div>
-                             <div class="col-md-2 strong">Sharing (%)</div>
-                             <div class="col-md-4"><asp:Literal ID="ltrlSharingPercnt" runat="server"></asp:Literal></div>
+                             <div class="col-md-2 strong">Referral Sharing (%)</div>
+                             <div class="col-md-4"><asp:Literal ID="ltrlReferralSharingPercnt" runat="server"></asp:Literal></div>
                               <div style="clear:both;border-bottom: 1px solid #f9f9f9;"></div>
                              
-                             <div class="col-md-2 strong">Referred Referral Code</div>
-                             <div class="col-md-4"><asp:Literal ID="ltrlReferredReferralCode" runat="server"></asp:Literal></div>
+                             <div class="col-md-2 strong">Referral Code</div>
+                             <div class="col-md-4"><asp:Literal ID="ltrlSelfReferralCode" runat="server"></asp:Literal></div>
+                             <div class="col-md-2 strong">Revenue Sharing (%)</div>
+                             <div class="col-md-4"><asp:Literal ID="ltflRevenueSharingPercnt" runat="server"></asp:Literal></div>
                              
                              
                          </div>

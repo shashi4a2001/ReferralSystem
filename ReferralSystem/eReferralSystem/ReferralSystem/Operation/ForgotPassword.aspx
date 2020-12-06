@@ -1,9 +1,15 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Operation/MasterPage2.master" AutoEventWireup="true" CodeFile="ForgotPassword.aspx.cs" Inherits="Operation_ForgotPassword" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MiddleContent" Runat="Server">
-    <div class="subTitle">Forget Password..</div>
+    <style>
+        #content{padding:0 !important;}
+        input[type='submit'] {
+            padding: 7px 16px !important;
+        }
+    </style>
+    <div class="subTitle">Forgot Password..</div>
 
-    <div>
+    <div style="padding:30px 0 0 20px;">
         <table>
             <tr>
                 <td>User Id <span style="color:red;">*</span></td>

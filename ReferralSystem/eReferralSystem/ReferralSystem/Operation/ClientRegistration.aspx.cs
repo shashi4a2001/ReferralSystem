@@ -73,8 +73,9 @@ public partial class Operation_ClientRegistration : System.Web.UI.Page
             string ClientNameAsPerBank = txtClientNameAsperBank.Text.Trim();
             string AccountNo = txtAccountNo.Text.Trim();
             string IFSCCode = txtIFSCCode.Text.Trim();
-            string SharingPercnt = txtSharingPercnt.Text.Trim();
-            string ReferredReferralCode = txtReferredReferralCode.Text.Trim();
+            string ReferralSharingPercnt = txtReferralSharingPercnt.Text.Trim();
+            string ReferralCode = txtReferralCode.Text.Trim();
+            string RevenueSharingPercnt = txtRevenueSharingPercnt.Text.Trim();
 
             if (MobileNo == "")
             {
@@ -84,7 +85,7 @@ public partial class Operation_ClientRegistration : System.Web.UI.Page
             }
             if (ClientType == "")
             {
-                ShowErrorMsg("Please Select Client Type..");
+                ShowErrorMsg("Please Select Login Type..");
                 ddlClientType.Focus();
                 return;
             }
@@ -112,12 +113,12 @@ public partial class Operation_ClientRegistration : System.Web.UI.Page
                 txtEmailId.Focus();
                 return;
             }
-            if (LandlineNo == "")
-            {
-                ShowErrorMsg("Please Enter Landline No..");
-                txtLandlineNo.Focus();
-                return;
-            }
+            //if (LandlineNo == "")
+            //{
+            //    ShowErrorMsg("Please Enter Landline No..");
+            //    txtLandlineNo.Focus();
+            //    return;
+            //}
             if (Address == "")
             {
                 ShowErrorMsg("Please Enter Address..");
@@ -154,16 +155,22 @@ public partial class Operation_ClientRegistration : System.Web.UI.Page
                 txtIFSCCode.Focus();
                 return;
             }
-            if (SharingPercnt == "")
+            if (ReferralSharingPercnt == "")
             {
-                ShowErrorMsg("Please Enter Sharing Percnt..");
-                txtSharingPercnt.Focus();
+                ShowErrorMsg("Please Enter Referral Sharing Percnt..");
+                txtReferralSharingPercnt.Focus();
                 return;
             }
-            if (ReferredReferralCode == "")
+            if (ReferralCode == "")
             {
-                ShowErrorMsg("Please Enter Referred Referral Code..");
-                txtReferredReferralCode.Focus();
+                ShowErrorMsg("Please Enter Referral Code..");
+                txtReferralCode.Focus();
+                return;
+            }
+            if (RevenueSharingPercnt == "")
+            {
+                ShowErrorMsg("Please Enter Revenue Sharing Percnt..");
+                txtRevenueSharingPercnt.Focus();
                 return;
             }
 
@@ -190,9 +197,10 @@ public partial class Operation_ClientRegistration : System.Web.UI.Page
             cmd.Parameters.AddWithValue("@ClientNameAsPerBank", ClientNameAsPerBank);
             cmd.Parameters.AddWithValue("@AccountNo", AccountNo);
             cmd.Parameters.AddWithValue("@IFSCCode", IFSCCode);
-            cmd.Parameters.AddWithValue("@SharingPercentage", SharingPercnt);
-            cmd.Parameters.AddWithValue("@SelfReferralCode", "");
-            cmd.Parameters.AddWithValue("@ReferredReferralCode", ReferredReferralCode);
+            cmd.Parameters.AddWithValue("@ReferralSharingPercentage", ReferralSharingPercnt);
+            cmd.Parameters.AddWithValue("@SelfReferralCode", ReferralCode);
+            cmd.Parameters.AddWithValue("@ReferredReferralCode", "");
+            cmd.Parameters.AddWithValue("@RevenueSharingPercentage", RevenueSharingPercnt);
             cmd.Parameters.AddWithValue("@UserId", user.LogId);
 
             DataTable dt = objDLGeneric.SpDataTable("usp_InsertClientMaster", cmd, user.ConnectionString);
@@ -249,8 +257,8 @@ public partial class Operation_ClientRegistration : System.Web.UI.Page
         txtClientNameAsperBank.Text = "";
         txtAccountNo.Text = "";
         txtIFSCCode.Text = "";
-        txtSharingPercnt.Text = "";
-        txtReferredReferralCode.Text = "";
+        txtReferralSharingPercnt.Text = "";
+        txtReferralCode.Text = "";
     }
 
     protected void btnFetchDetail0_Click(object sender, EventArgs e)
