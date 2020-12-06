@@ -134,3 +134,15 @@ Begin
 	<tr><td colspan=''4''>Invest 19</td></tr>
 	</table>')
 End
+
+
+IF (EXISTS(SELECT 1 FROM sys.columns WHERE Name = N'SharingPercentage' AND Object_ID = Object_ID(N'ClientMaster')))
+BEGIN
+	EXEC sp_RENAME 'ClientMaster.SharingPercentage' , 'ReferralSharingPercentage', 'COLUMN'
+END
+GO
+IF (NOT EXISTS(SELECT 1 FROM sys.columns WHERE Name = N'RevenueSharingPercentage' AND Object_ID = Object_ID(N'ClientMaster')))
+BEGIN
+  Alter Table ClientMaster ADD RevenueSharingPercentage  Numeric(18,2)
+END
+GO

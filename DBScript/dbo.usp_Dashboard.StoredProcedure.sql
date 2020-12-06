@@ -18,8 +18,8 @@ Begin
 	a.ClientId,a.ClientCode,a.ClientName,b.ClientTypeName As [ClientType],a.ContactPerson,a.EmailId,
 	a.MobileNo,a.LandlineNo,a.Address,a.LoginId,a.BankName,a.ClientNameAsPerBank,a.AccountNo,
 	a.IFSCCode,a.SelfReferralCode,a.ReferredReferralCode,
-	a.SharingPercentage As [SharingPercentage],a.ReferralAmount As [Referral Amount],
-	a.ReferredReferralRevenue As [ReferredReferralRevenue], 
+	a.ReferralSharingPercentage As [ReferralSharingPercentage],a.ReferralAmount As [Referral Amount],
+	a.ReferredReferralRevenue As [ReferredReferralRevenue],IsNull(a.RevenueSharingPercentage,0) As [RevenueSharingPercentage], 
 	CONVERT(varchar,a.CreatedDate,9) As [Account Opening Date]  
 	From ClientMaster a With(NoLock)
 	Inner Join ClientTypeMaster b With(NoLock) ON a.ClientTypeCode = b.ClientTypeCode  

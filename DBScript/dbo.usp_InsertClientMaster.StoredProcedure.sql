@@ -24,9 +24,10 @@ Create Procedure usp_InsertClientMaster
 @ClientNameAsPerBank varchar(300),
 @AccountNo varchar(100),
 @IFSCCode varchar(100),
-@SharingPercentage Numeric(18,2),
+@ReferralSharingPercentage Numeric(18,2),
 @SelfReferralCode varchar(50),
 @ReferredReferralCode varchar(50),
+@RevenueSharingPercentage Numeric(18,2),
 @UserId varchar(100)
 As
 Begin
@@ -79,13 +80,13 @@ Begin
 	Insert Into ClientMaster(
 	MobileNo,ClientRefId,ClientCode,ClientName,ClientTypeCode,ContactPerson,EmailId,
 	LandlineNo,Address,LoginId,LoginPassword,BankName,ClientNameAsPerBank,AccountNo,
-	IFSCCode,SharingPercentage,SelfReferralCode,ReferredReferralCode,ReferralAmount,
-	ReferredReferralRevenue,CreatedBy,CreatedDate)
+	IFSCCode,ReferralSharingPercentage,SelfReferralCode,ReferredReferralCode,ReferralAmount,
+	ReferredReferralRevenue,RevenueSharingPercentage,CreatedBy,CreatedDate)
 	values(
 	@MobileNo,@ClientRefId,@ClientCode,@ClientName,@ClientTypeCode,@ContactPerson,@EmailId,
 	@LandlineNo,@Address,@LoginId,@LoginPassword,@BankName,@ClientNameAsPerBank,@AccountNo,
-	@IFSCCode,@SharingPercentage,@SelfReferralCode,@ReferredReferralCode,@ReferralAmount,
-	@ReferredReferralRevenue,@UserId,getdate())
+	@IFSCCode,@ReferralSharingPercentage,@SelfReferralCode,@ReferredReferralCode,@ReferralAmount,
+	@ReferredReferralRevenue,@RevenueSharingPercentage,@UserId,getdate())
 
 	Select 'Success' As [Result],SCOPE_IDENTITY() as ClientId
 
