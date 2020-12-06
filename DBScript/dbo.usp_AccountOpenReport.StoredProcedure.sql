@@ -32,7 +32,7 @@ Begin
 	Begin	
 		Select 
 		a.ClientId,a.ClientCode,a.ClientName,b.ClientTypeName As [ClientType],a.ContactPerson,a.EmailId,
-		a.MobileNo, a.SharingPercentage As [Sharing Percentage],a.ReferralAmount As [Referral Amount],
+		a.MobileNo, a.ReferralSharingPercentage As [Referral Sharing Percentage],a.ReferralAmount As [Referral Amount],
 		a.ReferredReferralRevenue As [Referred Referral Revenue], 
 		CONVERT(varchar,a.CreatedDate,9) As [Account Opening Date]  
 		From ClientMaster a With(NoLock)

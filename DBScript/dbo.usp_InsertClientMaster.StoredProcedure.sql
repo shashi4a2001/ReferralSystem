@@ -74,8 +74,13 @@ Begin
 		return
 	End
 
+	Set @ReferredReferralCode=''
+	Select @ReferredReferralCode=SelfReferralCode From ClientMaster With(NoLock) Where ClientId = @UserId
+
 	Declare @ReferralAmount Numeric(18,2)
 	Declare @ReferredReferralRevenue Numeric(18,2)
+	Set @ReferralAmount=100
+	Set @ReferredReferralRevenue=(@ReferralAmount*@ReferralSharingPercentage)/100
 
 	Insert Into ClientMaster(
 	MobileNo,ClientRefId,ClientCode,ClientName,ClientTypeCode,ContactPerson,EmailId,
