@@ -146,3 +146,7 @@ BEGIN
   Alter Table ClientMaster ADD RevenueSharingPercentage  Numeric(18,2)
 END
 GO
+IF (EXISTS(SELECT 1 FROM sys.columns WHERE Name = N'LoginPassword' AND Object_ID = Object_ID(N'ClientMaster')))
+BEGIN
+	Alter Table ClientMaster Drop Column LoginPassword
+END

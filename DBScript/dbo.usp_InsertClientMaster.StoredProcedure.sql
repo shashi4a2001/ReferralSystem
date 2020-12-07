@@ -73,6 +73,7 @@ Begin
 		Select 'Email Id already exists..' As [Result]
 		return
 	End
+	Declare @ClientId BigInt
 
 	Set @ReferredReferralCode=''
 	Select @ReferredReferralCode=SelfReferralCode From ClientMaster With(NoLock) Where ClientId = @UserId
@@ -84,14 +85,21 @@ Begin
 
 	Insert Into ClientMaster(
 	MobileNo,ClientRefId,ClientCode,ClientName,ClientTypeCode,ContactPerson,EmailId,
-	LandlineNo,Address,LoginId,LoginPassword,BankName,ClientNameAsPerBank,AccountNo,
+	LandlineNo,Address,LoginId,BankName,ClientNameAsPerBank,AccountNo,
 	IFSCCode,ReferralSharingPercentage,SelfReferralCode,ReferredReferralCode,ReferralAmount,
 	ReferredReferralRevenue,RevenueSharingPercentage,CreatedBy,CreatedDate)
 	values(
 	@MobileNo,@ClientRefId,@ClientCode,@ClientName,@ClientTypeCode,@ContactPerson,@EmailId,
-	@LandlineNo,@Address,@LoginId,@LoginPassword,@BankName,@ClientNameAsPerBank,@AccountNo,
+	@LandlineNo,@Address,@LoginId,@BankName,@ClientNameAsPerBank,@AccountNo,
 	@IFSCCode,@ReferralSharingPercentage,@SelfReferralCode,@ReferredReferralCode,@ReferralAmount,
 	@ReferredReferralRevenue,@RevenueSharingPercentage,@UserId,dbo.fnGetDate())
+
+	Set @ClientId=@@Identity
+
+	Insert Into UserMaster(ClientId,UserName,UserId,LoginPwd,IsFirstTimeLogin,
+							PwdExpireOn,LoginPwd1,CreatedBy,CreatedDate)
+				values	  (@ClientId,@ClientName,@LoginId,@LoginPassword,1,
+						   '01/01/1900',@LoginPassword,@UserId,dbo.fnGetDate())
 
 	Select 'Success' As [Result],SCOPE_IDENTITY() as ClientId
 
