@@ -35,7 +35,11 @@ Begin
 		select 'USEREXISTS' As [Msg],@ClientId as ClientId,@ClientTypeCode As [ClientTypeCode],
 				@ClientName As [ClientName],@IsFirstTimeLogin As [IsFirstTimeLogin],
 				Cast(Convert(varchar,@PwdExpireOn,103) As DateTime) As [PwdExpireOn],
-				dbo.fnGetDate() As [CurrentDate]
+				dbo.fnGetDate() As [CurrentDate],
+				(Case 
+				When Cast(Convert(varchar,@PwdExpireOn,103) As DateTime)<dbo.fnGetDate() Then 1 
+				Else 0 
+				End) As [IsPasswordExpired]
 		Return
 	End 	
 End
