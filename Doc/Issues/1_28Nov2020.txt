@@ -1,0 +1,18 @@
+Client Registration Menu name should be change with "User Registration"
+Client Type *  label should be change with "Login Type"
+Referred Referral Code * information should be change with "Referral Code *" which will come from API.
+Landline No. * shold be optional.
+Client Name As Per Bank * - Shold be auto filled with ClientName
+Cheque Upload with Preview. 
+Sharing (%) * lable should be change with "Referral  Sharing (%) *"
+Revenue Sharing (%) textbox should be added
+
+IFSC Code *			Client Name As Per Bank *	
+Bank Name *			Account No. *		
+
+Forget Password : new link should be mailed to change password.
+RBI Bank Master Upload should be provided and same information to be dispalyed in Client Registration form.
+Send Email functionality to be added in report section.
+
+
+
