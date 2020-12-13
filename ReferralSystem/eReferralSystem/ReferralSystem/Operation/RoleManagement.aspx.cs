@@ -67,19 +67,21 @@ public partial class RoleManagement : System.Web.UI.Page
             {
                 string code = ((Label)grdStyled.Rows[i].FindControl("lblCode")).Text.Trim();
                 Boolean blSuperAdmin = ((CheckBox)grdStyled.Rows[i].FindControl("chkSuperAdmin")).Checked;
-                Boolean blMasterAgent = ((CheckBox)grdStyled.Rows[i].FindControl("chkMasterAgent")).Checked;
-                Boolean blSubAgent = ((CheckBox)grdStyled.Rows[i].FindControl("chkSubAgent")).Checked;
-                Boolean blFranchisee = ((CheckBox)grdStyled.Rows[i].FindControl("chkFranchisee")).Checked;
-                Boolean blFranchiseeAgent = ((CheckBox)grdStyled.Rows[i].FindControl("chkFranchiseeAgent")).Checked;
+                Boolean blNationalHead = ((CheckBox)grdStyled.Rows[i].FindControl("chkNationalHead")).Checked;
+                Boolean blRegionalHead = ((CheckBox)grdStyled.Rows[i].FindControl("chkRegionalHead")).Checked;
+                Boolean blStateFranchisee = ((CheckBox)grdStyled.Rows[i].FindControl("chkStateFranchisee")).Checked;
+                Boolean blDistrictFranchisee = ((CheckBox)grdStyled.Rows[i].FindControl("chkDistrictFranchisee")).Checked;
+                Boolean blIndividualAgent = ((CheckBox)grdStyled.Rows[i].FindControl("chkIndividualAgent")).Checked;
                 Boolean blIndividual = ((CheckBox)grdStyled.Rows[i].FindControl("chkIndividual")).Checked;
 
                 SqlCommand cmd = new SqlCommand();
                 cmd.Parameters.AddWithValue("@ClientTypeCode", code);
                 cmd.Parameters.AddWithValue("@CanMakeSuperAdmin", blSuperAdmin);
-                cmd.Parameters.AddWithValue("@CanMakeMasterAgent", blMasterAgent);
-                cmd.Parameters.AddWithValue("@CanMakeSubAgent", blSubAgent);
-                cmd.Parameters.AddWithValue("@CanMakeFranchisee", blFranchisee);
-                cmd.Parameters.AddWithValue("@CanMakeFranchiseeAgent", blFranchiseeAgent);
+                cmd.Parameters.AddWithValue("@CanMakeNationalHead", blNationalHead);
+                cmd.Parameters.AddWithValue("@CanMakeRegionalHead", blRegionalHead);
+                cmd.Parameters.AddWithValue("@CanMakeStateFranchisee", blStateFranchisee);
+                cmd.Parameters.AddWithValue("@CanMakeDistrictFranchisee", blDistrictFranchisee);
+                cmd.Parameters.AddWithValue("@CanMakeIndividualAgent", blIndividualAgent);
                 cmd.Parameters.AddWithValue("@CanMakeIndividual", blIndividual);
                 cmd.Parameters.AddWithValue("@UserId", user.UserId);
 

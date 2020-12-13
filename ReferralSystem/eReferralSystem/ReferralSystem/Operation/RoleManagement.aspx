@@ -30,32 +30,42 @@
                     </ItemTemplate>
                 </asp:TemplateField>
 
-                 <asp:TemplateField HeaderText="MasterAgent">
+                 <asp:TemplateField HeaderText="NationalHead">
                     <ItemTemplate>
-                        <asp:CheckBox ID="chkMasterAgent" runat="server" Checked='<%# Eval("CanMakeMasterAgent") %>'/>
+                        <asp:CheckBox ID="chkNationalHead" runat="server" Checked='<%# Eval("CanMakeNationalHead") %>'/>
                     </ItemTemplate>
                 </asp:TemplateField>
 
-                <asp:TemplateField HeaderText="SubAgent">
+                <asp:TemplateField HeaderText="RegionalHead">
                     <ItemTemplate>
-                        <asp:CheckBox ID="chkSubAgent" runat="server" Checked='<%# Eval("CanMakeSubAgent") %>'/>
+                        <asp:CheckBox ID="chkRegionalHead" runat="server" Checked='<%# Eval("CanMakeRegionalHead") %>'/>
                     </ItemTemplate>
                 </asp:TemplateField>
 
-                <asp:TemplateField HeaderText="Franchisee">
+                <asp:TemplateField HeaderText="StateFranchisee">
                     <ItemTemplate>
-                        <asp:CheckBox ID="chkFranchisee" runat="server" Checked='<%# Eval("CanMakeFranchisee") %>'/>
+                        <asp:CheckBox ID="chkStateFranchisee" runat="server" Checked='<%# Eval("CanMakeStateFranchisee") %>'/>
                     </ItemTemplate>
                 </asp:TemplateField>
 
-                <asp:TemplateField HeaderText="FranchiseeAgent">
+                <asp:TemplateField HeaderText="DistrictFranchisee">
                     <ItemTemplate>
-                        <asp:CheckBox ID="chkFranchiseeAgent" runat="server" Checked='<%# Eval("CanMakeFranchiseeAgent") %>'/>
+                        <asp:CheckBox ID="chkDistrictFranchisee" runat="server" Checked='<%# Eval("CanMakeDistrictFranchisee") %>'/>
                     </ItemTemplate>
                 </asp:TemplateField>
 
-                  <asp:TemplateField HeaderText="Individual">
+                  <asp:TemplateField HeaderText="IndividualAgent">
                     <ItemTemplate>
+                        <asp:CheckBox ID="chkIndividualAgent" runat="server" Checked='<%# Eval("CanMakeIndividualAgent") %>'/>
+                    </ItemTemplate>
+                </asp:TemplateField>
+
+              
+
+
+
+                <asp:TemplateField HeaderText="Individual">
+                     <ItemTemplate>
                         <asp:CheckBox ID="chkIndividual" runat="server" Checked='<%# Eval("CanMakeIndividual") %>'/>
                     </ItemTemplate>
                 </asp:TemplateField>
@@ -65,6 +75,8 @@
 
 
             </Columns>
+            
+<RowStyle BorderWidth="1px" BorderStyle="Solid"></RowStyle>
             
         </asp:GridView>
                           <asp:button runat="server" text="Update Data" id="UpdateData" name="UpdateData" OnClick="UpdateData_Click" />

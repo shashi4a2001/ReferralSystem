@@ -115,7 +115,7 @@ public partial class Operation_Login : System.Web.UI.Page
                     {
                         //First Time Login
                     }
-                    if ( Convert.ToDateTime( dt.Rows[0]["PwdExpireOn"])< Convert.ToDateTime(dt.Rows[0]["CurrentDate"]))
+                    if (dt.Rows[0]["IsPasswordExpired"].ToString() != "0")
                     {
                         //Password Expired
                     }
