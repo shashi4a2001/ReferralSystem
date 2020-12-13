@@ -4,7 +4,7 @@ Begin
 	Drop Procedure usp_SelectClientByUserId
 End
 GO
---Exec usp_SelectEmailMsg 'abc','PasswordChanged'
+--Exec usp_SelectClientByUserId 'abc'
 SET ANSI_NULLS ON
 SET QUOTED_IDENTIFIER ON
 GO
@@ -12,5 +12,7 @@ Create Procedure usp_SelectClientByUserId
 @UserId varchar(100) 
 As
 Begin
-	 Select ClientId,ClientCode,LoginPassword From ClientMaster With(NoLock) Where LoginId=@UserId
+	 Select a.ClientId,a.ClientCode,
+	 (Select LoginPWd From UserMaster b With(NoLock) Where b.UserId=@UserId)LoginPassword 
+	 From ClientMaster a With(NoLock) Where a.LoginId=@UserId
 End
