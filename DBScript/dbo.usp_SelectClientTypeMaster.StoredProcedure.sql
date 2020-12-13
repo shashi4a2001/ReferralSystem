@@ -12,7 +12,7 @@ Create Procedure usp_SelectClientTypeMaster
 As
 Begin
 	Select ClientTypeLevel,ClientTypeCode,ClientTypeName,
-	CanMakeSuperAdmin,CanMakeMasterAgent,CanMakeSubAgent,
-	CanMakeFranchisee,CanMakeFranchiseeAgent,CanMakeIndividual 
+	CanMakeSuperAdmin,CanMakeNationalHead,CanMakeRegionalHead,
+	CanMakeStateFranchisee,CanMakeDistrictFranchisee,CanMakeIndividualAgent,CanMakeIndividual 
 	From ClientTypeMaster With(NoLock)	
 End

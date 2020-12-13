@@ -16,11 +16,12 @@ AS
          ,[ClientTypeCode]
          ,[ClientTypeName]
          ,[CanMakeSuperAdmin]
-         ,[CanMakeMasterAgent]
-         ,[CanMakeSubAgent]
-         ,[CanMakeFranchisee]
-         ,[CanMakeFranchiseeAgent]
-         ,[CanMakeIndividual]
+         ,[CanMakeNationalHead]
+         ,[CanMakeRegionalHead]
+         ,[CanMakeStateFranchisee]
+         ,[CanMakeDistrictFranchisee]
+         ,[CanMakeIndividualAgent]
+		 ,[CanMakeIndividual]
          ,[CreatedBy]
          ,[CreatedDate]
          ,[ModifiedBy]
@@ -33,11 +34,12 @@ AS
          ,d.[ClientTypeCode]
          ,d.[ClientTypeName]
          ,d.[CanMakeSuperAdmin]
-         ,d.[CanMakeMasterAgent]
-         ,d.[CanMakeSubAgent]
-         ,d.[CanMakeFranchisee]
-         ,d.[CanMakeFranchiseeAgent]
-         ,d.[CanMakeIndividual]
+         ,d.[CanMakeNationalHead]
+         ,d.[CanMakeRegionalHead]
+         ,d.[CanMakeStateFranchisee]
+         ,d.[CanMakeDistrictFranchisee]
+         ,d.[CanMakeIndividualAgent]
+		 ,d.[CanMakeIndividual]
          ,d.[CreatedBy]
          ,d.[CreatedDate]
          ,d.[ModifiedBy]
@@ -52,11 +54,12 @@ AS
          OR ISNULL(i.[ClientTypeCode],'')<> ISNULL(d.[ClientTypeCode],'')
          OR ISNULL(i.[ClientTypeName],'')<> ISNULL(d.[ClientTypeName],'')
          OR ISNULL(i.[CanMakeSuperAdmin],0)<> ISNULL(d.[CanMakeSuperAdmin],0)
-         OR ISNULL(i.[CanMakeMasterAgent],0)<> ISNULL(d.[CanMakeMasterAgent],0)
-         OR ISNULL(i.[CanMakeSubAgent],0)<> ISNULL(d.[CanMakeSubAgent],0)
-         OR ISNULL(i.[CanMakeFranchisee],0)<> ISNULL(d.[CanMakeFranchisee],0)
-         OR ISNULL(i.[CanMakeFranchiseeAgent],0)<> ISNULL(d.[CanMakeFranchiseeAgent],0)
-         OR ISNULL(i.[CanMakeIndividual],0)<> ISNULL(d.[CanMakeIndividual],0)
+         OR ISNULL(i.[CanMakeNationalHead],0)<> ISNULL(d.[CanMakeNationalHead],0)
+         OR ISNULL(i.[CanMakeRegionalHead],0)<> ISNULL(d.[CanMakeRegionalHead],0)
+         OR ISNULL(i.[CanMakeStateFranchisee],0)<> ISNULL(d.[CanMakeStateFranchisee],0)
+         OR ISNULL(i.[CanMakeDistrictFranchisee],0)<> ISNULL(d.[CanMakeDistrictFranchisee],0)
+         OR ISNULL(i.[CanMakeIndividualAgent],0)<> ISNULL(d.[CanMakeIndividualAgent],0)
+		 OR ISNULL(i.[CanMakeIndividual],0)<> ISNULL(d.[CanMakeIndividual],0)
          OR ISNULL(i.[CreatedBy],'')<> ISNULL(d.[CreatedBy],'')
          OR ISNULL(i.[CreatedDate],'')<> ISNULL(d.[CreatedDate],'')
          OR ISNULL(i.[ModifiedBy],'')<> ISNULL(d.[ModifiedBy],'')

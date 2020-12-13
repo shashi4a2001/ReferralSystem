@@ -24,25 +24,29 @@ Begin
 	Begin
 		Delete From #t2 Where ClientTypeCode='100'
 	End
-	If Not Exists (Select 1 From #t1 Where CanMakeMasterAgent =1)
+	If Not Exists (Select 1 From #t1 Where CanMakeNationalHead =1)
 	Begin
 		Delete From #t2 Where ClientTypeCode='101'
 	End
-	If Not Exists (Select 1 From #t1 Where CanMakeSubAgent =1)
+	If Not Exists (Select 1 From #t1 Where CanMakeRegionalHead =1)
 	Begin
 		Delete From #t2 Where ClientTypeCode='102'
 	End
-	If Not Exists (Select 1 From #t1 Where CanMakeFranchisee =1)
+	If Not Exists (Select 1 From #t1 Where CanMakeStateFranchisee =1)
 	Begin
 		Delete From #t2 Where ClientTypeCode='103'
 	End
-	If Not Exists (Select 1 From #t1 Where CanMakeFranchiseeAgent =1)
+	If Not Exists (Select 1 From #t1 Where CanMakeDistrictFranchisee =1)
 	Begin
 		Delete From #t2 Where ClientTypeCode='104'
 	End
-	If Not Exists (Select 1 From #t1 Where CanMakeIndividual =1)
+	If Not Exists (Select 1 From #t1 Where CanMakeIndividualAgent =1)
 	Begin
 		Delete From #t2 Where ClientTypeCode='105'
+	End
+	If Not Exists (Select 1 From #t1 Where CanMakeIndividual =1)
+	Begin
+		Delete From #t2 Where ClientTypeCode='106'
 	End
 
 	Select * From #t2 Order By ClientTypeLevel 

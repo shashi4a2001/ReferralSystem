@@ -11,10 +11,11 @@ GO
 Create Procedure usp_UpdateClientTypeMaster
 @ClientTypeCode varchar(10),
 @CanMakeSuperAdmin Bit,
-@CanMakeMasterAgent Bit,
-@CanMakeSubAgent Bit,
-@CanMakeFranchisee Bit,
-@CanMakeFranchiseeAgent Bit,
+@CanMakeNationalHead Bit,
+@CanMakeRegionalHead Bit,
+@CanMakeStateFranchisee Bit,
+@CanMakeDistrictFranchisee Bit,
+@CanMakeIndividualAgent Bit,
 @CanMakeIndividual Bit,
 @UserId varchar(100)
 As
@@ -22,10 +23,11 @@ Begin
 
 	Update ClientTypeMaster Set 
 	CanMakeSuperAdmin=@CanMakeSuperAdmin,
-	CanMakeMasterAgent=@CanMakeMasterAgent,
-	CanMakeSubAgent=@CanMakeSubAgent,
-	CanMakeFranchisee=@CanMakeFranchisee,
-	CanMakeFranchiseeAgent=@CanMakeFranchiseeAgent,
+	CanMakeNationalHead=@CanMakeNationalHead,
+	CanMakeRegionalHead=@CanMakeRegionalHead,
+	CanMakeStateFranchisee=@CanMakeStateFranchisee,
+	CanMakeDistrictFranchisee=@CanMakeDistrictFranchisee,
+	CanMakeIndividualAgent=@CanMakeIndividualAgent,
 	CanMakeIndividual=@CanMakeIndividual,
 	ModifiedBy=@UserId,
 	ModifiedDate=dbo.fnGetDate()
