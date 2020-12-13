@@ -14,19 +14,37 @@ Create Procedure usp_UpdateUserPassword
 @NewPassword varchar(500)
 As
 Begin
-	If Not Exists (Select 1 From ClientMaster With(NoLock) Where LoginId = @LoginId)
+	If Not Exists (Select 1 From UserMaster With(NoLock) Where UserId = @LoginId)
 	Begin
 		Select 'Invalid User...'
 		Return
 	End
-	If Not Exists (Select 1 From ClientMaster With(NoLock) Where LoginId = @LoginId and LoginPassword =@OldPassword)
+	If Not Exists (Select 1 From UserMaster With(NoLock) Where UserId = @LoginId and LoginPwd =@OldPassword)
 	Begin
 		Select 'Invalid Old Password...'
 		Return
 	End
 
+	Declare @LoginPwd varchar(300)
+	Declare @LoginPwd1 varchar(300)
+	Declare @LoginPwd2 varchar(300)
 
-	Update ClientMaster Set LoginPassword = @NewPassword,ModifiedDate=dbo.fnGetDate() Where LoginId = @LoginId
+	Select 
+	@LoginPwd=LoginPwd,
+	@LoginPwd1=LoginPwd1,
+	@LoginPwd2=LoginPwd2 
+	From UserMaster With(NoLock) 
+	Where UserId = @LoginId
+
+	Update UserMaster Set 
+	LoginPwd  = @NewPassword,
+	LoginPwd1 = @LoginPwd,
+	LoginPwd2 = @LoginPwd1,
+	LoginPwd3 = @LoginPwd2,
+	IsFirstTimeLogin = 0,
+	PwdExpireOn=Cast(Convert(varchar,getdate(),106)As DateTime)+30,
+	ModifiedDate=dbo.fnGetDate() 
+	Where UserId = @LoginId
 
 	Select 'Success'
 

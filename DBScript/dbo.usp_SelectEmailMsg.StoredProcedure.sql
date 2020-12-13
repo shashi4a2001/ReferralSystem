@@ -4,7 +4,7 @@ Begin
 	Drop Procedure usp_SelectEmailMsg
 End
 GO
---Exec usp_SelectEmailMsg 'abc','PasswordChanged'
+--Exec usp_SelectEmailMsg '100','PasswordChanged'
 SET ANSI_NULLS ON
 SET QUOTED_IDENTIFIER ON
 GO
