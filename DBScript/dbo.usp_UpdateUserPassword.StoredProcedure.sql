@@ -9,17 +9,17 @@ SET ANSI_NULLS ON
 SET QUOTED_IDENTIFIER ON
 GO
 Create Procedure usp_UpdateUserPassword
-@LoginId varchar(100),
+@UserId varchar(100),
 @OldPassword varchar(500),
 @NewPassword varchar(500)
 As
 Begin
-	If Not Exists (Select 1 From UserMaster With(NoLock) Where UserId = @LoginId)
+	If Not Exists (Select 1 From UserMaster With(NoLock) Where UserId = @UserId)
 	Begin
 		Select 'Invalid User...'
 		Return
 	End
-	If Not Exists (Select 1 From UserMaster With(NoLock) Where UserId = @LoginId and LoginPwd =@OldPassword)
+	If Not Exists (Select 1 From UserMaster With(NoLock) Where UserId = @UserId and LoginPwd =@OldPassword)
 	Begin
 		Select 'Invalid Old Password...'
 		Return
@@ -34,7 +34,7 @@ Begin
 	@LoginPwd1=LoginPwd1,
 	@LoginPwd2=LoginPwd2 
 	From UserMaster With(NoLock) 
-	Where UserId = @LoginId
+	Where UserId = @UserId
 
 	Update UserMaster Set 
 	LoginPwd  = @NewPassword,
@@ -44,7 +44,7 @@ Begin
 	IsFirstTimeLogin = 0,
 	PwdExpireOn=Cast(Convert(varchar,getdate(),106)As DateTime)+30,
 	ModifiedDate=dbo.fnGetDate() 
-	Where UserId = @LoginId
+	Where UserId = @UserId
 
 	Select 'Success'
 
