@@ -41,10 +41,13 @@ Begin
 		Select 'Message : Login Id already exists..' As [Result]
 		return
 	End
-	If Exists (Select 1 From ClientMaster With(NoLock) Where ClientCode =@ClientCode)
+	If @ClientCode<>'NA' and @ClientCode<>''
 	Begin
-		Select 'Message : Client Code already exists..' As [Result]
-		return
+		If Exists (Select 1 From ClientMaster With(NoLock) Where ClientCode =@ClientCode)
+		Begin
+			Select 'Message : Client Code already exists..' As [Result]
+			return
+		End
 	End
 	If Exists (Select 1 From ClientMaster With(NoLock) Where EmailId =@EmailId)
 	Begin
