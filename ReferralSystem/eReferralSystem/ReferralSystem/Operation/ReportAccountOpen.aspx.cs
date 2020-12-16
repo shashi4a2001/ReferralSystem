@@ -40,7 +40,7 @@ public partial class Operation_ReportAccountOpen : System.Web.UI.Page
         DLClsGeneric objDLGeneric = new DLClsGeneric();
         SqlCommand cmd = new SqlCommand();
         cmd.Parameters.AddWithValue("@ClientTypeCode", user.UserRole);
-        DataTable dt = objDLGeneric.SpDataTable("usp_SelectClientTypePermissionList", cmd, user.ConnectionString);
+        DataTable dt = objDLGeneric.SpDataTable("usp_SelectClientTypePermissionList2", cmd, user.ConnectionString);
 
         DataRow dr = dt.NewRow();
         dr["ClientTypeLevel"] = "-1";
