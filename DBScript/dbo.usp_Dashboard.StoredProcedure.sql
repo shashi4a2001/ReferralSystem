@@ -8,7 +8,7 @@ GO
 SET ANSI_NULLS ON
 SET QUOTED_IDENTIFIER ON
 GO
---Exec usp_Dashboard '101'
+--Exec usp_Dashboard '111'
 Create Procedure usp_Dashboard
 @ClientId BigInt = Null
 As
@@ -38,11 +38,54 @@ Begin
 
 
 	Declare @SelfReferralCode varchar(100)
-	Select @SelfReferralCode=SelfReferralCode From ClientMaster With(NoLock) Where ClientId=@ClientId
-		
-	Select ClientId,ClientTypeCode,CreatedDate 
-	Into #Dashboard 
-	From ClientMaster With(NoLock) Where ReferredReferralCode=@SelfReferralCode
+	Declare @ClientTypeCode varchar(10)
+	Select @SelfReferralCode=SelfReferralCode,@ClientTypeCode=ClientTypeCode 
+	From ClientMaster With(NoLock) Where ClientId=@ClientId
+	
+	Create table #Dashboard(ClientId BigInt,ClientTypeCode varchar(10),CreatedDate DateTime)
+	
+	If @ClientTypeCode='100'--Super Admin
+	Begin
+		Insert Into #Dashboard
+		Select ClientId,ClientTypeCode,CreatedDate 		
+		From ClientMaster With(NoLock) Where ClientTypeCode<>'100'-- ReferredReferralCode=@SelfReferralCode
+	End
+	Else If @ClientTypeCode='101'--National Head
+	Begin
+		Insert Into #Dashboard
+		Select ClientId,ClientTypeCode,CreatedDate 		
+		From ClientMaster With(NoLock) Where ClientTypeCode In ('102','103','104','105','106')
+	End
+	Else If @ClientTypeCode='102'--Regional Head
+	Begin
+		Insert Into #Dashboard
+		Select ClientId,ClientTypeCode,CreatedDate 		
+		From ClientMaster With(NoLock) Where ClientTypeCode In ('103','104','105','106')
+	End
+	Else If @ClientTypeCode='103'--State Franchisee
+	Begin
+		Insert Into #Dashboard
+		Select ClientId,ClientTypeCode,CreatedDate 		
+		From ClientMaster With(NoLock) Where ClientTypeCode In ('104','105','106')
+	End
+	Else If @ClientTypeCode='104'--District Franchisee
+	Begin
+		Insert Into #Dashboard
+		Select ClientId,ClientTypeCode,CreatedDate 		
+		From ClientMaster With(NoLock) Where ClientTypeCode In ('105','106')
+	End
+	Else If @ClientTypeCode='105'--Individual Agent
+	Begin
+		Insert Into #Dashboard
+		Select ClientId,ClientTypeCode,CreatedDate 		
+		From ClientMaster With(NoLock) Where ReferredReferralCode=@SelfReferralCode
+	End
+	Else If @ClientTypeCode='106'--Individual	
+	Begin
+		Insert Into #Dashboard
+		Select ClientId,ClientTypeCode,CreatedDate 		
+		From ClientMaster With(NoLock) Where ReferredReferralCode=@SelfReferralCode
+	End
 
 		
 	Select 'Total Account Opened (Current Month)..' As [Summary],IsNull(Count(1),0) As [Count]
