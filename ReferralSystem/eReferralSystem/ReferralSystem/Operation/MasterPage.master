@@ -84,8 +84,9 @@
             <div class="navbar-inverse">
             <div class="container">
                     <a class="navbar-brand" href="Dashboard.aspx" style="color:#f5f5f5;">Dashboard</a>&nbsp;&nbsp;
-                    <a class="navbar-brand" href="RoleManagement.aspx" style="color:#f5f5f5;">Role Management</a>&nbsp;&nbsp;
-                    <a class="navbar-brand" href="ClientRegistration.aspx" style="color:#f5f5f5;">User Registration</a>
+                <asp:Literal ID="ltrlMenu1" runat="server"></asp:Literal>
+                <asp:Literal ID="ltrlMenu2" runat="server"></asp:Literal>
+                    
                     <a class="navbar-brand" href="ReportAccountOpen.aspx" style="color:#f5f5f5;">Account Open Report</a>
              </div>
             </div>
