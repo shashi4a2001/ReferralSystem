@@ -26,7 +26,9 @@ Begin
 	Set @DateTo=DATEADD(s,-1,DATEADD(dd,1, @DateTo))
 
 	Declare @SelfReferralCode varchar(100)
-	Select @SelfReferralCode=SelfReferralCode From ClientMaster With(NoLock) Where ClientId=@ClientId
+	Declare @ClientType_Code varchar(10)
+	Select @SelfReferralCode=SelfReferralCode,@ClientType_Code=ClientTypeCode  
+	From ClientMaster With(NoLock) Where ClientId=@ClientId
 	
 	If @ReportType='Detail'
 	Begin	
@@ -53,7 +55,7 @@ Begin
 		--Begin
 		--End
 
-		If @ClientTypeCode='100'--Super Admin
+		If @ClientType_Code='100'--Super Admin
 		Begin
 			Select 
 			a.ClientId,a.ClientCode,a.ClientName,b.ClientTypeName As [ClientType],a.ContactPerson,a.EmailId,
@@ -67,7 +69,7 @@ Begin
 			and a.ClientTypeCode =IsNull(@ClientTypeCode,a.ClientTypeCode)
 			and a.CreatedDate Between @DateFrom And @DateTo
 		End
-		Else If @ClientTypeCode='101'--National Head
+		Else If @ClientType_Code='101'--National Head
 		Begin
 			Select 
 			a.ClientId,a.ClientCode,a.ClientName,b.ClientTypeName As [ClientType],a.ContactPerson,a.EmailId,
@@ -81,7 +83,7 @@ Begin
 			and a.ClientTypeCode =IsNull(@ClientTypeCode,a.ClientTypeCode)
 			and a.CreatedDate Between @DateFrom And @DateTo
 		End
-		Else If @ClientTypeCode='102'--Regional Head
+		Else If @ClientType_Code='102'--Regional Head
 		Begin
 			Select 
 			a.ClientId,a.ClientCode,a.ClientName,b.ClientTypeName As [ClientType],a.ContactPerson,a.EmailId,
@@ -95,7 +97,7 @@ Begin
 			and a.ClientTypeCode =IsNull(@ClientTypeCode,a.ClientTypeCode)
 			and a.CreatedDate Between @DateFrom And @DateTo
 		End
-		Else If @ClientTypeCode='103'--State Franchisee
+		Else If @ClientType_Code='103'--State Franchisee
 		Begin
 			Select 
 			a.ClientId,a.ClientCode,a.ClientName,b.ClientTypeName As [ClientType],a.ContactPerson,a.EmailId,
@@ -109,7 +111,7 @@ Begin
 			and a.ClientTypeCode =IsNull(@ClientTypeCode,a.ClientTypeCode)
 			and a.CreatedDate Between @DateFrom And @DateTo
 		End
-		Else If @ClientTypeCode='104'--District Franchisee
+		Else If @ClientType_Code='104'--District Franchisee
 		Begin
 			Select 
 			a.ClientId,a.ClientCode,a.ClientName,b.ClientTypeName As [ClientType],a.ContactPerson,a.EmailId,
@@ -124,7 +126,7 @@ Begin
 			and a.CreatedDate Between @DateFrom And @DateTo
 
 		End
-		Else If @ClientTypeCode='105'--Individual Agent
+		Else If @ClientType_Code='105'--Individual Agent
 		Begin
 			Select 
 			a.ClientId,a.ClientCode,a.ClientName,b.ClientTypeName As [ClientType],a.ContactPerson,a.EmailId,
@@ -138,7 +140,7 @@ Begin
 			and a.ClientTypeCode =IsNull(@ClientTypeCode,a.ClientTypeCode)
 			and a.CreatedDate Between @DateFrom And @DateTo
 		End
-		Else If @ClientTypeCode='106'--Individual	
+		Else If @ClientType_Code='106'--Individual	
 		Begin
 			Select 
 			a.ClientId,a.ClientCode,a.ClientName,b.ClientTypeName As [ClientType],a.ContactPerson,a.EmailId,
@@ -157,7 +159,7 @@ Begin
 	End
 	If @ReportType='Summary'
 	Begin	
-		If @ClientTypeCode='100'--Super Admin
+		If @ClientType_Code='100'--Super Admin
 		Begin
 			Select 
 			b.ClientTypeName As [ClientType],Count(1) As [No .Of Account],
@@ -170,7 +172,7 @@ Begin
 			and a.CreatedDate Between @DateFrom And @DateTo
 			Group By b.ClientTypeName
 		End
-		Else If @ClientTypeCode='101'--National Head
+		Else If @ClientType_Code='101'--National Head
 		Begin
 			Select 
 			b.ClientTypeName As [ClientType],Count(1) As [No .Of Account],
@@ -183,7 +185,7 @@ Begin
 			and a.CreatedDate Between @DateFrom And @DateTo
 			Group By b.ClientTypeName
 		End
-		Else If @ClientTypeCode='102'--Regional Head
+		Else If @ClientType_Code='102'--Regional Head
 		Begin
 			Select 
 			b.ClientTypeName As [ClientType],Count(1) As [No .Of Account],
@@ -196,7 +198,7 @@ Begin
 			and a.CreatedDate Between @DateFrom And @DateTo
 			Group By b.ClientTypeName
 		End
-		Else If @ClientTypeCode='103'--State Franchisee
+		Else If @ClientType_Code='103'--State Franchisee
 		Begin
 			Select 
 			b.ClientTypeName As [ClientType],Count(1) As [No .Of Account],
@@ -209,7 +211,7 @@ Begin
 			and a.CreatedDate Between @DateFrom And @DateTo
 			Group By b.ClientTypeName
 		End
-		Else If @ClientTypeCode='104'--District Franchisee
+		Else If @ClientType_Code='104'--District Franchisee
 		Begin
 			Select 
 			b.ClientTypeName As [ClientType],Count(1) As [No .Of Account],
@@ -222,7 +224,7 @@ Begin
 			and a.CreatedDate Between @DateFrom And @DateTo
 			Group By b.ClientTypeName
 		End
-		Else If @ClientTypeCode='105'--Individual Agent
+		Else If @ClientType_Code='105'--Individual Agent
 		Begin
 			Select 
 			b.ClientTypeName As [ClientType],Count(1) As [No .Of Account],
@@ -235,7 +237,7 @@ Begin
 			and a.CreatedDate Between @DateFrom And @DateTo
 			Group By b.ClientTypeName
 		End
-		Else If @ClientTypeCode='106'--Individual	
+		Else If @ClientType_Code='106'--Individual	
 		Begin
 			Select 
 			b.ClientTypeName As [ClientType],Count(1) As [No .Of Account],
