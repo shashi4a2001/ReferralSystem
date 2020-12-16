@@ -9,7 +9,7 @@ SET ANSI_NULLS ON
 SET QUOTED_IDENTIFIER ON
 GO
 Create Procedure usp_UploadClientMaster
-@MobileNo varchar(20),
+@MobileNo varchar(50),
 @ClientTypeCode varchar(10),
 @ClientRefId BigInt =Null,
 @ClientCode varchar(100),
@@ -19,88 +19,60 @@ Create Procedure usp_UploadClientMaster
 @LandlineNo varchar(100),
 @Address varchar(500),
 @LoginId varchar(100),
-@LoginPassword varchar(100),
 @BankName varchar(200),
 @ClientNameAsPerBank varchar(300),
 @AccountNo varchar(100),
 @IFSCCode varchar(100),
-@ReferralSharingPercentage Numeric(18,2),
+@ReferralSharingPercentage Numeric(18,2)=null,
 @SelfReferralCode varchar(50),
 @ReferredReferralCode varchar(50),
-@RevenueSharingPercentage Numeric(18,2),
+@RevenueSharingPercentage Numeric(18,2)=null,
 @UserId varchar(100)
 As
 Begin
 	
-	Declare @CreatorClientTypeCode varchar(10)
-	set @CreatorClientTypeCode=''
-	Select @CreatorClientTypeCode=ClientTypeCode From ClientMaster With(NoLock) Where ClientId = @UserId
-
-	Create table #TypePermission
-	(
-		ClientTypeLevel Int,
-		ClientTypeCode varchar(10),
-		ClientTypeName varchar(50)
-	)
-
-	Insert Into #TypePermission(ClientTypeLevel,ClientTypeCode,ClientTypeName)
-	Exec usp_SelectClientTypePermissionList @ClientTypeCode= @CreatorClientTypeCode
-
-	If Not Exists (Select 1 From #TypePermission Where ClientTypeCode=@ClientTypeCode)
-	Begin
-		Select 'You dont have permission to create this type of client..' As [Result]
-		return
-	End
-
-
 	If Exists (Select 1 From ClientMaster With(NoLock) Where MobileNo =@MobileNo)
 	Begin
-		Select 'Mobile No. already exists..' As [Result]
+		Select 'Message : Mobile No. already exists..' As [Result]
 		return
 	End
 	If Exists (Select 1 From ClientMaster With(NoLock) Where LoginId =@LoginId)
 	Begin
-		Select 'Login Id already exists..' As [Result]
+		Select 'Message : Login Id already exists..' As [Result]
 		return
 	End
 	If Exists (Select 1 From ClientMaster With(NoLock) Where ClientCode =@ClientCode)
 	Begin
-		Select 'Client Code already exists..' As [Result]
+		Select 'Message : Client Code already exists..' As [Result]
 		return
 	End
 	If Exists (Select 1 From ClientMaster With(NoLock) Where EmailId =@EmailId)
 	Begin
-		Select 'Email Id already exists..' As [Result]
+		Select 'Message : Email Id already exists..' As [Result]
 		return
 	End
 	Declare @ClientId BigInt
 
-	Set @ReferredReferralCode=''
-	Select @ReferredReferralCode=SelfReferralCode From ClientMaster With(NoLock) Where ClientId = @UserId
 
-	Declare @ReferralAmount Numeric(18,2)
-	Declare @ReferredReferralRevenue Numeric(18,2)
-	Set @ReferralAmount=100
-	Set @ReferredReferralRevenue=(@ReferralAmount*@ReferralSharingPercentage)/100
 
 	Insert Into ClientMaster(
 	MobileNo,ClientRefId,ClientCode,ClientName,ClientTypeCode,ContactPerson,EmailId,
 	LandlineNo,Address,LoginId,BankName,ClientNameAsPerBank,AccountNo,
-	IFSCCode,ReferralSharingPercentage,SelfReferralCode,ReferredReferralCode,ReferralAmount,
-	ReferredReferralRevenue,RevenueSharingPercentage,CreatedBy,CreatedDate)
+	IFSCCode,ReferralSharingPercentage,SelfReferralCode,ReferredReferralCode,
+	RevenueSharingPercentage,CreatedBy,CreatedDate)
 	values(
 	@MobileNo,@ClientRefId,@ClientCode,@ClientName,@ClientTypeCode,@ContactPerson,@EmailId,
 	@LandlineNo,@Address,@LoginId,@BankName,@ClientNameAsPerBank,@AccountNo,
-	@IFSCCode,@ReferralSharingPercentage,@SelfReferralCode,@ReferredReferralCode,@ReferralAmount,
-	@ReferredReferralRevenue,@RevenueSharingPercentage,@UserId,dbo.fnGetDate())
+	@IFSCCode,@ReferralSharingPercentage,@SelfReferralCode,@ReferredReferralCode,
+	@RevenueSharingPercentage,@UserId,dbo.fnGetDate())
 
 	Set @ClientId=@@Identity
 
 	Insert Into UserMaster(ClientId,UserName,UserId,LoginPwd,IsFirstTimeLogin,
 							PwdExpireOn,LoginPwd1,CreatedBy,CreatedDate)
-				values	  (@ClientId,@ClientName,@LoginId,@LoginPassword,1,
-						   '01/01/1900',@LoginPassword,@UserId,dbo.fnGetDate())
+				values	  (@ClientId,@ClientName,@LoginId,'xMycjpL7vseSZizZEO8rkw==',1,
+						   '01/01/1900','xMycjpL7vseSZizZEO8rkw==',@UserId,dbo.fnGetDate())
 
-	Select 'Success' As [Result],SCOPE_IDENTITY() as ClientId
+	Select 'Success : Upload' As [Result],SCOPE_IDENTITY() as ClientId
 
 End

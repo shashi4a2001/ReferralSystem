@@ -9,7 +9,7 @@ SET ANSI_NULLS ON
 SET QUOTED_IDENTIFIER ON
 GO
 Create Procedure usp_InsertClientMaster
-@MobileNo varchar(20),
+@MobileNo varchar(50),
 @ClientTypeCode varchar(10),
 @ClientRefId BigInt =Null,
 @ClientCode varchar(100),
