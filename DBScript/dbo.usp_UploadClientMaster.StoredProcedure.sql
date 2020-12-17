@@ -71,6 +71,16 @@ Begin
 			return
 		End
 	End
+
+	If @SelfReferralCode<>'NA' and @SelfReferralCode<>''
+	Begin
+		If Exists (Select 1 From ClientMaster With(NoLock) Where SelfReferralCode =@SelfReferralCode)
+		Begin
+			Select 'Message : SelfReferralCode already exists..' As [Result]
+			return
+		End
+	End
+
 	Declare @ClientId BigInt
 
 
