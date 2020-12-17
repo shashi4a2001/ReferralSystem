@@ -30,16 +30,29 @@ Create Procedure usp_UploadClientMaster
 @UserId varchar(100)
 As
 Begin
-	
+	Set @LoginId = IsNull(@LoginId,'')
+	Set @ClientCode = IsNull(@ClientCode,'')
+	Set @EmailId = IsNull(@EmailId,'')
+	Set @ClientTypeCode=RTRIM(LTrim(@ClientTypeCode))
+
+	if @LoginId='NA'
+	Begin
+		set @LoginId=''
+	End
+
 	If Exists (Select 1 From ClientMaster With(NoLock) Where MobileNo =@MobileNo)
 	Begin
 		Select 'Message : Mobile No. already exists..' As [Result]
 		return
 	End
-	If Exists (Select 1 From ClientMaster With(NoLock) Where LoginId =@LoginId)
+
+	If @LoginId<>'NA' and @LoginId<>''
 	Begin
-		Select 'Message : Login Id already exists..' As [Result]
-		return
+		If Exists (Select 1 From ClientMaster With(NoLock) Where LoginId =@LoginId)
+		Begin
+			Select 'Message : Login Id already exists..' As [Result]
+			return
+		End
 	End
 	If @ClientCode<>'NA' and @ClientCode<>''
 	Begin
@@ -49,10 +62,14 @@ Begin
 			return
 		End
 	End
-	If Exists (Select 1 From ClientMaster With(NoLock) Where EmailId =@EmailId)
+
+	If @EmailId<>'NA' and @EmailId<>''
 	Begin
-		Select 'Message : Email Id already exists..' As [Result]
-		return
+		If Exists (Select 1 From ClientMaster With(NoLock) Where EmailId =@EmailId)
+		Begin
+			Select 'Message : Email Id already exists..' As [Result]
+			return
+		End
 	End
 	Declare @ClientId BigInt
 
@@ -71,10 +88,13 @@ Begin
 
 	Set @ClientId=@@Identity
 
-	Insert Into UserMaster(ClientId,UserName,UserId,LoginPwd,IsFirstTimeLogin,
-							PwdExpireOn,LoginPwd1,CreatedBy,CreatedDate)
-				values	  (@ClientId,@ClientName,@LoginId,'xMycjpL7vseSZizZEO8rkw==',1,
-						   '01/01/1900','xMycjpL7vseSZizZEO8rkw==',@UserId,dbo.fnGetDate())
+	If @ClientTypeCode<>'106'
+	Begin
+		Insert Into UserMaster(ClientId,UserName,UserId,LoginPwd,IsFirstTimeLogin,
+								PwdExpireOn,LoginPwd1,CreatedBy,CreatedDate)
+					values	  (@ClientId,@ClientName,@LoginId,'xMycjpL7vseSZizZEO8rkw==',1,
+							   '01/01/1900','xMycjpL7vseSZizZEO8rkw==',@UserId,dbo.fnGetDate())
+	End
 
 	Select 'Success : Upload' As [Result],SCOPE_IDENTITY() as ClientId
 
