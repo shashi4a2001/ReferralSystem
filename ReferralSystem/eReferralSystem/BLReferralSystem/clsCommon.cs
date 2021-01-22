@@ -198,6 +198,11 @@ namespace BLCMR
                 strErrorMsg = ex.Message;
                 strStatus = "Failed";
             }
+
+            if (strStatus == "Failed")
+            {
+                throw new Exception(strErrorMsg);
+            }
         }
         public string getConfirmVal(string strAnswer)
         {
