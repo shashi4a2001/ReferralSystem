@@ -1,8 +1,6 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="ChangePassword.aspx.cs" Inherits="Operation_ChangePassword"
-    MasterPageFile="~/Operation/MasterPage.master" ValidateRequest="false" %>
+﻿<%@ Page Language="C#" MasterPageFile="~/Operation/MasterPage2.master" AutoEventWireup="true" CodeFile="PasswordRecovery.aspx.cs" Inherits="Operation_PasswordRecovery" %>
 
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="ajaxToolkit" %>
-<%@ Register Src="~/UserControl/UC_PageHeader.ascx" TagName="UC_PageHeader" TagPrefix="uc1" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MiddleContent" runat="server">
     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
     <head>
@@ -61,6 +59,8 @@
     <body>
         <div class="content_wrapper" style="height: 100%; width: 100%;">
             <div id="content">
+
+                <asp:Panel ID="Panel1" runat="server">
                 <div>
 
                     <table style="margin-left: 25%; margin-top: 5%; margin-bottom: 2%;">
@@ -72,13 +72,10 @@
                             </td>
                         </tr>
                         <tr>
-                            <td style="height: 30px">Old Password <span style="color:red;">*</span>
+                            <td style="height: 30px">Recover password for 
                             </td>
                             <td style="height: 30px">
-                                <asp:TextBox ID="txtOldPassword" runat="server" TextMode="Password" MaxLength="20"
-                                    CssClass="hasDatepicker" Width="257px"></asp:TextBox>
-                                <asp:RequiredFieldValidator ID="RequiredValidatortxtName0" runat="server" ControlToValidate="txtOldPassword"
-                                    CssClass="RequiredFieldValidatorColor" ForeColor="Red" ErrorMessage="*" SetFocusOnError="True"></asp:RequiredFieldValidator>
+                                <asp:Label ID="lblUserId" runat="server" Font-Bold="true" ForeColor="black"></asp:Label>
                             </td>
                         </tr>
                         <tr>
@@ -106,8 +103,8 @@
                             </td>
                             <td>
                                 <br />
-                                <center>
-                                    <asp:Button ID="btnSubmit" runat="server" Text="Change Password" OnClick="btnSubmit_Click" /></center>
+                                 
+                                    <asp:Button ID="btnSubmit" runat="server" Text="Set Password" OnClick="btnSubmit_Click" /> 
                             </td>
                         </tr>
                         <tr>
@@ -117,7 +114,6 @@
                         </tr>
                         <tr>
                             <td colspan="2">
-                                 
                                 <br />
                                 <span class="style2"><strong>Password must contain</strong></span><br />
                                 <span class="style1">*At least 7 chars<br />
@@ -128,6 +124,23 @@
                         </tr>
                     </table>
                 </div>
+                </asp:Panel>
+
+                <asp:Panel ID="Panel2" runat="server" Visible="false" >
+                    <table style="margin-left: 25%; margin-top: 5%; margin-bottom: 2%;">
+                        <tr>
+                            <td>
+                                <br />
+                                <br />
+                                <br />
+                                <div style="color:green; font-size:22px;">Your password has been set successfully...</div>
+                                <div style="font-size:16px;">Go To <a href="../Login.aspx">Login Page</a></div>
+
+                            </td>
+                            </tr></table>
+                     
+
+                </asp:Panel>
             </div>
         </div>
 

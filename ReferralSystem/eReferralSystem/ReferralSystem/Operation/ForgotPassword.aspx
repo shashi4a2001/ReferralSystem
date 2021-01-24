@@ -20,10 +20,10 @@
                 <td></td>
 
                 <td colspan="3">
-                    <asp:Button ID="btnClick" runat="server" Text="Go" Width="70px" OnClick="btnClick_Click" /></td>
+                    <asp:Button ID="btnClick" runat="server" Text="Send Recovery Email" Width="179px" OnClick="btnClick_Click" /></td>
             </tr>
          </table>
      </div>
-     <div><asp:Label ID="lblmsg" runat="server"></asp:Label></div>
+     <div>&nbsp;&nbsp;&nbsp;<asp:Label ID="lblmsg" runat="server"></asp:Label></div>
 </asp:Content>
 

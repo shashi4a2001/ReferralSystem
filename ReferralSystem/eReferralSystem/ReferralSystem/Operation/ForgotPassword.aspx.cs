@@ -70,9 +70,10 @@ public partial class Operation_ForgotPassword : System.Web.UI.Page
                 Convert.ToString(dtEmailTemplate.Rows[0]["ToEmailId"]) != ""
                 )
             {
-                if (dtEmailTemplate.Rows[0]["TemplateText"].ToString().Contains("(Password)"))
+                clsCommon objclsCommon = new clsCommon();
+                if (dtEmailTemplate.Rows[0]["TemplateText"].ToString().Contains("(ParamPasswordRecovery)"))
                 {
-                    dtEmailTemplate.Rows[0]["TemplateText"] = dtEmailTemplate.Rows[0]["TemplateText"].ToString().Replace("(Password)", password);
+                    dtEmailTemplate.Rows[0]["TemplateText"] = dtEmailTemplate.Rows[0]["TemplateText"].ToString().Replace("(ParamPasswordRecovery)", objclsCommon.EncryptData(clientid));
                 }
 
                 SendMail.From = Convert.ToString(dtSMTP.Rows[0]["SenderEmailID"]);
@@ -95,7 +96,7 @@ public partial class Operation_ForgotPassword : System.Web.UI.Page
 
                 SendMail.ConnectionString = ConnectionString;
 
-                clsCommon objclsCommon = new clsCommon();
+               
                 objclsCommon.SendEmail(SendMail);
             }
         }

@@ -131,9 +131,10 @@ public partial class Operation_ChangePassword : System.Web.UI.Page
 
             DLClsGeneric objDLGeneric = new DLClsGeneric();
             SqlCommand cmd = new SqlCommand();
-            cmd.Parameters.AddWithValue("@UserId", UserID);
+            cmd.Parameters.AddWithValue("@ClientId", ClientId);
             cmd.Parameters.AddWithValue("@OldPassword", OldPassword);
             cmd.Parameters.AddWithValue("@NewPassword", NewPassword);
+            cmd.Parameters.AddWithValue("@Type", "C");
             string msg= objDLGeneric.SpExecuteScalar ("usp_UpdateUserPassword", cmd, user.ConnectionString);
             if (msg == "Success")
             {
