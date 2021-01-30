@@ -26,20 +26,20 @@ Begin
 End
 
  
---If Not Exists (Select 1 From ClientMaster Where MobileNo ='9999999999')
---Begin
---	Insert Into ClientMaster(MobileNo,ClientRefId,ClientCode,ClientName,ClientTypeCode,ContactPerson,
---	EmailId,LandlineNo,Address,LoginId,
---	BankName,ClientNameAsPerBank,AccountNo,IFSCCode,
---	SelfReferralCode,ReferredReferralCode,ReferralAmount,ReferredReferralRevenue,
---	CreatedBy,CreatedDate)
---	values ('9999999999','1001','sa101','shashi super',100,'shashi kant kumar',
---	'abc@bcd.com','','','sa101_01',
---	'ICICI Bank','shashi kant kumar','013232323','ICICI011888',
---	'100_1','',0,0,
---	'sys',getdate()
---	)
---End
+If Not Exists (Select 1 From ClientMaster Where MobileNo ='9999999999')
+Begin
+	Insert Into ClientMaster(MobileNo,ClientRefId,ClientCode,ClientName,ClientTypeCode,ContactPerson,
+	EmailId,LandlineNo,Address,LoginId,
+	BankName,ClientNameAsPerBank,AccountNo,IFSCCode,
+	SelfReferralCode,ReferredReferralCode,ReferralAmount,ReferredReferralRevenue,
+	CreatedBy,CreatedDate)
+	values ('9999999999','1001','dr101','Deepak Rawat',100,'Deepak Rawat',
+	'abc@bcd.com','','','Deepak19',
+	'ICICI Bank','Deepak Rawat','013232323','ICICI011888',
+	'100_1','',0,0,
+	'sys',getdate()
+	)
+End
  
 --GO
 --If Not Exists (Select 1 From SMTPServerDetails)
