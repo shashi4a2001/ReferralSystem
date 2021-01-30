@@ -23,13 +23,14 @@ Begin
 		Set @ClientTypeCode=null
 	End
 
+	set @DateFrom = DATEADD(dd,-1,DATEADD(s,-1,DATEADD(dd,1, @DateFrom)))
 	Set @DateTo=DATEADD(s,-1,DATEADD(dd,1, @DateTo))
 
 	Declare @SelfReferralCode varchar(100)
 	Declare @ClientType_Code varchar(10)
 	Select @SelfReferralCode=SelfReferralCode,@ClientType_Code=ClientTypeCode  
 	From ClientMaster With(NoLock) Where ClientId=@ClientId
-	
+
 	If @ReportType='Detail'
 	Begin	
 
@@ -67,7 +68,7 @@ Begin
 			Where 
 			a.ClientTypeCode <>'100'
 			and a.ClientTypeCode =IsNull(@ClientTypeCode,a.ClientTypeCode)
-			and a.CreatedDate Between @DateFrom And @DateTo
+			and a.CreatedDate > @DateFrom and a.CreatedDate<= @DateTo
 		End
 		Else If @ClientType_Code='101'--National Head
 		Begin
