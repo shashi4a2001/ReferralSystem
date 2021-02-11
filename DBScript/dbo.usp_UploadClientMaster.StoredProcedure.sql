@@ -27,9 +27,12 @@ Create Procedure usp_UploadClientMaster
 @SelfReferralCode varchar(50),
 @ReferredReferralCode varchar(50),
 @RevenueSharingPercentage Numeric(18,2)=null,
-@UserId varchar(100)
+@UserId varchar(100),
+@CreatedBy varchar(100),
+@CreatedDate DateTime
 As
 Begin
+
 	Set @LoginId = IsNull(@LoginId,'')
 	Set @ClientCode = IsNull(@ClientCode,'')
 	Set @EmailId = IsNull(@EmailId,'')
@@ -89,12 +92,12 @@ Begin
 	MobileNo,ClientRefId,ClientCode,ClientName,ClientTypeCode,ContactPerson,EmailId,
 	LandlineNo,Address,LoginId,BankName,ClientNameAsPerBank,AccountNo,
 	IFSCCode,ReferralSharingPercentage,SelfReferralCode,ReferredReferralCode,
-	RevenueSharingPercentage,CreatedBy,CreatedDate)
+	RevenueSharingPercentage,CreatedBy,CreatedDate,CreatedByInSystem,CreatedDateInSystem)
 	values(
 	@MobileNo,@ClientRefId,@ClientCode,@ClientName,@ClientTypeCode,@ContactPerson,@EmailId,
 	@LandlineNo,@Address,@LoginId,@BankName,@ClientNameAsPerBank,@AccountNo,
 	@IFSCCode,@ReferralSharingPercentage,@SelfReferralCode,@ReferredReferralCode,
-	@RevenueSharingPercentage,@UserId,dbo.fnGetDate())
+	@RevenueSharingPercentage,@CreatedBy,@CreatedDate,@UserId,dbo.fnGetDate())
 
 	Set @ClientId=@@Identity
 

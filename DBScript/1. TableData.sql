@@ -111,5 +111,11 @@ IF (EXISTS(SELECT 1 FROM sys.columns WHERE Name = N'LoginPassword' AND Object_ID
 BEGIN
 	Alter Table ClientMaster Drop Column LoginPassword
 END
+GO
+IF (Not EXISTS(SELECT 1 FROM sys.columns WHERE Name = N'CreatedByInSystem' AND Object_ID = Object_ID(N'ClientMaster')))
+BEGIN
+	Alter Table ClientMaster Add	CreatedByInSystem varchar(100),
+									CreatedDateInSystem DateTime
+END
 
 --update EmailTemplateMaster set TemplateText='<table><tr><td> Dear ,</td></tr><tr><td></td></tr><tr>    <td>Your password recovery link is : ..   </td>     </tr><tr> <td>http://localhost:11510/Operation/PasswordRecovery.aspx?hlink=(ParamPasswordRecovery)</td></tr><tr><td>&nbsp;</td></tr><tr><td>Happy Investing!</td></tr><tr><td>Regards,<span style=''mso-fareast-font-family: Times New Roman''><o:p></o:p></span></td></tr><tr><td>Invest 19</td></tr>   </table>' where templatetype='ForgotPassword'
