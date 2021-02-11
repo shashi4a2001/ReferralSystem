@@ -178,6 +178,8 @@ public partial class Operation_UploadClient : System.Web.UI.Page
                     }
 
                     cmd.Parameters.AddWithValue("@UserId", user.LogId);
+                    cmd.Parameters.AddWithValue("@CreatedBy", dr["CreatedBy"].ToString());
+                    cmd.Parameters.AddWithValue("@CreatedDate", dr["CreatedDate"].ToString());
 
                     DataTable dtResult = objDLGeneric.SpDataTable("usp_UploadClientMaster", cmd, user.ConnectionString);
                     if (dtResult == null)
