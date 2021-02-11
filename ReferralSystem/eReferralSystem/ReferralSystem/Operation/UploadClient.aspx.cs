@@ -181,15 +181,31 @@ public partial class Operation_UploadClient : System.Web.UI.Page
                     cmd.Parameters.AddWithValue("@CreatedBy", dr["CreatedBy"].ToString());
                     cmd.Parameters.AddWithValue("@CreatedDate", dr["CreatedDate"].ToString());
 
-                    DataTable dtResult = objDLGeneric.SpDataTable("usp_UploadClientMaster", cmd, user.ConnectionString);
-                    if (dtResult == null)
+                    string clntTypeCode = dr["ClientTypeCode"].ToString();
+                    if (
+                         string.IsNullOrWhiteSpace(dr["CreatedDate"].ToString()) ||
+                         string.IsNullOrEmpty(dr["CreatedDate"].ToString())
+                        )
                     {
-                        dr["UploadedRemarks"] = "Problem In Uploading this record";
+                        dr["UploadedRemarks"] = "Problem In Uploading this record : CreatedDate is not available..";
+                    }
+                    else if (!(clntTypeCode == "100" || clntTypeCode == "101" || clntTypeCode == "102" || clntTypeCode == "103" || clntTypeCode == "104" || clntTypeCode == "105" || clntTypeCode == "106"))
+                    {
+                        dr["UploadedRemarks"] = "Problem In Uploading this record : Invalid ClientTypeCode";
                     }
                     else
                     {
-                        dr["UploadedRemarks"] = dtResult.Rows[0]["Result"].ToString();
+                        DataTable dtResult = objDLGeneric.SpDataTable("usp_UploadClientMaster", cmd, user.ConnectionString);
+                        if (dtResult == null)
+                        {
+                            dr["UploadedRemarks"] = "Problem In Uploading this record";
+                        }
+                        else
+                        {
+                            dr["UploadedRemarks"] = dtResult.Rows[0]["Result"].ToString();
+                        }
                     }
+                   
                 }
                 catch (Exception ex)
                 {
