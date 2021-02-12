@@ -1,21 +1,13 @@
-Referrel-Web Server 
---------------------------
-MSTSC Password:- Sg)G.wfCjeEM**SjUn9qQYUDkwYvBnNA
-Public Ip : 13.233.143.167
+148.72.213.241
+referral
+Admin@123
 
 
-Referrel-SQL-Server 
---------------------------
-MSTSC Password:- =wDkzqANQhrjW=Z*%O(xsOaW*W-h4Cx6
-Public Ip : 35.154.81.179
-
-DB User Id : inv19
-Password :   sql@2021
+sql userid : referral
+sql pwd : sql@2019
 
 
 -----------------------
-http://13.233.143.167/ReferralSystem/Login.aspx
-Login Detaild:
---------------
-userid   : shashisuper
-password : 123
+http://148.72.213.241/ReferralSystem/Login.aspx
+userid  : Deepak19
+password: 123
