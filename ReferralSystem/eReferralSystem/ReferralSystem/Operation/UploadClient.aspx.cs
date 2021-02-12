@@ -132,9 +132,18 @@ public partial class Operation_UploadClient : System.Web.UI.Page
 
     protected void btnUpload_Click(object sender, EventArgs e)
     {
+        int cntNewUploadedRecord = 0;
+        int cntDuplicateRecord = 0;
+        int cntErrorRecord = 0;
+        lblNewUploadedRecord.Text = "";
+        lblDuplicateRecord.Text = "";
+        lblErrorRecord.Text = "";
+        lblMsg.Text = "";
+
         DataTable dt =(DataTable)ViewState["uploadclientdata"];
         if (dt == null)
         {
+           
             lblMsg.Text = "No Record to Upload..";
             lblMsg.ForeColor = System.Drawing.Color.Red;
         }
@@ -187,11 +196,13 @@ public partial class Operation_UploadClient : System.Web.UI.Page
                          string.IsNullOrEmpty(dr["CreatedDate"].ToString())
                         )
                     {
-                        dr["UploadedRemarks"] = "Problem In Uploading this record : CreatedDate is not available..";
+                        dr["UploadedRemarks"] = "Error : CreatedDate is not available..";
+                        cntErrorRecord++;
                     }
                     else if (!(clntTypeCode == "100" || clntTypeCode == "101" || clntTypeCode == "102" || clntTypeCode == "103" || clntTypeCode == "104" || clntTypeCode == "105" || clntTypeCode == "106"))
                     {
-                        dr["UploadedRemarks"] = "Problem In Uploading this record : Invalid ClientTypeCode";
+                        dr["UploadedRemarks"] = "Error : Invalid ClientTypeCode";
+                        cntErrorRecord++;
                     }
                     else
                     {
@@ -199,20 +210,41 @@ public partial class Operation_UploadClient : System.Web.UI.Page
                         if (dtResult == null)
                         {
                             dr["UploadedRemarks"] = "Problem In Uploading this record";
+                            cntErrorRecord++;
                         }
                         else
                         {
                             dr["UploadedRemarks"] = dtResult.Rows[0]["Result"].ToString();
+
+                            if (dtResult.Rows[0]["Result"].ToString() .StartsWith("Success"))
+                            {
+                                cntNewUploadedRecord++;
+                            }
+                            else if (dtResult.Rows[0]["Result"].ToString().StartsWith("Error"))
+                            {
+                                cntErrorRecord++;
+                            }
+                            else if(dtResult.Rows[0]["Result"].ToString().StartsWith("Message")&& dtResult.Rows[0]["Result"].ToString().Contains("exists"))
+                            {
+                                cntDuplicateRecord++;
+                            }
+
                         }
                     }
                    
                 }
                 catch (Exception ex)
                 {
+                    cntErrorRecord++;
                     dr["UploadedRemarks"] = "Error :" + ex.Message.ToString();
                 }
             }
 
+            lblNewUploadedRecord.Text = cntNewUploadedRecord.ToString();
+            lblDuplicateRecord.Text = cntDuplicateRecord.ToString();
+            lblErrorRecord.Text = cntErrorRecord.ToString();
+            lblMsg.Text = "Process Completed Successfully..";
+            lblMsg.ForeColor = System.Drawing.Color.Green;
         }
 
         grdStyled.DataSource = dt;

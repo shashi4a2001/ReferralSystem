@@ -20,6 +20,18 @@
               &nbsp;&nbsp;
               <asp:Label ID="lblMsg" runat="server" Text=""></asp:Label>
           </div>
+          <div>
+             <table>
+                 <tr>
+                     <td><span style="color:#00c2a8;font-weight:bold;">Uploaded Summary || </span></td>
+                     <td>New :</td><td><asp:Label ID="lblNewUploadedRecord" runat="server" Text="" Font-Bold="True" ForeColor="#00c2a8"></asp:Label></td>
+                    <td>Duplicate :</td><td><asp:Label ID="lblDuplicateRecord" runat="server" Text="" Font-Bold="True" ForeColor="#00c2a8"></asp:Label></td>
+                    <td>Error :</td><td><asp:Label ID="lblErrorRecord" runat="server" Text="" Font-Bold="True" ForeColor="red"></asp:Label> (Including Incorrect ClientTypeCode/CreatedDate)</td>
+
+                 </tr>
+
+             </table>
+          </div>
           <div style="width: 100%; overflow: auto; border: 2px solid #d4d4d4; max-height: 350px;padding:3px">
                             <asp:GridView ID="grdStyled" runat="server" AutoGenerateColumns="true"
                                 CellPadding="20" CellSpacing="20"
