@@ -96,10 +96,15 @@ Begin
 
 	Set @ClientId=@@Identity
 
-	Insert Into UserMaster(ClientId,UserName,UserId,LoginPwd,IsFirstTimeLogin,
-							PwdExpireOn,LoginPwd1,CreatedBy,CreatedDate)
-				values	  (@ClientId,@ClientName,@LoginId,@LoginPassword,1,
-						   '01/01/1900',@LoginPassword,@UserId,dbo.fnGetDate())
+	If @ClientTypeCode<>'106'
+	Begin
+		Insert Into UserMaster(ClientId,UserName,UserId,LoginPwd,IsFirstTimeLogin,
+								PwdExpireOn,LoginPwd1,CreatedBy,CreatedDate)
+					values	  (@ClientId,@ClientName,@LoginId,@LoginPassword,1,
+							   '01/01/1900',@LoginPassword,@UserId,dbo.fnGetDate())
+
+		Exec usp_SetClientHieararchy @ClientId =@ClientId
+	End
 
 	Select 'Success' As [Result],SCOPE_IDENTITY() as ClientId
 
