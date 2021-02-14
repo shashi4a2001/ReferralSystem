@@ -50,6 +50,14 @@ Begin
 		Select ClientId,ClientTypeCode,CreatedDate 		
 		From ClientMaster With(NoLock) Where ClientTypeCode<>'100'-- ReferredReferralCode=@SelfReferralCode
 	End
+	Else
+	Begin
+		Insert Into #Dashboard
+		Select a.ClientId,a.ClientTypeCode,b.CreatedDate
+		From ClientHierarchy a With(NoLock) Inner Join ClientMaster b With(NoLock) on a.ClientId=b.ClientId
+		Where a.ReferredClientId=@ClientId
+	End
+	/*
 	Else If @ClientTypeCode='101'--National Head
 	Begin
 		Insert Into #Dashboard
@@ -86,7 +94,7 @@ Begin
 		Select ClientId,ClientTypeCode,CreatedDate 		
 		From ClientMaster With(NoLock) Where ReferredReferralCode=@SelfReferralCode
 	End
-
+	*/
 		
 	Select 'Total Account Opened (Current Month)..' As [Summary],IsNull(Count(1),0) As [Count]
 	From #Dashboard Where CreatedDate Between @StartDateOfCurrentMonth And @CurrentDate
