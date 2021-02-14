@@ -59,7 +59,7 @@ Begin
 		If @ClientType_Code='100'--Super Admin
 		Begin
 			Select 
-			a.ClientId,a.ClientCode,a.ClientName,b.ClientTypeName As [ClientType],a.ContactPerson,a.EmailId,
+			a.ClientId,a.ClientCode,a.ClientName,a.ClientTypeCode,b.ClientTypeName As [ClientType],a.ContactPerson,a.EmailId,
 			a.MobileNo, a.ReferralSharingPercentage As [Referral Sharing Percentage],a.ReferralAmount As [Referral Amount],
 			a.ReferredReferralRevenue As [Referred Referral Revenue], 
 			CONVERT(varchar,a.CreatedDate,9) As [Account Opening Date]  
@@ -70,8 +70,25 @@ Begin
 			and a.ClientTypeCode =IsNull(@ClientTypeCode,a.ClientTypeCode)
 			and a.CreatedDate > @DateFrom and a.CreatedDate<= @DateTo
 		End
-		Else If @ClientType_Code='101'--National Head
+		Else
 		Begin
+		Select 
+			a.ClientId,a.ClientCode,a.ClientName,a.ClientTypeCode,b.ClientTypeName As [ClientType],a.ContactPerson,a.EmailId,
+			a.MobileNo, a.ReferralSharingPercentage As [Referral Sharing Percentage],a.ReferralAmount As [Referral Amount],
+			a.ReferredReferralRevenue As [Referred Referral Revenue], 
+			CONVERT(varchar,a.CreatedDate,9) As [Account Opening Date]  
+			From ClientMaster a With(NoLock)
+			Inner Join ClientTypeMaster b With(NoLock) ON a.ClientTypeCode = b.ClientTypeCode  
+			Inner Join ClientHierarchy c With(NoLock) ON a.ClientId=c.ClientId
+			Where 
+			c.ReferredClientId=@ClientId
+			and a.ClientTypeCode =IsNull(@ClientTypeCode,a.ClientTypeCode)
+			and a.CreatedDate Between @DateFrom And @DateTo
+			Order By a.ClientTypeCode,a.ClientName
+		End
+		/*
+		Else If @ClientType_Code='101'--National Head
+		Begin			
 			Select 
 			a.ClientId,a.ClientCode,a.ClientName,b.ClientTypeName As [ClientType],a.ContactPerson,a.EmailId,
 			a.MobileNo, a.ReferralSharingPercentage As [Referral Sharing Percentage],a.ReferralAmount As [Referral Amount],
@@ -156,7 +173,7 @@ Begin
 			and a.CreatedDate Between @DateFrom And @DateTo
 		End
 
-		
+		*/
 	End
 	If @ReportType='Summary'
 	Begin	
@@ -173,6 +190,22 @@ Begin
 			and a.CreatedDate Between @DateFrom And @DateTo
 			Group By b.ClientTypeName
 		End
+		Else
+		Begin
+			Select
+			b.ClientTypeName As [ClientType],Count(1) As [No .Of Account],
+			Sum(a.ReferralAmount) As [Referral Amount],Sum(a.ReferredReferralRevenue) As [Referred Referral Revenue]
+			From ClientMaster a With(NoLock)
+			Inner Join ClientTypeMaster b With(NoLock) ON a.ClientTypeCode = b.ClientTypeCode  
+			Inner Join ClientHierarchy c With(NoLock) ON a.ClientId=c.ClientId
+			Where 
+			c.ReferredClientId=@ClientId
+			and a.ClientTypeCode =IsNull(@ClientTypeCode,a.ClientTypeCode)
+			and a.CreatedDate Between @DateFrom And @DateTo
+			Group By a.ClientTypeCode,b.ClientTypeName
+		
+		End
+		/*
 		Else If @ClientType_Code='101'--National Head
 		Begin
 
@@ -255,7 +288,7 @@ Begin
 			and a.CreatedDate Between @DateFrom And @DateTo
 			Group By b.ClientTypeName
 		End
-		
+		*/
 	End
 
 End
