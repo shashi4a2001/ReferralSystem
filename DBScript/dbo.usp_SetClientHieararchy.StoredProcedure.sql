@@ -63,9 +63,11 @@ Begin
 	Set @NHReferralCode =''
 	
 
+	Declare @HrchyClientId BigInt
 	Declare @HrchyClientTypeCode varchar(50)
 	Declare @HrchyNewSelfReferralCode varchar(50)
 	Declare @HrchyNewReferredReferralCode varchar(50)
+	Declare @HrchyOrder Int
 	
 	 Select @ClientId=ClientId,@ClientTypeCode=ClientTypeCode,@ReferredReferralCode=ReferredReferralCode
 	 From ClientMaster With(NoLock)
@@ -85,15 +87,20 @@ Begin
 		And IsNull(@ReferredReferralCode,'') <>''
 	 Begin
 
+		Set @HrchyOrder=1
+		Delete From ClientHierarchy Where ClientId=@ClientId
+
 		While (@iCnt<=7)
 		Begin
+			Set @HrchyClientId=null
 			Set @HrchyClientTypeCode=''
 			Set @HrchyNewReferredReferralCode=''
 
 			If IsNull(@ReferredReferralCode,'')<>''
 			Begin
-			Print @ReferredReferralCode
+				--Print @ReferredReferralCode
 				Select 
+				@HrchyClientId=ClientId,
 				@HrchyClientTypeCode=ClientTypeCode,
 				@HrchyNewSelfReferralCode=SelfReferralCode,
 				@HrchyNewReferredReferralCode=ReferredReferralCode
@@ -116,55 +123,64 @@ Begin
 				-- Set New Referral code to search
 				Set @ReferredReferralCode=@HrchyNewReferredReferralCode 
 
-				If @HrchyClientTypeCode='105' --Individual Agent
+				If IsNull(@HrchyClientId,0)>0 And @HrchyClientTypeCode<>''
 				Begin
-					Set @IAReferralCode=@HrchyNewSelfReferralCode
+					If Not Exists (Select 1 From ClientHierarchy Where ClientId=@ClientId And ReferredClientTypeCode=@HrchyClientTypeCode)
+					Begin
+						Insert Into ClientHierarchy(ClientId,ClientTypeCode,ReferredClientId,ReferredClientTypeCode,ReferredOrder,CreatedBy,CreatedDate)
+						values (@ClientId,@ClientTypeCode,@HrchyClientId,@HrchyClientTypeCode,@HrchyOrder,'sys',getdate())
+					End
+					Set @HrchyOrder=@HrchyOrder+1
 				End
-				Else If @HrchyClientTypeCode='104' --District Franchisee
-				Begin
-					Set @DFReferralCode=@HrchyNewSelfReferralCode
-				End
-				Else If @HrchyClientTypeCode='103' --State Franchisee
-				Begin
-					Set @SFReferralCode=@HrchyNewSelfReferralCode
-				End
-				Else If @HrchyClientTypeCode='102' --Regional Head
-				Begin
-					Set @RHReferralCode=@HrchyNewSelfReferralCode
-				End
-				Else If @HrchyClientTypeCode='101' --National Head
-				Begin
-					Set @NHReferralCode=@HrchyNewSelfReferralCode
-				End
+				--If @HrchyClientTypeCode='105' --Individual Agent
+				--Begin
+				--	Set @IAReferralCode=@HrchyNewSelfReferralCode
+				--End
+				--Else If @HrchyClientTypeCode='104' --District Franchisee
+				--Begin
+				--	Set @DFReferralCode=@HrchyNewSelfReferralCode
+				--End
+				--Else If @HrchyClientTypeCode='103' --State Franchisee
+				--Begin
+				--	Set @SFReferralCode=@HrchyNewSelfReferralCode
+				--End
+				--Else If @HrchyClientTypeCode='102' --Regional Head
+				--Begin
+				--	Set @RHReferralCode=@HrchyNewSelfReferralCode
+				--End
+				--Else If @HrchyClientTypeCode='101' --National Head
+				--Begin
+				--	Set @NHReferralCode=@HrchyNewSelfReferralCode
+				--End
 			End
 			
 			Set @iCnt=@iCnt+1
 		End
 
-		If Exists 
-		(
-			Select 1 From ClientMaster 
-			Where ClientId =@ClientId
-				And 
-				(
-						IsNull(NHReferralCode,'')<>IsNull(@NHReferralCode,'')
-					OR IsNull(RHReferralCode,'')<>IsNull(@RHReferralCode,'')
-					OR IsNull(SFReferralCode,'')<>IsNull(@SFReferralCode,'')
-					OR IsNull(DFReferralCode,'')<>IsNull(@DFReferralCode,'')
-					OR IsNull(IAReferralCode,'')<>IsNull(@IAReferralCode,'')
-				)
-		)
-		Begin
-			Update ClientMaster Set
-			NHReferralCode=@NHReferralCode,
-			RHReferralCode=@RHReferralCode,
-			SFReferralCode=@SFReferralCode,
-			DFReferralCode=@DFReferralCode,
-			IAReferralCode=@IAReferralCode,
-			ModifiedBy='HierarchyUpdate',
-			ModifiedDate=GETDATE()
-			Where ClientId =@ClientId
-		End
+		--If Exists 
+		--(
+		--	Select 1 From ClientMaster 
+		--	Where ClientId =@ClientId
+		--		And 
+		--		(
+		--				IsNull(NHReferralCode,'')<>IsNull(@NHReferralCode,'')
+		--			OR IsNull(RHReferralCode,'')<>IsNull(@RHReferralCode,'')
+		--			OR IsNull(SFReferralCode,'')<>IsNull(@SFReferralCode,'')
+		--			OR IsNull(DFReferralCode,'')<>IsNull(@DFReferralCode,'')
+		--			OR IsNull(IAReferralCode,'')<>IsNull(@IAReferralCode,'')
+		--		)
+		--)
+		--Begin
+		--	Update ClientMaster Set
+		--	NHReferralCode=@NHReferralCode,
+		--	RHReferralCode=@RHReferralCode,
+		--	SFReferralCode=@SFReferralCode,
+		--	DFReferralCode=@DFReferralCode,
+		--	IAReferralCode=@IAReferralCode,
+		--	ModifiedBy='HierarchyUpdate',
+		--	ModifiedDate=GETDATE()
+		--	Where ClientId =@ClientId
+		--End
 		
 	 End
 	 
