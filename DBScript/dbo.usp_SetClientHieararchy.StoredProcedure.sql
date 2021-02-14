@@ -41,6 +41,16 @@ Begin
 
  
 */
+
+/*
+Select a.id,a.ClientId,b.ReferredReferralCode,a.ReferredClientId,b.SelfReferralCode,a.ReferredClientTypeCode,c.ClientTypeName,a.ReferredOrder 
+from ClientHierarchy a Inner Join ClientMaster b on a.ReferredClientId = b.ClientId
+Inner Join ClientTypeMaster c on a.ReferredClientTypeCode=c.ClientTypeCode
+order by a.ClientId,a.ReferredOrder
+
+select b.clienttypename,SelfReferralCode,ReferredReferralCode,NHReferralCode,RHReferralCode,SFReferralCode,DFReferralCode,IAReferralCode,* 
+from ClientMaster a inner join clienttypemaster b on a.clienttypecode=b.clienttypecode  where ClientId=951
+*/
 	If IsNull(@ClientId,0)=0
 	Begin
 		Return
