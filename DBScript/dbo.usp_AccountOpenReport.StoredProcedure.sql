@@ -175,16 +175,20 @@ Begin
 		End
 		Else If @ClientType_Code='101'--National Head
 		Begin
+
+
 			Select 
-			b.ClientTypeName As [ClientType],Count(1) As [No .Of Account],
+			a.ClientTypeCode,b.ClientTypeName As [ClientType],Count(1) As [No .Of Account],
 			Sum(a.ReferralAmount) As [Referral Amount],Sum(a.ReferredReferralRevenue) As [Referred Referral Revenue]
 			From ClientMaster a With(NoLock)
 			Inner Join ClientTypeMaster b With(NoLock) ON a.ClientTypeCode = b.ClientTypeCode  
 			Where 
-			a.ClientTypeCode In  ('102','103','104','105','106')
-			and a.ClientTypeCode =IsNull(@ClientTypeCode,a.ClientTypeCode)
+			a.ReferredReferralCode=@SelfReferralCode
 			and a.CreatedDate Between @DateFrom And @DateTo
-			Group By b.ClientTypeName
+			Group By a.ClientTypeCode,b.ClientTypeName
+
+
+
 		End
 		Else If @ClientType_Code='102'--Regional Head
 		Begin
