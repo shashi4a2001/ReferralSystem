@@ -118,8 +118,8 @@ BEGIN
 									CreatedDateInSystem DateTime,
 									NHReferralCode varchar(50),
 									RHReferralCode varchar(50),
-									SHReferralCode varchar(50),
-									DHReferralCode varchar(50),
+									SFReferralCode varchar(50),
+									DFReferralCode varchar(50),
 									IAReferralCode varchar(50)
 END
 
