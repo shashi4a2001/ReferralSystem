@@ -10,6 +10,7 @@ SET QUOTED_IDENTIFIER ON
 GO
 --Exec usp_AccountOpenReport '101'
 Create Procedure usp_AccountOpenReportDrillDown
+@ParentClientId BigInt = Null,
 @ClientId BigInt = Null,
 @DateFrom DateTime = Null,
 @DateTo DateTime = Null
@@ -20,10 +21,13 @@ Begin
 --			Sum(a.ReferralAmount) As [Referral Amount],Sum(a.ReferredReferralRevenue) As [Referred Referral Revenue]
 
 	
-	Select  b.ClientTypeCode,c.ClientTypeName,b.ClientName,b.ContactPerson,b.EmailId,b.ClientId from ClientHierarchy a With(NoLock)
+	Select  b.ClientTypeCode,c.ClientTypeName,b.ClientName,(b.ReferralAmount) As [Referral Amount],(b.ReferredReferralRevenue) As [Referred Referral Revenue],b.ContactPerson,b.EmailId,b.ClientId 
+	Into #t1
+	from ClientHierarchy a With(NoLock)
 	Inner Join ClientMaster b With(NoLock) On a.ClientId=b.ClientId
 	Inner Join ClientTypeMaster c With(NoLock) On a.ClientTypeCode=c.ClientTypeCode
-	where a.ReferredClientId=@ClientId and ReferredOrder=1 order by ReferredOrder
-
+	where a.ReferredClientId=@ClientId and ReferredOrder=1 order by ReferredOrder,b.ClientTypeCode
+	
+	Select * From #t1 Order By ClientTypeCode
 	
 End
