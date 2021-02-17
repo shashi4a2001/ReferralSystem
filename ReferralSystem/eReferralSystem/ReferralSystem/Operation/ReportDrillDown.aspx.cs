@@ -86,7 +86,10 @@ public partial class Operation_ReportDrillDown : System.Web.UI.Page
         //}
         DataSet ds = objDLGeneric.SpDataSet("usp_AccountOpenReportDrillDown", cmd, user.ConnectionString);
 
-        grdStyled.DataSource = ds.Tables[0];
+        grdStyled2.DataSource = ds.Tables[0];
+        grdStyled2.DataBind();
+
+        grdStyled.DataSource = ds.Tables[1];
         grdStyled.DataBind();
     }
 
@@ -129,6 +132,7 @@ public partial class Operation_ReportDrillDown : System.Web.UI.Page
 
             string ClientId = e.CommandArgument.ToString();
             ShowReport(ClientId);
+            Literal1.Text= " <a href = 'javascript: history.back()'><< Go Back</a>";
         }
     }
 }

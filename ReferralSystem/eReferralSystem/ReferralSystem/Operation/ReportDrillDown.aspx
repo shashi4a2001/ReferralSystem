@@ -33,8 +33,35 @@
     <uc1:UC_PageLabel runat="server" ID="UC_PageLabel" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MiddleContent" Runat="Server">
-                            
-                        <div style="width: 100%; overflow: auto; border: 2px solid #d4d4d4; max-height: 400px;padding:3px">
+
+<div>
+
+    <div>&nbsp;
+        <asp:Literal ID="Literal1" runat="server"></asp:Literal>
+       
+    </div>  
+    <div style="float: left;width: 14%;  border: 2px solid #d4d4d4; padding:3px; background-color:#098675;"">
+        
+    
+        <asp:GridView ID="grdStyled2" runat="server"
+                                CellPadding="20" CellSpacing="20"
+                                RowStyle-BorderWidth="1" RowStyle-BorderStyle="Solid" Width="100%"
+                               >
+                               
+                                
+                                
+                                
+                                <EmptyDataRowStyle HorizontalAlign="Center" />
+
+                                <EmptyDataTemplate>
+                                    No records found
+                                </EmptyDataTemplate>
+
+<RowStyle BorderWidth="1px" BorderStyle="Solid"></RowStyle>
+                            </asp:GridView>
+    </div>
+                          
+      <div style=" float:right; width: 85%; overflow: auto; border: 2px solid #d4d4d4; max-height: 400px;padding:3px">
                             <asp:GridView ID="grdStyled" runat="server"
                                 CellPadding="20" CellSpacing="20"
                                 RowStyle-BorderWidth="1" RowStyle-BorderStyle="Solid" Width="100%"
@@ -44,7 +71,7 @@
                                 <Columns>
                                      <asp:TemplateField>
             <ItemTemplate>
-                <asp:LinkButton runat="server" Text="Select" CommandName="SelectData" CommandArgument='<%# Eval("ClientId") %>' />
+                <asp:LinkButton runat="server" Text="Go Next >>" CommandName="SelectData" CommandArgument='<%# Eval("ClientId") %>' />
             </ItemTemplate>
         </asp:TemplateField>
                                 </Columns>
@@ -58,6 +85,8 @@
 
 <RowStyle BorderWidth="1px" BorderStyle="Solid"></RowStyle>
                             </asp:GridView>
-                        </div>
+       </div>
+
+</div>
 </asp:Content>
 
