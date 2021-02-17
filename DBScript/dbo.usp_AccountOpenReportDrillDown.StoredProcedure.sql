@@ -28,6 +28,7 @@ Begin
 	Inner Join ClientTypeMaster c With(NoLock) On a.ClientTypeCode=c.ClientTypeCode
 	where a.ReferredClientId=@ClientId and ReferredOrder=1 order by ReferredOrder,b.ClientTypeCode
 	
+	Select ClientTypeName,Count(1)As [Count] From #t1 Group By ClientTypeCode,ClientTypeName Order By ClientTypeCode
 	Select * From #t1 Order By ClientTypeCode
 	
 End
