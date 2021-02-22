@@ -244,12 +244,10 @@ select SelfReferralCode,ReferredReferralCode,* from ClientMaster where ReferredR
 
 
 	--Select * from BrokerageSummary
-select b.ClientTypeCode,c.ClientTypeName, a.* from brokeragedetail a 
-Inner Join ClientMaster b on a.ClientId=b.ClientId 
-Inner Join ClientTypeMaster c On b.ClientTypeCode=c.ClientTypeCode
-order by b.ClientTypeCode
-
-	 Truncate table BrokerageSummary
-Truncate table brokeragedetail
+--select b.ClientTypeCode,c.ClientTypeName, a.* from brokeragedetail a 
+--Inner Join ClientMaster b on a.ClientId=b.ClientId 
+--Inner Join ClientTypeMaster c On b.ClientTypeCode=c.ClientTypeCode
+--order by b.ClientTypeCode
+ 
 
 End
