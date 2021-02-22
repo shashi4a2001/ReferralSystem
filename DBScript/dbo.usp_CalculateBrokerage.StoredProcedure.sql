@@ -109,7 +109,8 @@ select SelfReferralCode,ReferredReferralCode,* from ClientMaster where ReferredR
 
 	Set @ReferralClientCount=IsNull(@ReferralClientCount,0)
 
-	Select 	@SharingPercentage = ReferralSharingPercentage,@SelfReferralCode=IsNull(SelfReferralCode,'')	
+	Select 	@SharingPercentage = (Case When @BrokerageType='101' Then  ReferralSharingPercentage When @BrokerageType='102' Then  RevenueSharingPercentage Else 0 End) ,
+			@SelfReferralCode=IsNull(SelfReferralCode,'')	
 	From ClientMaster With(NoLock) Where ClientId=@ClientId
 
 	Set @SharingPercentage=IsNull(@SharingPercentage,0)
@@ -176,7 +177,15 @@ select SelfReferralCode,ReferredReferralCode,* from ClientMaster where ReferredR
 		Set @AmountEarnedPerClient=0
 		Set @AmountEarnedTotal=0
 
-		Set @SharingPercentage = @ReferralSharingPercentage_1
+		If @BrokerageType='101'
+		Begin
+			Set @SharingPercentage = @ReferralSharingPercentage_1
+		End
+		Else
+		If @BrokerageType='102'
+		Begin
+			Set @SharingPercentage = @RevenueSharingPercentage_1
+		End
 		Set @SelfReferralCode=@SelfReferralCode_1
 		Set @ClientId=@ClientId_1
 
@@ -219,6 +228,11 @@ select SelfReferralCode,ReferredReferralCode,* from ClientMaster where ReferredR
 		Set @icnt=@icnt+1
 	End
 	
+	If @BrokerageType='102'
+	Begin
+		Update #BrokerageDetail Set ReferralClientCount=0
+	End
+
 	--Finally Insert Calculated Brokerage in Table
 	Insert Into BrokerageDetail
 	(FKId,BrokerageType,ClientId,SharingPercentage,AmountEarnedPerClient,ReferralAmountBalance,
