@@ -60,8 +60,11 @@ Begin
 		Begin
 			Select 
 			a.ClientId,a.ClientCode,a.ClientName,a.ClientTypeCode,b.ClientTypeName As [ClientType],a.ContactPerson,a.EmailId,
-			a.MobileNo, a.ReferralSharingPercentage As [Referral Sharing Percentage],a.ReferralAmount As [Referral Amount],
-			a.ReferredReferralRevenue As [Referred Referral Revenue], 
+			a.MobileNo, 
+			a.ReferralSharingPercentage As [Referral Sharing(%)],
+			a.RevenueSharingPercentage As [Revenue Sharing(%)],
+			--a.ReferralAmount As [Referral Amount],
+			--a.ReferredReferralRevenue As [Referred Referral Revenue], 
 			CONVERT(varchar,a.CreatedDate,9) As [Account Opening Date]  
 			From ClientMaster a With(NoLock)
 			Left Join ClientTypeMaster b With(NoLock) ON a.ClientTypeCode = b.ClientTypeCode  
@@ -74,8 +77,11 @@ Begin
 		Begin
 		Select 
 			a.ClientId,a.ClientCode,a.ClientName,a.ClientTypeCode,b.ClientTypeName As [ClientType],a.ContactPerson,a.EmailId,
-			a.MobileNo, a.ReferralSharingPercentage As [Referral Sharing Percentage],a.ReferralAmount As [Referral Amount],
-			a.ReferredReferralRevenue As [Referred Referral Revenue], 
+			a.MobileNo, 
+			a.ReferralSharingPercentage As [Referral Sharing(%)],
+			a.RevenueSharingPercentage As [Revenue Sharing(%)],
+			--a.ReferralAmount As [Referral Amount],
+			--a.ReferredReferralRevenue As [Referred Referral Revenue], 
 			CONVERT(varchar,a.CreatedDate,9) As [Account Opening Date]  
 			From ClientMaster a With(NoLock)
 			Inner Join ClientTypeMaster b With(NoLock) ON a.ClientTypeCode = b.ClientTypeCode  
@@ -180,8 +186,9 @@ Begin
 		If @ClientType_Code='100'--Super Admin
 		Begin
 			Select 
-			b.ClientTypeName As [ClientType],Count(1) As [No .Of Account],
-			Sum(a.ReferralAmount) As [Referral Amount],Sum(a.ReferredReferralRevenue) As [Referred Referral Revenue]
+			b.ClientTypeName As [ClientType],Count(1) As [No .Of Account]--,
+			--Sum(a.ReferralAmount) As [Referral Amount],
+			--Sum(a.ReferredReferralRevenue) As [Referred Referral Revenue]
 			From ClientMaster a With(NoLock)
 			Left Join ClientTypeMaster b With(NoLock) ON a.ClientTypeCode = b.ClientTypeCode  
 			Where 
@@ -193,8 +200,9 @@ Begin
 		Else
 		Begin
 			Select
-			b.ClientTypeName As [ClientType],Count(1) As [No .Of Account],
-			Sum(a.ReferralAmount) As [Referral Amount],Sum(a.ReferredReferralRevenue) As [Referred Referral Revenue]
+			b.ClientTypeName As [ClientType],Count(1) As [No .Of Account]--,
+			--Sum(a.ReferralAmount) As [Referral Amount],
+			--Sum(a.ReferredReferralRevenue) As [Referred Referral Revenue]
 			From ClientMaster a With(NoLock)
 			Inner Join ClientTypeMaster b With(NoLock) ON a.ClientTypeCode = b.ClientTypeCode  
 			Inner Join ClientHierarchy c With(NoLock) ON a.ClientId=c.ClientId
