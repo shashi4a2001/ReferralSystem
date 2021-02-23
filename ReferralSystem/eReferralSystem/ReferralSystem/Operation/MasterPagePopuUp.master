@@ -1,0 +1,105 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPagePopuUp.master.cs" Inherits="Operation_MasterPagePopuUp" %>
+
+<!DOCTYPE html>
+
+<html>
+<head id="Head1" runat="server">
+    <title></title>
+
+    <style type="text/css">
+        
+        .foot
+        {
+            background-color: #1f3e8e!important;
+            height: 2px;
+            color: #FFFFFF;
+            font-size: 12px;
+            text-align: center;
+            border-top: #7b7a7a dashed 1px;
+            line-height: 15px;
+            margin-top: 25px;
+            position: absolute;
+            width: 100%;
+            padding-top: 5px;
+        }
+
+        .logo
+        {
+            font-size: 38px;
+            font-weight: 600;
+            float: left;
+            padding-top: 0;
+            margin-top: -8px;
+            font-family: Arial, Helvetica, sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-left: 10px;
+            color: #fff;
+            margin-top: 3px;
+            text-shadow: 0 1px 0 #fff;
+        }
+        .navbar-brand {
+    float: left;
+    height:40px !important;
+    padding: 10px 15px !important;
+    font-size: 14px !important;
+    line-height: 18px !important;
+    color:#fff!important;
+}
+        .navbar-inverse {
+    background-color: #00c2a8 !important;
+    border-color: #038876 !important;
+}
+    </style>
+    <!-- Template stylesheet -->
+    <link href="~/Common/CSS/blue/screen.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="../Common/CSS/bootstrap.min.css" rel="stylesheet" />
+    <!-- Jquery and plugins -->
+    <link href="../Common/CSS/Admin.css" type="text/css" rel="Stylesheet" />
+    <link href="../Common/css/blue/screen.css" rel="stylesheet" type="text/css" media="all" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div class="content_wrapper">
+            <!-- Begin header -->
+              
+            
+            <div>
+                 <asp:ContentPlaceHolder ID="PageLabelContent" runat="server">
+                </asp:ContentPlaceHolder>
+            </div>
+            <!-- End header -->
+            <!-- Begin left panel -->
+            <!-- End left panel -->
+            <!-- Begin content -->
+            <div id="content">
+                <asp:ScriptManager ID="ManageOperation" runat="server">
+                </asp:ScriptManager>
+                
+                <asp:ContentPlaceHolder ID="MiddleContent" runat="server">
+                </asp:ContentPlaceHolder>
+
+                <!-- Begin footer -->
+
+                <!-- End footer -->
+
+
+                <br class="clear" />
+                <!-- Begin footer -->
+
+            </div>
+
+
+            <!-- End content -->
+
+            <%--  <div class="foot" style="height: 80px;">
+                <img src="../Common/Images/lnvmOnline.png" alt="Posts" height="50" width="650" />
+                <br />
+                &copy; COPYRIGHT © 2019. ALL RIGHTS RESERVED
+            </div>--%>
+        </div>
+
+    </form>
+</body>
+</html>
