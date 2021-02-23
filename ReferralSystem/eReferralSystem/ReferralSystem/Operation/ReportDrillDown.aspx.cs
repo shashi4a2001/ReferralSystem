@@ -34,6 +34,7 @@ public partial class Operation_ReportDrillDown : System.Web.UI.Page
             //txtDateTo.Text = DateTime.Today.ToString("dd/MM/yyyy");
             ShowReport(user.LogId.ToString());
         }
+        Literal1.Text = "<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>";
     }
 
     //private void BindClientType()
@@ -86,10 +87,21 @@ public partial class Operation_ReportDrillDown : System.Web.UI.Page
         //}
         DataSet ds = objDLGeneric.SpDataSet("usp_AccountOpenReportDrillDown", cmd, user.ConnectionString);
 
-        grdStyled2.DataSource = ds.Tables[0];
+        ltrlClientName.Text = "";
+        ltrlClientReferralAmount.Text = "";
+        ltrlClientReferralRevenue.Text = "";
+
+        if (ds.Tables[0].Rows.Count > 0)
+        {
+            ltrlClientName.Text = ds.Tables[0].Rows[0]["ClientName"].ToString();
+            ltrlClientReferralAmount.Text = "<a href='javascript:ShowSubReport("+ ds.Tables[0].Rows[0]["ClientId"].ToString() +",101)' >" + ds.Tables[0].Rows[0]["ReferralAmount"].ToString() + "</a>";
+            ltrlClientReferralRevenue.Text = "<a href='javascript:ShowSubReport(" + ds.Tables[0].Rows[0]["ClientId"].ToString() + ",102)' >" + ds.Tables[0].Rows[0]["ReferralRevenue"].ToString() + "</a>";
+        }
+
+        grdStyled2.DataSource = ds.Tables[1];
         grdStyled2.DataBind();
 
-        grdStyled.DataSource = ds.Tables[1];
+        grdStyled.DataSource = ds.Tables[2];
         grdStyled.DataBind();
     }
 
