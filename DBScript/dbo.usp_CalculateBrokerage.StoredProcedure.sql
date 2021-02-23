@@ -242,7 +242,7 @@ select SelfReferralCode,ReferredReferralCode,* from ClientMaster where ReferredR
 	From #BrokerageDetail
 
 
-
+	Select 'Success'
 	--Select * from BrokerageSummary
 --select b.ClientTypeCode,c.ClientTypeName, a.* from brokeragedetail a 
 --Inner Join ClientMaster b on a.ClientId=b.ClientId 
