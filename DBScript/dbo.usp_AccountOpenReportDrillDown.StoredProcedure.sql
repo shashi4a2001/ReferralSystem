@@ -8,7 +8,7 @@ GO
 SET ANSI_NULLS ON
 SET QUOTED_IDENTIFIER ON
 GO
---Exec usp_AccountOpenReport '101'
+--Exec usp_AccountOpenReportDrillDown '101'
 Create Procedure usp_AccountOpenReportDrillDown
 @ParentClientId BigInt = Null,
 @ClientId BigInt = Null,
@@ -29,6 +29,7 @@ Begin
 
 	If (@ParentClientId=@ClientId) And Exists (Select 1 From ClientMaster With(NoLock) Where ClientId=@ParentClientId and ClientTypeCode='100')
 	Begin
+	 
 		Declare @MinClientTypeCode Int
 		Select @MinClientTypeCode=Min(ClientTypeCode) From ClientMaster With(NoLock) Where ClientTypeCode<>100
 
@@ -39,15 +40,39 @@ Begin
 		where b.ClientTypeCode=@MinClientTypeCode order by ClientName
 
 	End
+	Else
+	Begin
+		Insert Into #t1
+		Select  b.ClientTypeCode,c.ClientTypeName,b.ClientName,(b.ReferralAmount) As [Referral Amount],(b.ReferredReferralRevenue) As [Referred Referral Revenue],b.ContactPerson,b.EmailId,b.ClientId 
+		from ClientHierarchy a With(NoLock)
+		Inner Join ClientMaster b With(NoLock) On a.ClientId=b.ClientId
+		Inner Join ClientTypeMaster c With(NoLock) On b.ClientTypeCode=c.ClientTypeCode
+		where a.ReferredClientId=@ClientId and ReferredOrder=1 order by ReferredOrder,b.ClientTypeCode
+	End
 
-	Insert Into #t1
-	Select  b.ClientTypeCode,c.ClientTypeName,b.ClientName,(b.ReferralAmount) As [Referral Amount],(b.ReferredReferralRevenue) As [Referred Referral Revenue],b.ContactPerson,b.EmailId,b.ClientId 
-	from ClientHierarchy a With(NoLock)
-	Inner Join ClientMaster b With(NoLock) On a.ClientId=b.ClientId
-	Inner Join ClientTypeMaster c With(NoLock) On b.ClientTypeCode=c.ClientTypeCode
-	where a.ReferredClientId=@ClientId and ReferredOrder=1 order by ReferredOrder,b.ClientTypeCode
+	Select a.ClientId,a.BrokerageType,Sum(A.AmountEarnedTotal) as [AmountEarnedTotal] 
+	Into #brkAmt1
+	From BrokerageDetail a With(NoLock) 
+	Where a.ClientId=@ParentClientId
+	Group By a.ClientId,a.BrokerageType
+
+	Select ClientId,ClientTypeCode,ClientName,
+	IsNull((Select Sum(AmountEarnedTotal) From #brkAmt1 b With(NoLock) Where a.ClientId=b.ClientId And BrokerageType='101'),0) As [ReferralAmount],
+	IsNull((Select Sum(AmountEarnedTotal) From #brkAmt1 c With(NoLock) Where a.ClientId=c.ClientId And BrokerageType='102'),0) As [ReferralRevenue]
+	From ClientMaster a With(NoLock) Where ClientId=@ParentClientId
+
+
+	Select a.ClientId,a.BrokerageType,Sum(A.AmountEarnedTotal) as [AmountEarnedTotal] 
+	Into #brkAmt2
+	From BrokerageDetail a With(NoLock) 
+	Inner Join #t1 b on a.ClientId=b.ClientId 
+	Group By a.ClientId,a.BrokerageType
 	
 	Select ClientTypeName,Count(1)As [Count] From #t1 Group By ClientTypeCode,ClientTypeName Order By ClientTypeCode
-	Select * From #t1 Order By ClientTypeCode
+	Select a.ClientTypeCode,a.ClientTypeName,a.ClientName,
+	IsNull((Select Sum(AmountEarnedTotal) From #brkAmt2 b With(NoLock) Where a.ClientId=b.ClientId And BrokerageType='101'),0) As [ReferralAmount],
+	IsNull((Select Sum(AmountEarnedTotal) From #brkAmt2 c With(NoLock) Where a.ClientId=c.ClientId And BrokerageType='102'),0) As [ReferralRevenue],
+	a.ContactPerson,a.EmailId,a.ClientId 
+	From #t1 a Order By ClientTypeCode
 	
 End
