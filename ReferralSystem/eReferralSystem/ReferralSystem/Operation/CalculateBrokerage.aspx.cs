@@ -64,18 +64,8 @@ public partial class Operation_CalculateBrokerage : System.Web.UI.Page
             string userId = user.LogId.ToString();
             DateTime DateFrom = DateTime.ParseExact(txtDateFrom.Text, "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture);
             DateTime DateTo = DateTime.ParseExact(txtDateTo.Text, "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture);
-            string BrokerageType = "";
-            string BrokerageAmount = "";
-            BrokerageAmount = txtAmount.Text.ToString().Trim();
-
-            if (ddlRevenueType.SelectedValue.ToString() == "1")
-            {
-                BrokerageType = "101";
-            }
-            else if (ddlRevenueType.SelectedValue.ToString() == "2")
-            {
-                BrokerageType = "102";
-            }
+            string BrokerageType = ddlRevenueType.SelectedValue.ToString();
+            string BrokerageAmount = txtAmount.Text.ToString().Trim();
 
 
             if (BrokerageType != "101" && BrokerageType != "102")
@@ -100,7 +90,7 @@ public partial class Operation_CalculateBrokerage : System.Web.UI.Page
             if (BrokerageAmount != "")
             {
                 double n;
-                bool isNumeric = int.TryParse("123", out n);
+                bool isNumeric = Double.TryParse(BrokerageAmount, out n);
 
                 if (isNumeric == false)
                 {
@@ -113,7 +103,7 @@ public partial class Operation_CalculateBrokerage : System.Web.UI.Page
 
 
 
-            if (DateTo > DateFrom)
+            if (DateFrom > DateTo)
             {
                 lblMsg.Text = "Invalid FromDate/ToDate";
                 lblMsg.ForeColor = System.Drawing.Color.Red;
@@ -122,7 +112,7 @@ public partial class Operation_CalculateBrokerage : System.Web.UI.Page
 
 
 
-
+            DataSet ds = new DataSet();
             DLClsGeneric objDLGeneric = new DLClsGeneric();
             SqlCommand cmd = new SqlCommand();
             cmd.Parameters.AddWithValue("@ClientId", ddlShareTo.SelectedValue.ToString());
@@ -131,10 +121,24 @@ public partial class Operation_CalculateBrokerage : System.Web.UI.Page
             cmd.Parameters.AddWithValue("@BrokerageType", BrokerageType);
             cmd.Parameters.AddWithValue("@BrokerageAmount", BrokerageAmount);
             cmd.Parameters.AddWithValue("@UserId", userId);
-            objDLGeneric.SpExecuteNonQuery("usp_CalculateBrokerage", cmd, user.ConnectionString);
+            ds = objDLGeneric.SpDataSet("usp_CalculateBrokerage", cmd, user.ConnectionString);
 
-            lblMsg.Text = "Amount Processed Successfully at :"+ DateTime.Now.ToString();
-            lblMsg.ForeColor = System.Drawing.Color.Green;
+            if (ds.Tables[0].Rows[0][0].ToString() == "Success")
+            {
+                lblMsg.Text = "Amount Processed Successfully at :" + DateTime.Now.ToString();
+                lblMsg.ForeColor = System.Drawing.Color.Green;
+
+                ddlShareTo.SelectedIndex = 0;
+                txtAmount.Text = "";
+                txtDateFrom.Text = "";
+                txtDateTo.Text = "";
+            }
+            else
+            {
+                lblMsg.Text = ds.Tables[0].Rows[0][0].ToString();
+                lblMsg.ForeColor = System.Drawing.Color.Red;
+            }
+         
 
             BindGrid();
         }
@@ -147,7 +151,7 @@ public partial class Operation_CalculateBrokerage : System.Web.UI.Page
 
     protected void ddlRevenueType_SelectedIndexChanged(object sender, EventArgs e)
     {
-        
+        BindGrid();
 
     }
     private void BindGrid()
