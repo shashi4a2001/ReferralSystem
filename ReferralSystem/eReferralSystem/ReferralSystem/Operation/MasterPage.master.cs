@@ -26,6 +26,7 @@ public partial class Operation_MasterPage : System.Web.UI.MasterPage
                     ltrlMenu1.Text = @"<a class=""navbar-brand"" href=""RoleManagement.aspx"" style=""color:#f5f5f5;"">Role Management</a>&nbsp;&nbsp;";
                     ltrlMenu2.Text = @"<a class=""navbar-brand"" href=""ClientRegistration.aspx"" style=""color:#f5f5f5;"">User Registration</a>";
                     ltrlMenu3.Text = @"<a class=""navbar-brand"" href=""UploadClient.aspx"" style=""color:#f5f5f5;"">Upload Client</a>";
+                    ltrlMenu4.Text = @"<a class=""navbar-brand"" href=""CalculateBrokerage.aspx"" style=""color:#f5f5f5;"">Manage Revenue</a>";
                 }
 
             }
