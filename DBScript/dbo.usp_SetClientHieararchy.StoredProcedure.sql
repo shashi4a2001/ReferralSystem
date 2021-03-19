@@ -17,7 +17,7 @@ Begin
 
 	Create table #ClientMasterAll(id int Identity(1,1),ClientId Bigint )
 	Insert Into #ClientMasterAll(ClientId)
-	Select ClientId From ClientMaster Order By ClientId
+	Select ClientId From ClientMaster  Order By ClientTypeCode desc
 
 	Declare @iLoop Int
 	Set @iLoop=1
@@ -135,7 +135,7 @@ from ClientMaster a inner join clienttypemaster b on a.clienttypecode=b.clientty
 
 				If IsNull(@HrchyClientId,0)>0 And @HrchyClientTypeCode<>''
 				Begin
-					If Not Exists (Select 1 From ClientHierarchy Where ClientId=@ClientId And ReferredClientTypeCode=@HrchyClientTypeCode)
+					If Not Exists (Select 1 From ClientHierarchy With(NoLock)  Where ClientId=@ClientId And ReferredClientTypeCode=@HrchyClientTypeCode)
 					Begin
 						Insert Into ClientHierarchy(ClientId,ClientTypeCode,ReferredClientId,ReferredClientTypeCode,ReferredOrder,CreatedBy,CreatedDate)
 						values (@ClientId,@ClientTypeCode,@HrchyClientId,@HrchyClientTypeCode,@HrchyOrder,'sys',getdate())
