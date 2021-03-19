@@ -108,7 +108,7 @@ Begin
 					values	  (@ClientId,@ClientName,@LoginId,'xMycjpL7vseSZizZEO8rkw==',1,
 							   '01/01/1900','xMycjpL7vseSZizZEO8rkw==',@UserId,dbo.fnGetDate())
 		
-		Exec usp_SetClientHieararchy @ClientId =@ClientId
+		Exec usp_SetClientHieararchySingle @ClientId =@ClientId
 	End
 
 	Select 'Success : Upload' As [Result],SCOPE_IDENTITY() as ClientId

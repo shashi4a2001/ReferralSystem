@@ -1,14 +1,14 @@
 
-if Exists(Select 1 from sys.procedures where name='usp_SetClientHieararchy')
+if Exists(Select 1 from sys.procedures where name='usp_SetClientHieararchySingle')
 Begin	
-	Drop Procedure usp_SetClientHieararchy
+	Drop Procedure usp_SetClientHieararchySingle
 End
 GO
 
 SET ANSI_NULLS ON
 SET QUOTED_IDENTIFIER ON
 GO
-Create Procedure usp_SetClientHieararchy
+Create Procedure usp_SetClientHieararchySingle
 @ClientId BigInt
 As
 Begin
