@@ -43,7 +43,7 @@ Begin
 	 
 		If IsNull(@ClientId,0)>0
 		Begin
-			Exec usp_SetClientHieararchy @ClientId =@ClientId
+			Exec usp_SetClientHieararchySingle @ClientId =@ClientId
 		End
 
 		Set @iLoop=@iLoop+1
