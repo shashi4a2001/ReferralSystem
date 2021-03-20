@@ -245,12 +245,19 @@ public partial class Operation_UploadClient : System.Web.UI.Page
             lblErrorRecord.Text = cntErrorRecord.ToString();
             lblMsg.Text = "Process Completed Successfully..";
             lblMsg.ForeColor = System.Drawing.Color.Green;
+            UploadComplete();
         }
 
         grdStyled.DataSource = dt;
         grdStyled.DataBind();
     }
 
+    private void UploadComplete()
+    {
+        DLClsGeneric objDLGeneric = new DLClsGeneric();
+        SqlCommand cmd = new SqlCommand();
+        objDLGeneric.SpExecuteNonQuery("usp_UploadClientMasterComplete", cmd, user.ConnectionString);
+    }
     protected void ImageButton1_Click(object sender, ImageClickEventArgs e)
     {
         ExportGridToExcel();
