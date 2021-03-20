@@ -233,6 +233,7 @@ namespace DLCMR
                 SpCmd.Connection = m_Conn;
                 SpCmd.CommandType = CommandType.StoredProcedure;
                 SpCmd.CommandText = SpName;
+                SpCmd.CommandTimeout = 0;
                 rowaffected = SpCmd.ExecuteNonQuery();
 
             }
